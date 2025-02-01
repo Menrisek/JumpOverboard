@@ -15,6 +15,9 @@ var win_screen
 var score_label
 var death_label
 var coin_label
+var speedrun_time_label
+
+var speedrun_time = 0
 
 signal gained_coins(int)
 signal level_beaten()
@@ -34,6 +37,7 @@ func win():
 	win_screen.visible = true
 	#zobrazuje na winscreenu staty
 	score_label.text = "Your Score: " + str(score)
+	speedrun_time_label.text = "Your Time: " + str(speedrun_time)
 	death_label.text = "Deaths " + str(deaths)
 	coin_label.text = "Coins: " + str(coins)
 	#zastaví se hra po 0.1 sec po dotknutí výherní vlajky

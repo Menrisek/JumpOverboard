@@ -12,6 +12,7 @@ class_name SaveData
 		"max_enemies_beaten" : 0,
 		"damage_taken" : 0,
 		"deaths" : 0,
+		"timer" : 0,
 		"unlocks" : "Level2",
 		"beaten" : false,
 	}

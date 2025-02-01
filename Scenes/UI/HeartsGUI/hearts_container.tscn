@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d12sekpr4j673"]
-
-[ext_resource type="Script" path="res://Scripts/UI/HeartsGUI/hearts_container.gd" id="1_j860s"]
-
-[node name="HeartsContainer" type="HBoxContainer"]
-theme_override_constants/separation = 0
-alignment = 2
-script = ExtResource("1_j860s")

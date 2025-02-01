@@ -2,7 +2,6 @@ extends Node
 class_name RunTimeLevel
 
 @onready var level_name = name
-@onready var hearts_bar = $UIManager/HeartsContainer
 @onready var player = $Player
 
 var max_score = 0
@@ -17,10 +16,9 @@ func _ready():
 	GameManager.enemies_beaten = 0
 	GameManager.damage_taken = 0
 	GameManager.deaths = 0
+	GameManager.speedrun_time = 0
 	GameManager.level_beaten.connect(beat_level)
 	#tohle je spojené s hearts containerem a díky tomu to ukazuje kolik srdcí je tam dole
-	hearts_bar.set_max_hearts(player.max_health)
-	
 	set_values()
 
 func set_values():
@@ -39,5 +37,5 @@ func beat_level():
 	#přistupujem do dictionary a předělávám unlocked na true
 	LevelData.level_dictionary[LevelData.level_dictionary[level_name]["unlocks"]]["unlocked"] = true
 	
-	LevelData.update_level(level_name, GameManager.score,max_score, GameManager.coins, max_coins, GameManager.enemies_beaten, max_enemies, GameManager.damage_taken, GameManager.deaths, true)
+	LevelData.update_level(level_name, GameManager.score,max_score, GameManager.coins, max_coins, GameManager.enemies_beaten, max_enemies, GameManager.damage_taken, GameManager.deaths, GameManager.speedrun_time, true)
 	SaveManager.save_game()

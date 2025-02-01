@@ -7,6 +7,7 @@ func _ready():
 	GameManager.score_label = $WinScreen/Score
 	GameManager.death_label =$"WinScreen/Death counter"
 	GameManager.coin_label = $"WinScreen/Coin counter"
+	GameManager.speedrun_time_label = $"WinScreen/Speedrun timer"
 	
 	GameManager.gained_coins.connect(update_coin_display)
 

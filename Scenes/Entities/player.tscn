@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dw7fpvs8un0wt" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 05.png" id="6_blq7k"]
 [ext_resource type="Texture2D" uid="uid://bqysm01hpefkl" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="6_nj5es"]
 [ext_resource type="Texture2D" uid="uid://cnpo16r1dg26p" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 01.png" id="11_l60d3"]
-[ext_resource type="Texture2D" uid="uid://c63kjyeoesila" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 02.png" id="12_c57l1"]
 [ext_resource type="Texture2D" uid="uid://iwplh6wkvi5y" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 03.png" id="13_5y8yt"]
 [ext_resource type="Texture2D" uid="uid://cilxyi31366pl" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="14_ox6tn"]
 [ext_resource type="Texture2D" uid="uid://dxcpa8ht3xcaw" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="15_kfyqh"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://56ygl4o1fnno" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 03.png" id="25_4h42k"]
 [ext_resource type="Texture2D" uid="uid://d0cg3sbdeoykx" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 04.png" id="26_khk2x"]
 [ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="27_u0465"]
+[ext_resource type="Texture2D" uid="uid://cfsqw8771rb2j" path="res://Art/Icons/cjhead.png" id="28_ek51v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3krsy"]
 height = 26.0
@@ -218,6 +218,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_jwh15"]
 resource_name = "run"
 length = 0.5
+loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -229,7 +230,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("11_l60d3"), ExtResource("12_c57l1"), ExtResource("13_5y8yt"), ExtResource("14_ox6tn"), ExtResource("15_kfyqh"), ExtResource("16_3ul8q")]
+"values": [ExtResource("11_l60d3"), ExtResource("15_kfyqh"), ExtResource("13_5y8yt"), ExtResource("14_ox6tn"), ExtResource("15_kfyqh"), ExtResource("16_3ul8q")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqntf"]
@@ -249,6 +250,7 @@ collision_layer = 2
 script = ExtResource("1_hcqxc")
 speed = 250.0
 jump_height = -300.0
+max_health = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 monitoring = false
@@ -280,11 +282,50 @@ monitorable = false
 position = Vector2(20, 2)
 shape = SubResource("RectangleShape2D_q3ayb")
 
+[node name="Healthbar" parent="." instance=ExtResource("27_u0465")]
+visible = false
+offset_top = 15.0
+offset_bottom = 15.0
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+
+[node name="HeartsContainer" type="HBoxContainer" parent="PlayerUI"]
+custom_minimum_size = Vector2(120, 120)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -120.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("28_ek51v")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("28_ek51v")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("28_ek51v")
+expand_mode = 2
+
+[node name="SpeedrunTimer" type="Label" parent="PlayerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "100.00"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_oqntf")
 }
-
-[node name="Healthbar" parent="." instance=ExtResource("27_u0465")]
-offset_top = 15.0
-offset_bottom = 15.0

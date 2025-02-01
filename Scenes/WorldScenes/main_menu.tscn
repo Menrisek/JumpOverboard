@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyregojhxb3o0"]
+[gd_scene load_steps=3 format=3 uid="uid://dyregojhxb3o0"]
 
 [ext_resource type="Script" path="res://Scripts/Core/main_menu.gd" id="1_sojbx"]
+[ext_resource type="VideoStream" path="res://Art/Main Menu/Pewdiepie Video.ogv" id="2_g6w87"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sojbx")
+
+[node name="Background Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -544.0
+offset_right = 960.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_g6w87")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,6 +49,11 @@ grow_vertical = 2
 layout_mode = 2
 text = "Start"
 
+[node name="Load" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Load
+"
+
 [node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Options"
@@ -42,6 +67,7 @@ layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/World Map" to="." method="_on_world_map_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

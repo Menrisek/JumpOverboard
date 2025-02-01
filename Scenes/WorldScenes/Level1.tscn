@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://cnlf1xg77ltfb"]
+[gd_scene load_steps=37 format=4 uid="uid://cnlf1xg77ltfb"]
 
 [ext_resource type="Script" path="res://Scripts/Core/RunTimeLevel.gd" id="1_exg0t"]
 [ext_resource type="Texture2D" uid="uid://ch77liydluqj1" path="res://Art/Palm Tree Island/Sprites/Background/BG Image.png" id="1_vnfku"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="6_qejgv"]
 [ext_resource type="Script" path="res://Scripts/UI/ui_manager.gd" id="6_tgl51"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="7_eaiba"]
-[ext_resource type="PackedScene" uid="uid://d12sekpr4j673" path="res://Scenes/UI/HeartsGUI/hearts_container.tscn" id="8_1gcrh"]
 [ext_resource type="PackedScene" uid="uid://bm4hkqi2x4k2p" path="res://Scenes/Interactable/coin.tscn" id="8_rx8jr"]
 [ext_resource type="PackedScene" uid="uid://bw3854j6u431o" path="res://Scenes/Interactable/chest.tscn" id="12_jh8tm"]
 [ext_resource type="PackedScene" uid="uid://bjpdewaeiii73" path="res://Scenes/Enemies/sharkie.tscn" id="13_ceguj"]
@@ -21,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="18_3r4bf"]
 [ext_resource type="PackedScene" uid="uid://bmxlrk2br3k7s" path="res://Scenes/Interactable/BoostingItems/speed_up.tscn" id="20_y2vss"]
 [ext_resource type="PackedScene" uid="uid://b6tbtl8d223r5" path="res://Scenes/Interactable/BoostingItems/jump_up.tscn" id="21_2pcjo"]
-[ext_resource type="PackedScene" uid="uid://dpg7s5dyy5cym" path="res://Scenes/Interactable/BoostingItems/health_up.tscn" id="22_x1tvt"]
+[ext_resource type="PackedScene" uid="uid://dpg7s5dyy5cym" path="res://Scenes/Interactable/BoostingItems/heal_up.tscn" id="22_x1tvt"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_m7bmp"]
 tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 196608, 1, 3, 262144, 1, 4, 327680, 1, 1, 393216, 1, 2, 458752, 1, 3, 524288, 1, 4, 589824, 1, 1, 655360, 1, 2, 720896, 1, 3, 786432, 1, 4, 851968, 1, 1, 917504, 1, 2, 983040, 1, 3, 1048576, 1, 4, 1, 65537, 0, 65537, 65537, 1, 131073, 65537, 2, 196609, 65537, 3, 262145, 65537, 2, 327681, 65537, 3, 393217, 65537, 4, 458753, 65537, 2, 524289, 65537, 3, 589825, 65537, 3, 655361, 65537, 4, 720897, 65537, 2, 786433, 65537, 3, 851969, 65537, 3, 917505, 65537, 4, 983041, 65537, 2, 1048577, 65537, 3, 2, 131073, 0, 65538, 131073, 1, 131074, 131073, 2, 196610, 131073, 3, 262146, 131073, 2, 327682, 131073, 3, 393218, 131073, 3, 458754, 131073, 2, 524290, 131073, 3, 589826, 131073, 3, 655362, 131073, 3, 720898, 131073, 2, 786434, 131073, 3, 851970, 131073, 3, 917506, 131073, 3, 983042, 131073, 2, 1048578, 131073, 3, 3, 196609, 0, 65539, 196609, 1, 131075, 196609, 2, 196611, 196609, 3, 262147, 196609, 2, 327683, 196609, 3, 393219, 196609, 3, 458755, 196609, 2, 524291, 196609, 3, 589827, 196609, 3, 655363, 196609, 3, 720899, 196609, 2, 786435, 196609, 3, 851971, 196609, 3, 917507, 196609, 3, 983043, 196609, 2, 1048579, 196609, 3, 4, 262145, 0, 65540, 262145, 1, 131076, 262145, 2, 196612, 262145, 3, 262148, 262145, 2, 327684, 262145, 3, 393220, 262145, 2, 458756, 262145, 2, 524292, 262145, 3, 589828, 262145, 3, 655364, 262145, 2, 720900, 262145, 2, 786436, 262145, 3, 851972, 262145, 3, 917508, 262145, 2, 983044, 262145, 2, 1048580, 262145, 3, 5, 327681, 0, 65541, 327681, 1, 131077, 327681, 2, 196613, 327681, 3, 262149, 327681, 4, 327685, 327681, 1, 393221, 327681, 2, 458757, 327681, 3, 524293, 327681, 4, 589829, 327681, 1, 655365, 327681, 2, 720901, 327681, 3, 786437, 327681, 4, 851973, 327681, 1, 917509, 327681, 2, 983045, 327681, 3, 1048581, 327681, 4)
@@ -595,9 +594,9 @@ shadow_color = Color(0, 0, 0, 0.682353)
 script = ExtResource("1_exg0t")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -967.0
+offset_left = -1487.0
 offset_top = -349.0
-offset_right = 3364.0
+offset_right = 3957.0
 offset_bottom = 576.0
 texture = ExtResource("1_vnfku")
 expand_mode = 2
@@ -626,20 +625,6 @@ position = Vector2(-62, 99)
 [node name="UIManager" type="CanvasLayer" parent="."]
 process_mode = 3
 script = ExtResource("6_tgl51")
-
-[node name="HeartsContainer" parent="UIManager" instance=ExtResource("8_1gcrh")]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -600.0
-offset_top = -120.0
-offset_right = -400.0
-offset_bottom = -80.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(3, 3)
 
 [node name="CoinIcon" type="TextureRect" parent="UIManager"]
 anchors_preset = 2
@@ -769,13 +754,26 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -89.0
-offset_top = 26.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 49.0
+offset_bottom = 31.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
 text = "Your Score: 1300"
 horizontal_alignment = 1
+
+[node name="Speedrun timer" type="Label" parent="UIManager/WinScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 40.0
+offset_right = 41.0
+offset_bottom = 63.0
+grow_horizontal = 2
+scale = Vector2(1.4, 1.4)
+text = "Your Time: 38.56"
 
 [node name="Death counter" type="Label" parent="UIManager/WinScreen"]
 layout_mode = 1
@@ -783,9 +781,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -89.0
-offset_top = 61.0
+offset_top = 71.0
 offset_right = 40.0
-offset_bottom = 84.0
+offset_bottom = 94.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
 text = "Deaths: 69"
@@ -797,9 +795,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -89.0
-offset_top = 97.0
+offset_top = 105.0
 offset_right = 40.0
-offset_bottom = 120.0
+offset_bottom = 128.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
 text = "Coins: 420"
@@ -1031,7 +1029,7 @@ position = Vector2(212, 98)
 [node name="JumpUp" parent="." instance=ExtResource("21_2pcjo")]
 position = Vector2(212, 76)
 
-[node name="HealthUp" parent="." instance=ExtResource("22_x1tvt")]
+[node name="HealUp" parent="." instance=ExtResource("22_x1tvt")]
 position = Vector2(1344, 66)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]

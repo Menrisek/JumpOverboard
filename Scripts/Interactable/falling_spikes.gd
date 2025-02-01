@@ -8,6 +8,7 @@ class_name FallingSpikes
 @export var time_to_live = 2.5
 #(-1,0)= levo, (1,0) = pravo, (0,-1) = nahoru, můžu i diagonálně (1,1),(-1,1)// kdyžtak se zeptat lukáše atd.
 @export var direction: Vector2 = Vector2(0, 1)
+@export var shake : bool = true
 
 var current_speed = 0.0
 
@@ -21,8 +22,10 @@ func _on_hitbox_area_entered(area):
 
 
 func _on_player_detection_zone_area_entered(area):
-	if area.get_parent() is Player:
+	if area.get_parent() is Player and shake:
 		animation.play("Shake")
+	elif area.get_parent() is Player and !shake:
+		fall()
 
 #je použita v animation playeru
 func fall():

@@ -7,22 +7,32 @@ class_name Player
 
 @export var speed = 300.0
 @export var jump_height = -400.0
-@export var attacking = false
-@export var hit = false
+var attacking = false
+var hit = false
 
 @export var max_health = 2
 @onready var health = 0
+var hearts_list : Array[TextureRect]
 var can_take_damage = true
 var current_position_x = velocity.x
+
+var time = GameManager.speedrun_time
 
 func _ready():
 	GameManager.damage_taken = 0
 	health = max_health
 	GameManager.player = self
+	time = 0
+	#kolik má srdcí tak tolik to zobrazí
+	var hearts_parent = $PlayerUI/HeartsContainer
+	for child in hearts_parent.get_children():
+		hearts_list.append(child)
 
-func _process(_delta):
+func _process(delta):
 	if Input.is_action_just_pressed("attack") && !hit:
 		attack()
+	time = float(time) + delta
+	update_ui()
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("left"):
@@ -71,7 +81,8 @@ func update_animation():
 func die():
 	GameManager.deaths += 1
 	GameManager.respawn_player()
-	get_node("Healthbar").update_healthbar(health, max_health)
+	update_heart_display()
+	# ZDE KDYBYCH CHTĚL HEALTHBAR POD HRÁČEM: get_node("Healthbar").update_healthbar(health, max_health)
 
 func attack():
 	var overlapping_objects = attack_area.get_overlapping_areas()
@@ -103,13 +114,43 @@ func take_damage(damage_amouth : int):
 		health -= damage_amouth
 		print("Current health: " + str(health))
 		#není to dokonalé, ale jinak takto funguje health bar pod hráčem (+ ve funkci die() je stejný bar)
-		get_node("Healthbar").update_healthbar(health, max_health)
+		# ZDE KDYBYCH CHTĚL HEALTHBAR POD HRÁČEM: get_node("Healthbar").update_healthbar(health, max_health)
+		update_heart_display()
 		
 		if health <= 0:
 			die()
+
+#updatování srdíček
+func update_heart_display():
+	for i in range(hearts_list.size()):
+		hearts_list[i].visible = i < health
+
+func heal(amount: int):
+	if health < max_health:
+		health += amount
+		#zajistím aby zdraví nepřekročilo maximum
+		health = min(health, max_health)
+		#aktualizuju zobrazení srdcí
+		update_heart_display()
+		print("Healed! Current health: " + str(health))
+	else:
+		print("Health is already full!")
+
 #hráč nemůže dostávat poškození
 func immunityframes():
 	can_take_damage = false
 	#hráč bude mít imunitu na x sekundy
 	await get_tree().create_timer(0.2).timeout
 	can_take_damage = true
+
+func update_ui():
+	#formás s dvěma decimálníma číslama
+	var formatted_time = str(time)
+	var decimal_index = formatted_time.find(".")
+	
+	if decimal_index > 0:
+		formatted_time = formatted_time.left(decimal_index + 3)  #vezme to jen 2 decimální místa
+	
+	GameManager.speedrun_time = formatted_time
+	
+	$PlayerUI/SpeedrunTimer.text = formatted_time

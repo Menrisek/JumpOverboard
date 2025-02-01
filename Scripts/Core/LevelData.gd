@@ -34,6 +34,7 @@ func generate_level(level):
 			"max_enemies_beaten" : 0,
 			"damage_taken" : 0,
 			"deaths" : 0,
+			"timer" : 0,
 			"unlocks" : generate_level_number(level),
 			"beaten" : false,
 		}
@@ -53,7 +54,7 @@ func generate_level_number(level):
 	return "Level" + str(level_number)
 
 #funcke na updatování lvlů (datové typy jsou už předtím definované)
-func update_level(level, score, max_score, coins, max_coins, enemies_beaten, max_enemies_beaten, damage_taken, deaths, beaten):
+func update_level(level, score, max_score, coins, max_coins, enemies_beaten, max_enemies_beaten, damage_taken, deaths, timer, beaten):
 	level_dictionary[level]["score"] = score
 	level_dictionary[level]["max_score"] = max_score
 	level_dictionary[level]["coins"] = coins
@@ -62,5 +63,6 @@ func update_level(level, score, max_score, coins, max_coins, enemies_beaten, max
 	level_dictionary[level]["max_enemies_beaten"] = max_enemies_beaten
 	level_dictionary[level]["damage_taken"] = damage_taken
 	level_dictionary[level]["deaths"] = deaths
+	level_dictionary[level]["timer"] = timer
 	level_dictionary[level]["beaten"] = beaten
 	print(level_dictionary)
