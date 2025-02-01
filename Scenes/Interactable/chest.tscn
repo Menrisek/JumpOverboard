@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw3854j6u431o"]
+
+[ext_resource type="Script" path="res://Scripts/Interactable/chest.gd" id="1_bsgg6"]
+[ext_resource type="Texture2D" uid="uid://cmt47jhxasc6y" path="res://Art/Palm Tree Island/Sprites/Objects/Chest/Chest Close 01.png" id="1_ryiy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiwrq"]
+size = Vector2(30, 24)
+
+[node name="Chest" type="Node2D" groups=["Enemies"]]
+script = ExtResource("1_bsgg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ryiy1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_aiwrq")

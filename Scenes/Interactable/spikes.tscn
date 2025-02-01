@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mc1uh105jpav"]
+
+[ext_resource type="Texture2D" uid="uid://dfbayclakaw1h" path="res://Art/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_lp8n5"]
+[ext_resource type="Script" path="res://Scripts/Interactable/spikes.gd" id="1_tfnd5"]
+
+[node name="Spikes" type="Node2D"]
+script = ExtResource("1_tfnd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lp8n5")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-16, 16, -16, 10, -13, 5, -7, 3, -5, 0, -4, 0, 0, 5, 3, 3, 7, 5, 11, 1, 12, 1, 15, 6, 15, 16)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

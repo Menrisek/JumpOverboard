@@ -1,0 +1,735 @@
+[gd_scene load_steps=30 format=3 uid="uid://cd65ved8crkmy"]
+
+[ext_resource type="Texture2D" uid="uid://ch70c123fh43" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_jim1w"]
+[ext_resource type="Script" path="res://Scripts/Core/WorldMap.gd" id="1_wpf7j"]
+[ext_resource type="Texture2D" uid="uid://b2saoxk6o5y4u" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="2_1hwth"]
+[ext_resource type="Texture2D" uid="uid://bsrjb0q4ix33q" path="res://Art/World Map/World Map.png" id="2_274kt"]
+[ext_resource type="Script" path="res://Scripts/Core/WorldMapLevel.gd" id="2_rdguj"]
+[ext_resource type="Texture2D" uid="uid://38vjocs50d1t" path="res://Art/World Map/Locked.png" id="3_rrpgb"]
+[ext_resource type="Texture2D" uid="uid://dms6d1h1bp0am" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xqcxy"]
+[ext_resource type="Texture2D" uid="uid://demr2vb8p7hyh" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_k6ub6"]
+[ext_resource type="Texture2D" uid="uid://dtglk5yag70x1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="5_l3fuw"]
+[ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="5_ns6p6"]
+[ext_resource type="Texture2D" uid="uid://d3svsl4r8ttqe" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="6_06hwi"]
+[ext_resource type="Texture2D" uid="uid://b2ylevubvmh2j" path="res://Art/World Map/Skull.png" id="6_icit8"]
+[ext_resource type="Texture2D" uid="uid://cysc1j4n6wcho" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="7_eopa5"]
+[ext_resource type="Texture2D" uid="uid://bao8f4iwe5n4y" path="res://Art/World Map/Nohit.png" id="7_r6m06"]
+[ext_resource type="Texture2D" uid="uid://c4sy6smyohdk6" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="8_rwbmq"]
+[ext_resource type="Texture2D" uid="uid://chlt3e5y8vmeq" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="9_7gfrr"]
+[ext_resource type="Texture2D" uid="uid://fe1oqbkhekiv" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="10_3rgg2"]
+[ext_resource type="Texture2D" uid="uid://qf5hh1imk58c" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="11_nv36p"]
+[ext_resource type="Texture2D" uid="uid://bs4froela1jyo" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="12_68veu"]
+[ext_resource type="Texture2D" uid="uid://d063y6ot8tlro" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="13_ywl50"]
+[ext_resource type="Texture2D" uid="uid://bibss45xewl1v" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="14_jg6u5"]
+
+[sub_resource type="Animation" id="Animation_4nca5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DisplayCoins:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-9.45207, -10.7463)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DisplayCoins:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DisplayEnemies:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.93391e-06, -14.3284)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DisplayEnemies:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DisplayHits:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.0411, -10.7463)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DisplayHits:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ne5yh"]
+resource_name = "show"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DisplayCoins:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-9.45207, -10.7463)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DisplayCoins:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DisplayEnemies:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-3.93391e-06, -14.3284)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DisplayEnemies:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DisplayHits:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(9.0411, -10.7463)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DisplayHits:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_66m1q"]
+_data = {
+"RESET": SubResource("Animation_4nca5"),
+"show": SubResource("Animation_ne5yh")
+}
+
+[sub_resource type="Animation" id="Animation_mbxmc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_jim1w")]
+}
+
+[sub_resource type="Animation" id="Animation_6nx36"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_jim1w"), ExtResource("2_1hwth"), ExtResource("3_xqcxy"), ExtResource("4_k6ub6"), ExtResource("5_l3fuw")]
+}
+
+[sub_resource type="Animation" id="Animation_4lavj"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_06hwi"), ExtResource("7_eopa5"), ExtResource("8_rwbmq"), ExtResource("9_7gfrr"), ExtResource("10_3rgg2"), ExtResource("11_nv36p")]
+}
+
+[sub_resource type="Animation" id="Animation_nm4vp"]
+resource_name = "select"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_68veu"), ExtResource("13_ywl50"), ExtResource("14_jg6u5")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a21r6"]
+_data = {
+"RESET": SubResource("Animation_mbxmc"),
+"idle": SubResource("Animation_6nx36"),
+"run": SubResource("Animation_4lavj"),
+"select": SubResource("Animation_nm4vp")
+}
+
+[node name="WorldMap" type="Node2D"]
+script = ExtResource("1_wpf7j")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2063.0
+offset_top = -1972.0
+offset_right = -1663.0
+offset_bottom = -1572.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.572549, 0.662745, 0.807843, 1)
+
+[node name="Map" type="TextureRect" parent="."]
+offset_left = -456.0
+offset_top = -264.0
+offset_right = -171.0
+offset_bottom = -105.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_274kt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Main menu" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -70.0
+offset_right = 219.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "Back to main menu"
+
+[node name="CoinIcon" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -51.0
+offset_right = -34.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("5_ns6p6")
+
+[node name="CoinDisplay" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -51.0
+offset_right = -85.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.2, 0.196078, 0.239216, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 2
+clip_text = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -295.0
+offset_top = -245.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CoinInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(259, 107)
+scale = Vector2(5, 5)
+texture = ExtResource("6_icit8")
+
+[node name="SkullInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(262, 167)
+scale = Vector2(5, 5)
+texture = ExtResource("7_r6m06")
+
+[node name="NoHitInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(256, 40)
+scale = Vector2(5, 5)
+texture = ExtResource("5_ns6p6")
+
+[node name="LevelHolder" type="Node2D" parent="."]
+
+[node name="Level1" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("right")]
+position = Vector2(-204, 160)
+script = ExtResource("2_rdguj")
+right = NodePath("../Level2")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level1"]
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level1"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level1/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level2" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+position = Vector2(-48, 123)
+script = ExtResource("2_rdguj")
+left = NodePath("../Level1")
+right = NodePath("../Level3")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level2"]
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level2"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level2/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level3" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "left", "right")]
+position = Vector2(171, 154)
+script = ExtResource("2_rdguj")
+up = NodePath("../Level4")
+left = NodePath("../Level2")
+right = NodePath("../Level4")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level3"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level3"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level3/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level4" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left")]
+position = Vector2(291, 49)
+script = ExtResource("2_rdguj")
+down = NodePath("../Level3")
+left = NodePath("../Level5")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level4"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level4"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level4/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level5" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+position = Vector2(22, -12)
+script = ExtResource("2_rdguj")
+left = NodePath("../Level6")
+right = NodePath("../Level4")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level5"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level5"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level5/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level6" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+position = Vector2(-159, -5)
+script = ExtResource("2_rdguj")
+left = NodePath("../Level7")
+right = NodePath("../Level5")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level6"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level6"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level6/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level7" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "right")]
+position = Vector2(-365, -46)
+script = ExtResource("2_rdguj")
+up = NodePath("../Level8")
+right = NodePath("../Level6")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level7"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level7"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level7/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level8" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left", "right")]
+position = Vector2(-198, -177)
+script = ExtResource("2_rdguj")
+down = NodePath("../Level7")
+left = NodePath("../Level7")
+right = NodePath("../Level9")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level8"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level8"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level8/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level9" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+position = Vector2(65, -204)
+script = ExtResource("2_rdguj")
+left = NodePath("../Level8")
+right = NodePath("../Level10")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level9"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level9"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level9/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Level10" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left")]
+position = Vector2(299, -153)
+script = ExtResource("2_rdguj")
+left = NodePath("../Level9")
+
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level10"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(2.43333, 2.23333)
+texture = ExtResource("3_rrpgb")
+
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level10"]
+visible = false
+position = Vector2(0, -3.69549e-06)
+scale = Vector2(2.43333, 2.23333)
+
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+position = Vector2(-9.45207, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_ns6p6")
+
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+position = Vector2(-3.93391e-06, -14.3284)
+scale = Vector2(0.761, 0.75)
+texture = ExtResource("6_icit8")
+
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+position = Vector2(9.0411, -10.7463)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_r6m06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level10/StatsDisplay"]
+libraries = {
+"": SubResource("AnimationLibrary_66m1q")
+}
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(-213, 157)
+texture = ExtResource("1_jim1w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+"": SubResource("AnimationLibrary_a21r6")
+}
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, -1)
+zoom = Vector2(3.5, 3.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[connection signal="pressed" from="CanvasLayer/Main menu" to="." method="_on_main_menu_pressed"]

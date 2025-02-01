@@ -1,0 +1,144 @@
+[gd_scene load_steps=20 format=3 uid="uid://dgdoy45wl66xt"]
+
+[ext_resource type="Script" path="res://Scripts/Interactable/Cannon/cannon.gd" id="1_2j8br"]
+[ext_resource type="Texture2D" uid="uid://bj3l4b0hcjkt1" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Idle/1.png" id="1_km1j0"]
+[ext_resource type="Texture2D" uid="uid://cug81x11076qq" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/1.png" id="3_5vvdx"]
+[ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="3_i35x5"]
+[ext_resource type="Texture2D" uid="uid://d1wgfo7t2kxun" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/2.png" id="4_4lybi"]
+[ext_resource type="Texture2D" uid="uid://b5p7hn7j66wid" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/3.png" id="5_1vogu"]
+[ext_resource type="Texture2D" uid="uid://yi4m1rjgsc2w" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/4.png" id="6_ed0ax"]
+[ext_resource type="Texture2D" uid="uid://b4eqahbq8swv3" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/5.png" id="7_cmtdp"]
+[ext_resource type="Texture2D" uid="uid://b273u21plh21r" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/6.png" id="8_nwa1p"]
+[ext_resource type="Texture2D" uid="uid://bmkfg0vi34ro0" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/1.png" id="9_ie2ku"]
+[ext_resource type="Texture2D" uid="uid://qtl2a6wqndf3" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/2.png" id="10_ccv3u"]
+[ext_resource type="Texture2D" uid="uid://dl68c342i1r5" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/3.png" id="11_jncys"]
+[ext_resource type="Texture2D" uid="uid://cettr86g2tals" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/4.png" id="12_xb8le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok0ho"]
+size = Vector2(23, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yi3k2"]
+size = Vector2(28, 23)
+
+[sub_resource type="Animation" id="Animation_e3uy0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_km1j0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:shooting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_a6cuk"]
+resource_name = "fire"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_5vvdx"), ExtResource("4_4lybi"), ExtResource("5_1vogu"), ExtResource("6_ed0ax"), ExtResource("7_cmtdp"), ExtResource("8_nwa1p")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fire"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3jylq"]
+resource_name = "hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_ie2ku"), ExtResource("10_ccv3u"), ExtResource("11_jncys"), ExtResource("12_xb8le")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:shooting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qie3q"]
+_data = {
+"RESET": SubResource("Animation_e3uy0"),
+"fire": SubResource("Animation_a6cuk"),
+"hit": SubResource("Animation_3jylq")
+}
+
+[node name="Canon" type="StaticBody2D" groups=["Enemies"]]
+script = ExtResource("1_2j8br")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_km1j0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_ok0ho")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitoring = false
+
+[node name="Hitbox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_yi3k2")
+
+[node name="Firepoint" type="Marker2D" parent="."]
+position = Vector2(-15, -2)
+scale = Vector2(-1, 1)
+
+[node name="Healthbar" parent="." instance=ExtResource("3_i35x5")]
+visible = false
+offset_top = -12.0
+offset_bottom = -12.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qie3q")
+}
