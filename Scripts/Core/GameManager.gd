@@ -37,12 +37,12 @@ func win():
 	win_screen.visible = true
 	#zobrazuje na winscreenu staty
 	score_label.text = "Your Score: " + str(score)
-	speedrun_time_label.text = "Your Time: " + str(speedrun_time)
 	death_label.text = "Deaths " + str(deaths)
 	coin_label.text = "Coins: " + str(coins)
 	#zastaví se hra po 0.1 sec po dotknutí výherní vlajky
 	await get_tree().create_timer(0.1).timeout
 	get_tree().paused = true
+	speedrun_time_label.text = "Your Time: " + str(speedrun_time)
 
 func pause_play():
 	paused = !paused

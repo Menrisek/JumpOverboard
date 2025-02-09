@@ -329,7 +329,7 @@ horizontal_alignment = 2
 vertical_alignment = 2
 clip_text = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="Icons Container" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -340,20 +340,62 @@ offset_top = -245.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="CoinInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
-position = Vector2(259, 107)
-scale = Vector2(5, 5)
-texture = ExtResource("6_icit8")
-
-[node name="SkullInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+[node name="SkullInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
 position = Vector2(262, 167)
 scale = Vector2(5, 5)
 texture = ExtResource("7_r6m06")
 
-[node name="NoHitInfo" type="Sprite2D" parent="CanvasLayer/HBoxContainer"]
+[node name="CoinInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
+position = Vector2(259, 107)
+scale = Vector2(5, 5)
+texture = ExtResource("6_icit8")
+
+[node name="NoHitInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
 position = Vector2(256, 40)
 scale = Vector2(5, 5)
 texture = ExtResource("5_ns6p6")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -215.0
+offset_top = -214.0
+offset_right = -67.0
+offset_bottom = -191.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Collected all coins -"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -215.0
+offset_top = -150.0
+offset_right = -70.0
+offset_bottom = -127.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Killed all enemies -"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -85.0
+offset_right = -71.0
+offset_bottom = -62.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Finished without getting hit -"
 
 [node name="LevelHolder" type="Node2D" parent="."]
 

@@ -27,6 +27,7 @@ func _ready():
 	var hearts_parent = $PlayerUI/HeartsContainer
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
+	level_intro_text()
 
 func _process(delta):
 	if Input.is_action_just_pressed("attack") && !hit:
@@ -64,6 +65,11 @@ func _physics_process(delta):
 	if position.y >= 400:
 		die()
 
+#není potřeba protože nemůžu proskakovat platformami
+func _input(event):
+	if event.is_action_pressed("down") && is_on_floor():
+		position.y +=1
+
 func update_animation():
 	if !attacking && !hit:
 		#Animace běhu a idlu
@@ -93,11 +99,6 @@ func attack():
 	
 	attacking = true
 	animation.play("attack2")
-
-#není potřeba protože nemůžu proskakovat platformami
-func _input(event):
-	if event.is_action_pressed("down") && is_on_floor():
-		position.y +=5
 
 func take_damage(damage_amouth : int):
 	if can_take_damage:
@@ -144,7 +145,7 @@ func immunityframes():
 	can_take_damage = true
 
 func update_ui():
-	#formás s dvěma decimálníma číslama
+	#formát s dvěmi decimálními čísly
 	var formatted_time = str(time)
 	var decimal_index = formatted_time.find(".")
 	
@@ -154,3 +155,8 @@ func update_ui():
 	GameManager.speedrun_time = formatted_time
 	
 	$PlayerUI/SpeedrunTimer.text = formatted_time
+	
+func level_intro_text():
+	$PlayerUI/LevelNumber/AnimationPlayer.play("level_title_appear")
+	#title je nadefinován v RunTimeLevelu
+	$PlayerUI/LevelNumber.text = get_parent().level_title

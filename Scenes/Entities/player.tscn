@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene load_steps=43 format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -37,6 +37,43 @@ height = 28.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ayb"]
 size = Vector2(19, 20)
 
+[sub_resource type="Animation" id="Animation_ppdhv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ukrnk"]
+resource_name = "level_title_appear"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1, 3.03333, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c6ssy"]
+_data = {
+"RESET": SubResource("Animation_ppdhv"),
+"level_title_appear": SubResource("Animation_ukrnk")
+}
+
 [sub_resource type="Animation" id="Animation_yyty4"]
 length = 0.001
 tracks/0/type = "value"
@@ -74,6 +111,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerUI/LevelNumber:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3q5ea"]
@@ -324,6 +373,23 @@ offset_left = -54.0
 offset_bottom = 23.0
 grow_horizontal = 0
 text = "100.00"
+
+[node name="LevelNumber" type="Label" parent="PlayerUI"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_right = 27.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+text = "Level 1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerUI/LevelNumber"]
+libraries = {
+"": SubResource("AnimationLibrary_c6ssy")
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
