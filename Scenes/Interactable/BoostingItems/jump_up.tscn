@@ -1,22 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6tbtl8d223r5"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable/BoostingItems/jump_up.gd" id="1_itgrn"]
-[ext_resource type="Texture2D" uid="uid://dm76jdewa2wuf" path="res://Art/Boosting Items/zajic.png" id="2_exc13"]
+[ext_resource type="Texture2D" uid="uid://bl0hun0cqoqmp" path="res://Art/Boosting Items/JumpBoost.png" id="2_psxbu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m2lvi"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_of0s5"]
+size = Vector2(16, 16.75)
 
 [node name="JumpUp" type="Node2D"]
 script = ExtResource("1_itgrn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.007, 0.007)
-texture = ExtResource("2_exc13")
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_psxbu")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_m2lvi")
+shape = SubResource("RectangleShape2D_of0s5")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

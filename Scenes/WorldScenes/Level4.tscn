@@ -868,7 +868,7 @@ position = Vector2(2007, 247)
 force = -460.0
 
 [node name="JumpUp" parent="." instance=ExtResource("15_f3pyu")]
-position = Vector2(2102, 134)
+position = Vector2(2099, 135)
 
 [node name="Canon2" parent="." instance=ExtResource("11_fc1t1")]
 position = Vector2(3166, 116)

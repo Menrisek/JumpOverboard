@@ -7,6 +7,7 @@
 size = Vector2(14, 16)
 
 [node name="HealUp" type="Node2D"]
+scale = Vector2(1.25, 1.25)
 script = ExtResource("1_1ttxp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

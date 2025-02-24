@@ -1,24 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmxlrk2br3k7s"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable/BoostingItems/speed_up.gd" id="1_a6jh7"]
-[ext_resource type="Texture2D" uid="uid://cfsqw8771rb2j" path="res://Art/Icons/cjhead.png" id="2_xd2du"]
+[ext_resource type="Texture2D" uid="uid://bci22oly3t21j" path="res://Art/Boosting Items/SpeedBoost.png" id="2_jwoe4"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4di0p"]
-radius = 7.0
-height = 28.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hnv7"]
+size = Vector2(23.5, 18)
 
 [node name="SpeedUp" type="Node2D"]
 script = ExtResource("1_a6jh7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("2_xd2du")
+texture = ExtResource("2_jwoe4")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_4di0p")
+shape = SubResource("RectangleShape2D_3hnv7")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
