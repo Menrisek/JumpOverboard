@@ -14,7 +14,7 @@ func _on_load_pressed():
 	
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	print("LOAD OPTIONS MENU")
 
 func _on_world_map_pressed():
 	GameManager.load_world()
