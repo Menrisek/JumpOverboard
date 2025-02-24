@@ -1,21 +1,21 @@
-[gd_resource type="Resource" script_class="SaveData" load_steps=2 format=3 uid="uid://dl37oy0mqfi2v"]
+[gd_resource type="Resource" script_class="SaveData" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Core/SaveData.gd" id="1_bepli"]
+[ext_resource type="Script" path="res://Scripts/Core/SaveData.gd" id="1_5tbyi"]
 
 [resource]
-script = ExtResource("1_bepli")
+script = ExtResource("1_5tbyi")
 level_dictionary = {
 "Level1": {
 "beaten": true,
 "coins": 32,
 "damage_taken": 0,
-"deaths": 3,
+"deaths": 0,
 "enemies_beaten": 0,
 "max_coins": 37,
 "max_enemies_beaten": 0,
 "max_score": 370,
 "score": 320,
-"timer": "58.09",
+"timer": "22.53",
 "unlocked": true,
 "unlocks": "Level2"
 },
