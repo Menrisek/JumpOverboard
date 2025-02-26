@@ -70,5 +70,9 @@ func load_main_menu():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Main menu/main_menu.tscn")
 
+func load_options_menu():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Main menu/options_menu.tscn")
+
 func quit():
 	get_tree().quit()

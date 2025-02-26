@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyregojhxb3o0"]
+[gd_scene load_steps=7 format=3 uid="uid://dyregojhxb3o0"]
 
 [ext_resource type="Script" path="res://Scripts/Core/main_menu.gd" id="1_3v0hf"]
 [ext_resource type="VideoStream" path="res://Art/Main Menu/IntroVideo.ogv" id="2_6hvww"]
+[ext_resource type="PackedScene" uid="uid://rrsh74vfp75c" path="res://Scenes/WorldScenes/Main menu/options_menu.tscn" id="3_0uttk"]
+[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="4_780r2"]
 
 [sub_resource type="SystemFont" id="SystemFont_annme"]
 font_names = PackedStringArray("Impact")
@@ -84,6 +86,15 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "JUMP OVERBOARD"
 label_settings = SubResource("LabelSettings_68qry")
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_0uttk")]
+visible = false
+layout_mode = 1
+
+[node name="Soundtrack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_780r2")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
