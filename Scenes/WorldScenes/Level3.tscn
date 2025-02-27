@@ -809,6 +809,7 @@ shadow_color = Color(0, 0, 0, 0.682353)
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_2bsto")
+level_title = "Tornado Of Souls"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -895.0
@@ -1073,6 +1074,27 @@ offset_right = 350.0
 offset_bottom = -10.0
 grow_vertical = 0
 text = "World map"
+
+[node name="LoreTornado" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 260.0
+offset_bottom = 32.0
+text = "I wonder what little tornado does"
+
+[node name="LoreJump" type="Label" parent="."]
+offset_left = 2321.0
+offset_top = -474.0
+offset_right = 2465.0
+offset_bottom = -451.0
+text = "You are not Kratos"
+
+[node name="LoreJump2" type="Label" parent="."]
+offset_left = 2402.0
+offset_top = -119.0
+offset_right = 2551.0
+offset_bottom = -96.0
+text = "...or maybe you are"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_ygnqc")
