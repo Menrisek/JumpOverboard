@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene load_steps=48 format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://blf43x4wj8q07" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 02.png" id="29_3x5om"]
 [ext_resource type="Texture2D" uid="uid://bmi7bhdwn761j" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 03.png" id="30_t6do6"]
 [ext_resource type="Texture2D" uid="uid://b8lxkoaartf11" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 04.png" id="31_3hcnw"]
+[ext_resource type="AudioStream" uid="uid://6r62d24060kf" path="res://Audio/SoundEffects/Player/Roblox Sword Equip - Sound Effect [Free No Copyright].wav" id="32_7tg0t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3krsy"]
 height = 26.0
@@ -414,3 +415,7 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_oqntf")
 }
+
+[node name="SFX Sword Swing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_7tg0t")
+volume_db = -15.0

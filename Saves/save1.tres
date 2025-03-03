@@ -1,11 +1,67 @@
-[gd_resource type="Resource" script_class="SaveData" load_steps=2 format=3 uid="uid://qnxlvqp1wt5x"]
+[gd_resource type="Resource" script_class="SaveData" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Core/SaveData.gd" id="1_sbrkj"]
+[ext_resource type="Script" path="res://Scripts/Core/SaveData.gd" id="1_d0y3f"]
 
 [resource]
-script = ExtResource("1_sbrkj")
+script = ExtResource("1_d0y3f")
 level_dictionary = {
 "Level1": {
+"beaten": true,
+"coins": 36,
+"damage_taken": 0,
+"deaths": 0,
+"enemies_beaten": 0,
+"max_coins": 37,
+"max_enemies_beaten": 0,
+"max_score": 370,
+"score": 360,
+"timer": "23.68",
+"unlocked": true,
+"unlocks": "Level2"
+},
+"Level2": {
+"beaten": true,
+"coins": 39,
+"damage_taken": 0,
+"deaths": 36,
+"enemies_beaten": 0,
+"max_coins": 39,
+"max_enemies_beaten": 0,
+"max_score": 390,
+"score": 390,
+"timer": "237.01",
+"unlocked": true,
+"unlocks": "Level3"
+},
+"Level3": {
+"beaten": true,
+"coins": 59,
+"damage_taken": 0,
+"deaths": 23,
+"enemies_beaten": 0,
+"max_coins": 59,
+"max_enemies_beaten": 0,
+"max_score": 590,
+"score": 590,
+"timer": "215.18",
+"unlocked": true,
+"unlocks": "Level4"
+},
+"Level4": {
+"beaten": true,
+"coins": 30,
+"damage_taken": 1,
+"deaths": 13,
+"enemies_beaten": 6,
+"max_coins": 65,
+"max_enemies_beaten": 16,
+"max_score": 2250,
+"score": 900,
+"timer": "160.79",
+"unlocked": true,
+"unlocks": "Level5"
+},
+"Level5": {
 "beaten": false,
 "coins": 0,
 "damage_taken": 0,
@@ -17,6 +73,6 @@ level_dictionary = {
 "score": 0,
 "timer": 0,
 "unlocked": true,
-"unlocks": "Level2"
+"unlocks": "Level6"
 }
 }

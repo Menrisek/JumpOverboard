@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6r62d24060kf"
+path="res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"
+
+[deps]
+
+source_file="res://Audio/SoundEffects/Player/Roblox Sword Equip - Sound Effect [Free No Copyright].wav"
+dest_files=["res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

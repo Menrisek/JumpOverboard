@@ -4,6 +4,7 @@ class_name Player
 @onready var animation= $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var attack_area = $AttackArea
+@onready var sfx_sword_swing = $"SFX Sword Swing"
 
 @export var speed = 300.0
 @export var jump_height = -400.0
@@ -98,6 +99,7 @@ func attack():
 			area.get_parent().take_damage(1)
 	
 	attacking = true
+	sfx_sword_swing.play()
 	animation.play("attack2")
 
 func take_damage(damage_amouth : int):
