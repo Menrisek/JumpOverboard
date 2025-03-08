@@ -3,10 +3,12 @@ extends Node
 var save_path = "user://Saves/"
 var save_name = "save1.tres"
 
+
 var save_data = SaveData.new()
 
 func save_game():
 	#přepisuje level_dictionary v Level data
+	DirAccess.make_dir_absolute(save_path)
 	save_data.level_dictionary = LevelData.level_dictionary
 	ResourceSaver.save(save_data, save_path + save_name)
 

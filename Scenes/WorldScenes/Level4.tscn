@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cnqta3njudydv"]
+[gd_scene load_steps=28 format=4 uid="uid://cnqta3njudydv"]
 
 [ext_resource type="Script" path="res://Scripts/Core/RunTimeLevel.gd" id="1_i6khi"]
 [ext_resource type="Texture2D" uid="uid://ch77liydluqj1" path="res://Art/Palm Tree Island/Sprites/Background/BG Image.png" id="2_83ik0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_me2e3"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="10_i4lms"]
 [ext_resource type="PackedScene" uid="uid://bm4hkqi2x4k2p" path="res://Scenes/Interactable/coin.tscn" id="10_rr7s1"]
+[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="11_uocx8"]
 [ext_resource type="PackedScene" uid="uid://ctx6tx0t2e8ag" path="res://Scenes/Interactable/falling_spikes.tscn" id="12_1l4yu"]
 [ext_resource type="PackedScene" uid="uid://bjpdewaeiii73" path="res://Scenes/Enemies/sharkie.tscn" id="12_vfg65"]
 [ext_resource type="PackedScene" uid="uid://b8wub4clrsene" path="res://Scenes/Interactable/jump_pad.tscn" id="13_ys6wn"]
@@ -1065,6 +1066,11 @@ offset_right = 350.0
 offset_bottom = -10.0
 grow_vertical = 0
 text = "World map"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_uocx8")
+volume_db = -20.0
+autoplay = true
 
 [node name="LoreSharks" type="Label" parent="."]
 offset_left = -112.0
