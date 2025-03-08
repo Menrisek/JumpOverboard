@@ -1,5 +1,5 @@
 res://Scenes/Enemies/sharkie.tscn::0232e34ad8f18480152c1bd1c4c19400::1739098772::res://godot/exported/133200997/export-f66565ed23dfaa7751ca20fa41b74cc6-sharkie.scn
-res://Scenes/Entities/player.tscn::460e5d06561bbff3ae7814345e453473::1741434332::res://godot/exported/133200997/export-451bebc45433b6ac2e7ea82126ce8736-player.scn
+res://Scenes/Entities/player.tscn::05ae3ab6ae939f4e7ec5149846702312::1741440228::res://godot/exported/133200997/export-451bebc45433b6ac2e7ea82126ce8736-player.scn
 res://Scenes/Interactable/BoostingItems/heal_up.tscn::051a2823ef76ba609dd01c79813b2b89::1740419561::res://godot/exported/133200997/export-c72250d9ff4c8001030d823f4c7f5e30-heal_up.scn
 res://Scenes/Interactable/BoostingItems/jump_up.tscn::9e8e9f0638bfc109c0e756ff3fb0cc54::1740419561::res://godot/exported/133200997/export-619085a668c19ec7f611b8edf1f4ebaa-jump_up.scn
 res://Scenes/Interactable/BoostingItems/speed_up.tscn::ab68123db0e21fc4aa5acce101b64974::1740419561::res://godot/exported/133200997/export-1f955186b930d8950aa1de6d5240e37c-speed_up.scn
@@ -17,16 +17,16 @@ res://Scenes/Interactable/one_way_platform_small.tscn::e81451010e264ffc67cd57f35
 res://Scenes/Interactable/revealable_platform.tscn::976eb6ea820f48bb55c0e3eaf35ecfea::1739098772::res://godot/exported/133200997/export-41c38250440dc16307c6705deb89eedb-revealable_platform.scn
 res://Scenes/Interactable/spikes.tscn::5eca233b189376615b0af17fa13685ed::1739098772::res://godot/exported/133200997/export-179229ff1440fcddd1b762bce68445da-spikes.scn
 res://Scenes/UI/healthbar.tscn::45cd73853df3c2d3d34d7449b4f08ff6::1740407153::res://godot/exported/133200997/export-39da0b312f8e5378dce5456376c27403-healthbar.scn
-res://Scenes/WorldScenes/Main menu/main_menu.tscn::700bbf614237dbc447cb98e90aacd16f::1741434330::res://godot/exported/133200997/export-a5a616d779854aa0b0b31928d16d84cc-main_menu.scn
-res://Scenes/WorldScenes/Main menu/options_menu.tscn::fe9f13b767b45bb15ba99d78a18d9edc::1741434330::res://godot/exported/133200997/export-cd2278899345a172330281e28d6ab7db-options_menu.scn
-res://Scenes/WorldScenes/Level1.tscn::2fbc983b401c97725b0be12c8f1c4478::1741434331::res://godot/exported/133200997/export-5c463fc7e748b74eee61ef88f7548e91-Level1.scn
-res://Scenes/WorldScenes/Level2.tscn::d371f87478062d177bad4af39d4d2489::1741434331::res://godot/exported/133200997/export-0f83db9e8dced98d72fce458485b317a-Level2.scn
-res://Scenes/WorldScenes/Level3.tscn::42ec4a1ff7a74cd3015e77bc96151efe::1741434331::res://godot/exported/133200997/export-52d8bae0c33d0f7c0d2865fa73c596c2-Level3.scn
-res://Scenes/WorldScenes/Level4.tscn::79b5b752dc40b47c51e5d2927252bfa0::1741435564::res://godot/exported/133200997/export-6ccef31473e9ebc79db58a3ad371e412-Level4.scn
-res://Scenes/WorldScenes/Level5.tscn::550798a0d49758cbdca68c0720955b2f::1741434332::res://godot/exported/133200997/export-a65a836a88624e0c71e262bb4da5b200-Level5.scn
-res://Scenes/WorldScenes/Level6.tscn::3dc1b7dda37f9dcec53d8ccc65751e02::1741434332::res://godot/exported/133200997/export-27ae810ac43d65883bdbf43a4dee9f02-Level6.scn
+res://Scenes/WorldScenes/Main menu/main_menu.tscn::700bbf614237dbc447cb98e90aacd16f::1741440227::res://godot/exported/133200997/export-a5a616d779854aa0b0b31928d16d84cc-main_menu.scn
+res://Scenes/WorldScenes/Main menu/options_menu.tscn::fe9f13b767b45bb15ba99d78a18d9edc::1741440227::res://godot/exported/133200997/export-cd2278899345a172330281e28d6ab7db-options_menu.scn
+res://Scenes/WorldScenes/Level1.tscn::2fbc983b401c97725b0be12c8f1c4478::1741440227::res://godot/exported/133200997/export-5c463fc7e748b74eee61ef88f7548e91-Level1.scn
+res://Scenes/WorldScenes/Level2.tscn::d371f87478062d177bad4af39d4d2489::1741440227::res://godot/exported/133200997/export-0f83db9e8dced98d72fce458485b317a-Level2.scn
+res://Scenes/WorldScenes/Level3.tscn::e7947463dc0bfaceb5617df8a6c3fbf6::1741440227::res://godot/exported/133200997/export-52d8bae0c33d0f7c0d2865fa73c596c2-Level3.scn
+res://Scenes/WorldScenes/Level4.tscn::79b5b752dc40b47c51e5d2927252bfa0::1741440228::res://godot/exported/133200997/export-6ccef31473e9ebc79db58a3ad371e412-Level4.scn
+res://Scenes/WorldScenes/Level5.tscn::550798a0d49758cbdca68c0720955b2f::1741440228::res://godot/exported/133200997/export-a65a836a88624e0c71e262bb4da5b200-Level5.scn
+res://Scenes/WorldScenes/Level6.tscn::3dc1b7dda37f9dcec53d8ccc65751e02::1741440228::res://godot/exported/133200997/export-27ae810ac43d65883bdbf43a4dee9f02-Level6.scn
 res://Scenes/WorldScenes/Level7.tscn::869e5d53e887108696f5dd0ec9a2e9c1::1739098773::res://godot/exported/133200997/export-07e3bdf4ebe7c0fe0f98a885888f7e1d-Level7.scn
 res://Scenes/WorldScenes/Level8.tscn::eca7140eb7d0ec7a363e66593e8bbe92::1739098773::res://godot/exported/133200997/export-12c05b081723f4b4a0c88ac5ac74759a-Level8.scn
 res://Scenes/WorldScenes/Level9.tscn::1b93715282b755b2bb70296f82b05ed2::1739098773::res://godot/exported/133200997/export-77d7f17df6b6ebc290d7be04f5231219-Level9.scn
 res://Scenes/WorldScenes/Level10.tscn::e518616182cf767258473d2fa2fd92ac::1739098773::res://godot/exported/133200997/export-0e72dd414e57fec07f0fc487b3013883-Level10.scn
-res://Scenes/WorldScenes/world_map.tscn::6aaf35e11aead4df3e1f5bc5e0e570cb::1741434332::res://godot/exported/133200997/export-df619d674c59daabd8e1294eed052fe0-world_map.scn
+res://Scenes/WorldScenes/world_map.tscn::6aaf35e11aead4df3e1f5bc5e0e570cb::1741440489::res://godot/exported/133200997/export-df619d674c59daabd8e1294eed052fe0-world_map.scn
