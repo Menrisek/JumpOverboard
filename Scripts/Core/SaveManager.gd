@@ -1,6 +1,6 @@
 extends Node
 
-var save_path = "res://Saves/"
+var save_path = "user://Saves/"
 var save_name = "save1.tres"
 
 var save_data = SaveData.new()
