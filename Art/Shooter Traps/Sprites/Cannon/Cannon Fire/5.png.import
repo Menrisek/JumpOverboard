@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4eqahbq8swv3"
-path="res://.godot/imported/5.png-bb27661c714dc8e98420a75f42c5e618.ctex"
+path="res://godot/imported/5.png-bb27661c714dc8e98420a75f42c5e618.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/5.png"
-dest_files=["res://.godot/imported/5.png-bb27661c714dc8e98420a75f42c5e618.ctex"]
+dest_files=["res://godot/imported/5.png-bb27661c714dc8e98420a75f42c5e618.ctex"]
 
 [params]
 

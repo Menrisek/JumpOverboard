@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dusm6mugsat4"
-path="res://.godot/imported/Flag 05.png-f3e0fcee7486e6ba01c71f894dc3c8f0.ctex"
+path="res://godot/imported/Flag 05.png-f3e0fcee7486e6ba01c71f894dc3c8f0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png"
-dest_files=["res://.godot/imported/Flag 05.png-f3e0fcee7486e6ba01c71f894dc3c8f0.ctex"]
+dest_files=["res://godot/imported/Flag 05.png-f3e0fcee7486e6ba01c71f894dc3c8f0.ctex"]
 
 [params]
 

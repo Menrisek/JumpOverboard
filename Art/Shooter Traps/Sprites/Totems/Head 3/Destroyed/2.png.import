@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu7km5tsv4agx"
-path="res://.godot/imported/2.png-de784cd3dd8dd0688816534fda57a1f1.ctex"
+path="res://godot/imported/2.png-de784cd3dd8dd0688816534fda57a1f1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Shooter Traps/Sprites/Totems/Head 3/Destroyed/2.png"
-dest_files=["res://.godot/imported/2.png-de784cd3dd8dd0688816534fda57a1f1.ctex"]
+dest_files=["res://godot/imported/2.png-de784cd3dd8dd0688816534fda57a1f1.ctex"]
 
 [params]
 

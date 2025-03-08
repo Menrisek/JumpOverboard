@@ -16,6 +16,8 @@ config/name_localized={
 "en": "Jump Overboard"
 }
 run/main_scene="res://Scenes/WorldScenes/Main menu/main_menu.tscn"
+config/use_hidden_project_data_directory=false
+config/use_custom_user_dir=true
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0.329412, 0.105882, 1)
 boot_splash/image="res://Art/Icons/cjhead.png"

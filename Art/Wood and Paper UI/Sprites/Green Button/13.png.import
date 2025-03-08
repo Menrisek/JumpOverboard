@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckfrdkt7nasos"
-path="res://.godot/imported/13.png-2ff6452cfecbeab3bd4c1f24eb00479f.ctex"
+path="res://godot/imported/13.png-2ff6452cfecbeab3bd4c1f24eb00479f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Green Button/13.png"
-dest_files=["res://.godot/imported/13.png-2ff6452cfecbeab3bd4c1f24eb00479f.ctex"]
+dest_files=["res://godot/imported/13.png-2ff6452cfecbeab3bd4c1f24eb00479f.ctex"]
 
 [params]
 

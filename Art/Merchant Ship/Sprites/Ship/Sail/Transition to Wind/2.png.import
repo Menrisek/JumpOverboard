@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xa6dhmxskris"
-path="res://.godot/imported/2.png-894772e0b8a4dbb8d1872a24f72c54cf.ctex"
+path="res://godot/imported/2.png-894772e0b8a4dbb8d1872a24f72c54cf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Sail/Transition to Wind/2.png"
-dest_files=["res://.godot/imported/2.png-894772e0b8a4dbb8d1872a24f72c54cf.ctex"]
+dest_files=["res://godot/imported/2.png-894772e0b8a4dbb8d1872a24f72c54cf.ctex"]
 
 [params]
 

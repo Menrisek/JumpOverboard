@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d04aea3jsn7ri"
-path="res://.godot/imported/07.png-23463525b6993047751867045bed9f7c.ctex"
+path="res://godot/imported/07.png-23463525b6993047751867045bed9f7c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Red Potion/07.png"
-dest_files=["res://.godot/imported/07.png-23463525b6993047751867045bed9f7c.ctex"]
+dest_files=["res://godot/imported/07.png-23463525b6993047751867045bed9f7c.ctex"]
 
 [params]
 

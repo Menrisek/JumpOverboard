@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqiw7slv58wb2"
-path="res://.godot/imported/Run 05.png-8148c5f29c01487e1433c4d3212cca0e.ctex"
+path="res://godot/imported/Run 05.png-8148c5f29c01487e1433c4d3212cca0e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Dust Particles/Run 05.png"
-dest_files=["res://.godot/imported/Run 05.png-8148c5f29c01487e1433c4d3212cca0e.ctex"]
+dest_files=["res://godot/imported/Run 05.png-8148c5f29c01487e1433c4d3212cca0e.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ihb4ykjism7g"
-path="res://.godot/imported/1.png-b750766bab9a36c85f7f83b7c61fe5ac.ctex"
+path="res://godot/imported/1.png-b750766bab9a36c85f7f83b7c61fe5ac.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Barrel/Hit/1.png"
-dest_files=["res://.godot/imported/1.png-b750766bab9a36c85f7f83b7c61fe5ac.ctex"]
+dest_files=["res://godot/imported/1.png-b750766bab9a36c85f7f83b7c61fe5ac.ctex"]
 
 [params]
 

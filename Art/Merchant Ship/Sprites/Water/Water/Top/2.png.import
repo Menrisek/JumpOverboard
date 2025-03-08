@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6ogprjrwry0g"
-path="res://.godot/imported/2.png-0b3f3fcb5ec1b8b08e3bfa965cc4e500.ctex"
+path="res://godot/imported/2.png-0b3f3fcb5ec1b8b08e3bfa965cc4e500.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Water/Water/Top/2.png"
-dest_files=["res://.godot/imported/2.png-0b3f3fcb5ec1b8b08e3bfa965cc4e500.ctex"]
+dest_files=["res://godot/imported/2.png-0b3f3fcb5ec1b8b08e3bfa965cc4e500.ctex"]
 
 [params]
 

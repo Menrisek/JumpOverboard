@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jwn2c5i5ptwi"
-path="res://.godot/imported/12.png-90f2b4e08fa26b8ec01cb152e388b6b7.ctex"
+path="res://godot/imported/12.png-90f2b4e08fa26b8ec01cb152e388b6b7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Big Text/12.png"
-dest_files=["res://.godot/imported/12.png-90f2b4e08fa26b8ec01cb152e388b6b7.ctex"]
+dest_files=["res://godot/imported/12.png-90f2b4e08fa26b8ec01cb152e388b6b7.ctex"]
 
 [params]
 

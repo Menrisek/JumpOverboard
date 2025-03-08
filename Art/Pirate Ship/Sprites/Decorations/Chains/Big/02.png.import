@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blaeytehjxwe0"
-path="res://.godot/imported/02.png-ff0979540d2fd59dd340ffc16c43c68e.ctex"
+path="res://godot/imported/02.png-ff0979540d2fd59dd340ffc16c43c68e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Ship/Sprites/Decorations/Chains/Big/02.png"
-dest_files=["res://.godot/imported/02.png-ff0979540d2fd59dd340ffc16c43c68e.ctex"]
+dest_files=["res://godot/imported/02.png-ff0979540d2fd59dd340ffc16c43c68e.ctex"]
 
 [params]
 

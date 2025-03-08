@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d18mhy838yj4g"
-path="res://.godot/imported/Small Cloud 1.png-956ef15354e9161a17b4a2e25f651c6d.ctex"
+path="res://godot/imported/Small Cloud 1.png-956ef15354e9161a17b4a2e25f651c6d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Background/Small Cloud 1.png"
-dest_files=["res://.godot/imported/Small Cloud 1.png-956ef15354e9161a17b4a2e25f651c6d.ctex"]
+dest_files=["res://godot/imported/Small Cloud 1.png-956ef15354e9161a17b4a2e25f651c6d.ctex"]
 
 [params]
 

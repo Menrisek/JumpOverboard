@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbdbiq5otdsqu"
-path="res://.godot/imported/1.png-fa9ef2840a8ff673a88a681a0402f4f7.ctex"
+path="res://godot/imported/1.png-fa9ef2840a8ff673a88a681a0402f4f7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Shooter Traps/Sprites/Totems/Head 3/Hit 2/1.png"
-dest_files=["res://.godot/imported/1.png-fa9ef2840a8ff673a88a681a0402f4f7.ctex"]
+dest_files=["res://godot/imported/1.png-fa9ef2840a8ff673a88a681a0402f4f7.ctex"]
 
 [params]
 

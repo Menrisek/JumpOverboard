@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhgikesmux46a"
-path="res://.godot/imported/05.png-fe1638d615be8bb13f8078900012ec15.ctex"
+path="res://godot/imported/05.png-fe1638d615be8bb13f8078900012ec15.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Big Map/Unfolding/05.png"
-dest_files=["res://.godot/imported/05.png-fe1638d615be8bb13f8078900012ec15.ctex"]
+dest_files=["res://godot/imported/05.png-fe1638d615be8bb13f8078900012ec15.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhvbaykmqyi2h"
-path="res://.godot/imported/Run 05.png-0114669d03299712baefe36770613bf8.ctex"
+path="res://godot/imported/Run 05.png-0114669d03299712baefe36770613bf8.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png"
-dest_files=["res://.godot/imported/Run 05.png-0114669d03299712baefe36770613bf8.ctex"]
+dest_files=["res://godot/imported/Run 05.png-0114669d03299712baefe36770613bf8.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vtx2nguwtumy"
-path="res://.godot/imported/05.png-10216f84ebe47cbea41c7933782dd94f.ctex"
+path="res://godot/imported/05.png-10216f84ebe47cbea41c7933782dd94f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Golden Skull/05.png"
-dest_files=["res://.godot/imported/05.png-10216f84ebe47cbea41c7933782dd94f.ctex"]
+dest_files=["res://godot/imported/05.png-10216f84ebe47cbea41c7933782dd94f.ctex"]
 
 [params]
 

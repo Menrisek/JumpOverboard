@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3adsdk4d6kqh"
-path="res://.godot/imported/Jump 02.png-c93939903db2c0f1fb6640e70a5c5688.ctex"
+path="res://godot/imported/Jump 02.png-c93939903db2c0f1fb6640e70a5c5688.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Dust Particles/Jump 02.png"
-dest_files=["res://.godot/imported/Jump 02.png-c93939903db2c0f1fb6640e70a5c5688.ctex"]
+dest_files=["res://godot/imported/Jump 02.png-c93939903db2c0f1fb6640e70a5c5688.ctex"]
 
 [params]
 

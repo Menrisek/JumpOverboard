@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlgpqadx061jm"
-path="res://.godot/imported/2.png-585c6fcac8f87915cf883c38eab25409.ctex"
+path="res://godot/imported/2.png-585c6fcac8f87915cf883c38eab25409.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Sail/Wind/2.png"
-dest_files=["res://.godot/imported/2.png-585c6fcac8f87915cf883c38eab25409.ctex"]
+dest_files=["res://godot/imported/2.png-585c6fcac8f87915cf883c38eab25409.ctex"]
 
 [params]
 

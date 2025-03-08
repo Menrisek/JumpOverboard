@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0cyfgvtdjar4"
-path="res://.godot/imported/1.png-32b4911ce5a46554ba6f7e0d7f05a785.ctex"
+path="res://godot/imported/1.png-32b4911ce5a46554ba6f7e0d7f05a785.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Sail/Transition to No Wind/1.png"
-dest_files=["res://.godot/imported/1.png-32b4911ce5a46554ba6f7e0d7f05a785.ctex"]
+dest_files=["res://godot/imported/1.png-32b4911ce5a46554ba6f7e0d7f05a785.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bobhvjgogklct"
-path="res://.godot/imported/Attack 2 03.png-fde7089491f7bc0e12475af2b93af9a1.ctex"
+path="res://godot/imported/Attack 2 03.png-fde7089491f7bc0e12475af2b93af9a1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 03.png"
-dest_files=["res://.godot/imported/Attack 2 03.png-fde7089491f7bc0e12475af2b93af9a1.ctex"]
+dest_files=["res://godot/imported/Attack 2 03.png-fde7089491f7bc0e12475af2b93af9a1.ctex"]
 
 [params]
 

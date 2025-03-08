@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv2ixtl7ftuup"
-path="res://.godot/imported/02.png-312082fecac402b5bacbc45f623df15f.ctex"
+path="res://godot/imported/02.png-312082fecac402b5bacbc45f623df15f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Ship/Sprites/Decorations/Door/Opening/02.png"
-dest_files=["res://.godot/imported/02.png-312082fecac402b5bacbc45f623df15f.ctex"]
+dest_files=["res://godot/imported/02.png-312082fecac402b5bacbc45f623df15f.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db8k34pv612b3"
-path="res://.godot/imported/6.png-da3ee0a8c3826b700829b0a7440b4bef.ctex"
+path="res://godot/imported/6.png-da3ee0a8c3826b700829b0a7440b4bef.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Water/Reflexes 1/6.png"
-dest_files=["res://.godot/imported/6.png-da3ee0a8c3826b700829b0a7440b4bef.ctex"]
+dest_files=["res://godot/imported/6.png-da3ee0a8c3826b700829b0a7440b4bef.ctex"]
 
 [params]
 

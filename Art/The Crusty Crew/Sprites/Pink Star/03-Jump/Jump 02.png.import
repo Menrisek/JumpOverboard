@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ksulv6wreu1"
-path="res://.godot/imported/Jump 02.png-0e17b07490d11dc3233812459b45325e.ctex"
+path="res://godot/imported/Jump 02.png-0e17b07490d11dc3233812459b45325e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png"
-dest_files=["res://.godot/imported/Jump 02.png-0e17b07490d11dc3233812459b45325e.ctex"]
+dest_files=["res://godot/imported/Jump 02.png-0e17b07490d11dc3233812459b45325e.ctex"]
 
 [params]
 

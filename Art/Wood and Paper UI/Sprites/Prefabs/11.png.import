@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s7rgekqujak8"
-path="res://.godot/imported/11.png-a5921c3e752aa47d89d327a342644e4a.ctex"
+path="res://godot/imported/11.png-a5921c3e752aa47d89d327a342644e4a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Prefabs/11.png"
-dest_files=["res://.godot/imported/11.png-a5921c3e752aa47d89d327a342644e4a.ctex"]
+dest_files=["res://godot/imported/11.png-a5921c3e752aa47d89d327a342644e4a.ctex"]
 
 [params]
 

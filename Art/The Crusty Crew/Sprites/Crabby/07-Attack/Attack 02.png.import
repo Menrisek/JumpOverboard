@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxu084jf0ulax"
-path="res://.godot/imported/Attack 02.png-99adf9ceff5271b607c760197185b757.ctex"
+path="res://godot/imported/Attack 02.png-99adf9ceff5271b607c760197185b757.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 02.png"
-dest_files=["res://.godot/imported/Attack 02.png-99adf9ceff5271b607c760197185b757.ctex"]
+dest_files=["res://godot/imported/Attack 02.png-99adf9ceff5271b607c760197185b757.ctex"]
 
 [params]
 

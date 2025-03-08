@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl0hun0cqoqmp"
-path="res://.godot/imported/JumpBoost.png-56d1176b92b96bce10893d67b839212d.ctex"
+path="res://godot/imported/JumpBoost.png-56d1176b92b96bce10893d67b839212d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Boosting Items/JumpBoost.png"
-dest_files=["res://.godot/imported/JumpBoost.png-56d1176b92b96bce10893d67b839212d.ctex"]
+dest_files=["res://godot/imported/JumpBoost.png-56d1176b92b96bce10893d67b839212d.ctex"]
 
 [params]
 

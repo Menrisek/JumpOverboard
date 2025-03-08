@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cflrynnixjrbp"
-path="res://.godot/imported/05.png-14082dd4f94ecf7900a4e69d1180a9c7.ctex"
+path="res://godot/imported/05.png-14082dd4f94ecf7900a4e69d1180a9c7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Ship/Sprites/Decorations/Door/Closing/05.png"
-dest_files=["res://.godot/imported/05.png-14082dd4f94ecf7900a4e69d1180a9c7.ctex"]
+dest_files=["res://godot/imported/05.png-14082dd4f94ecf7900a4e69d1180a9c7.ctex"]
 
 [params]
 

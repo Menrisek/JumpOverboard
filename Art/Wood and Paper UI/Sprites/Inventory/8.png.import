@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b343ayvb6ip"
-path="res://.godot/imported/8.png-31ee3910017d2e765a7416bacfa82ca3.ctex"
+path="res://godot/imported/8.png-31ee3910017d2e765a7416bacfa82ca3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Inventory/8.png"
-dest_files=["res://.godot/imported/8.png-31ee3910017d2e765a7416bacfa82ca3.ctex"]
+dest_files=["res://godot/imported/8.png-31ee3910017d2e765a7416bacfa82ca3.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo1imivxt7dg0"
-path="res://.godot/imported/Yellow Button (guide).png-bb48b934d95b18ae4bc47dec076071c9.ctex"
+path="res://godot/imported/Yellow Button (guide).png-bb48b934d95b18ae4bc47dec076071c9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Yellow Button/Yellow Button (guide).png"
-dest_files=["res://.godot/imported/Yellow Button (guide).png-bb48b934d95b18ae4bc47dec076071c9.ctex"]
+dest_files=["res://godot/imported/Yellow Button (guide).png-bb48b934d95b18ae4bc47dec076071c9.ctex"]
 
 [params]
 

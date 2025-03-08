@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cayldy0do8sp2"
-path="res://.godot/imported/14.png-4bf43387e1f1ecb6146e9d57128d5e0b.ctex"
+path="res://godot/imported/14.png-4bf43387e1f1ecb6146e9d57128d5e0b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Yellow Board/14.png"
-dest_files=["res://.godot/imported/14.png-4bf43387e1f1ecb6146e9d57128d5e0b.ctex"]
+dest_files=["res://godot/imported/14.png-4bf43387e1f1ecb6146e9d57128d5e0b.ctex"]
 
 [params]
 

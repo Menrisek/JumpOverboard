@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da2j7ymgp7w8o"
-path="res://.godot/imported/02.png-b1beb9369b531d24bc852b34a8123e35.ctex"
+path="res://godot/imported/02.png-b1beb9369b531d24bc852b34a8123e35.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Skull Effect/02.png"
-dest_files=["res://.godot/imported/02.png-b1beb9369b531d24bc852b34a8123e35.ctex"]
+dest_files=["res://godot/imported/02.png-b1beb9369b531d24bc852b34a8123e35.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwhcr8la2550h"
-path="res://.godot/imported/3.png-0b73071404a769e77bcd6654de24acea.ctex"
+path="res://godot/imported/3.png-0b73071404a769e77bcd6654de24acea.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Ship/Hit/3.png"
-dest_files=["res://.godot/imported/3.png-0b73071404a769e77bcd6654de24acea.ctex"]
+dest_files=["res://godot/imported/3.png-0b73071404a769e77bcd6654de24acea.ctex"]
 
 [params]
 

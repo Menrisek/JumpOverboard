@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxpe1oo0nksdv"
-path="res://.godot/imported/Yellow Board (guide).png-d788baa516592089e9e16c174e850c56.ctex"
+path="res://godot/imported/Yellow Board (guide).png-d788baa516592089e9e16c174e850c56.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Yellow Board/Yellow Board (guide).png"
-dest_files=["res://.godot/imported/Yellow Board (guide).png-d788baa516592089e9e16c174e850c56.ctex"]
+dest_files=["res://godot/imported/Yellow Board (guide).png-d788baa516592089e9e16c174e850c56.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cysc1j4n6wcho"
-path="res://.godot/imported/Run 02.png-7dcb1b97c640ab05b2f75cfe4cd8401d.ctex"
+path="res://godot/imported/Run 02.png-7dcb1b97c640ab05b2f75cfe4cd8401d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png"
-dest_files=["res://.godot/imported/Run 02.png-7dcb1b97c640ab05b2f75cfe4cd8401d.ctex"]
+dest_files=["res://godot/imported/Run 02.png-7dcb1b97c640ab05b2f75cfe4cd8401d.ctex"]
 
 [params]
 

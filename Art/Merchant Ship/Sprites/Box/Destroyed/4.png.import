@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b67ex17cymm42"
-path="res://.godot/imported/4.png-d06308bd63a0866129c9475a83abe0de.ctex"
+path="res://godot/imported/4.png-d06308bd63a0866129c9475a83abe0de.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Box/Destroyed/4.png"
-dest_files=["res://.godot/imported/4.png-d06308bd63a0866129c9475a83abe0de.ctex"]
+dest_files=["res://godot/imported/4.png-d06308bd63a0866129c9475a83abe0de.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k5kfbr3w8aat"
-path="res://.godot/imported/5.png-81c555b9da91225a18f1ed57495cc773.ctex"
+path="res://godot/imported/5.png-81c555b9da91225a18f1ed57495cc773.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Sail/No Wind/5.png"
-dest_files=["res://.godot/imported/5.png-81c555b9da91225a18f1ed57495cc773.ctex"]
+dest_files=["res://godot/imported/5.png-81c555b9da91225a18f1ed57495cc773.ctex"]
 
 [params]
 

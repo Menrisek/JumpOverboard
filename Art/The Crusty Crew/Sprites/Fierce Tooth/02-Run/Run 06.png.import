@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daovhbedknr5c"
-path="res://.godot/imported/Run 06.png-8b9190f0ad44121c67ee6bb96930b8e1.ctex"
+path="res://godot/imported/Run 06.png-8b9190f0ad44121c67ee6bb96930b8e1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 06.png"
-dest_files=["res://.godot/imported/Run 06.png-8b9190f0ad44121c67ee6bb96930b8e1.ctex"]
+dest_files=["res://godot/imported/Run 06.png-8b9190f0ad44121c67ee6bb96930b8e1.ctex"]
 
 [params]
 

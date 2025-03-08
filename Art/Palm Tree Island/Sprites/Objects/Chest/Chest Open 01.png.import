@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dawd6cmixgq5u"
-path="res://.godot/imported/Chest Open 01.png-1e5718688d7f59d0b430f563a3e417b4.ctex"
+path="res://godot/imported/Chest Open 01.png-1e5718688d7f59d0b430f563a3e417b4.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Objects/Chest/Chest Open 01.png"
-dest_files=["res://.godot/imported/Chest Open 01.png-1e5718688d7f59d0b430f563a3e417b4.ctex"]
+dest_files=["res://godot/imported/Chest Open 01.png-1e5718688d7f59d0b430f563a3e417b4.ctex"]
 
 [params]
 

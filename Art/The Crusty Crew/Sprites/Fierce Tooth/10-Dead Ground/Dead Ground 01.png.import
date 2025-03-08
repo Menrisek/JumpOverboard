@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n7u13ustj3de"
-path="res://.godot/imported/Dead Ground 01.png-671262afaa5b9b44cbe0d2adb4225082.ctex"
+path="res://godot/imported/Dead Ground 01.png-671262afaa5b9b44cbe0d2adb4225082.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Fierce Tooth/10-Dead Ground/Dead Ground 01.png"
-dest_files=["res://.godot/imported/Dead Ground 01.png-671262afaa5b9b44cbe0d2adb4225082.ctex"]
+dest_files=["res://godot/imported/Dead Ground 01.png-671262afaa5b9b44cbe0d2adb4225082.ctex"]
 
 [params]
 

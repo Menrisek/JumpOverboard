@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h38h7a5dh2bn"
-path="res://.godot/imported/4.png-e08fef746a28ffae8f95d837515cae88.ctex"
+path="res://godot/imported/4.png-e08fef746a28ffae8f95d837515cae88.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Small Text/White Bar/4.png"
-dest_files=["res://.godot/imported/4.png-e08fef746a28ffae8f95d837515cae88.ctex"]
+dest_files=["res://godot/imported/4.png-e08fef746a28ffae8f95d837515cae88.ctex"]
 
 [params]
 

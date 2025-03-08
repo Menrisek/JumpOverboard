@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0nhwetr3stxs"
-path="res://.godot/imported/Attack 03.png-4571d9404ddcd1c3828237123232655b.ctex"
+path="res://godot/imported/Attack 03.png-4571d9404ddcd1c3828237123232655b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 03.png"
-dest_files=["res://.godot/imported/Attack 03.png-4571d9404ddcd1c3828237123232655b.ctex"]
+dest_files=["res://godot/imported/Attack 03.png-4571d9404ddcd1c3828237123232655b.ctex"]
 
 [params]
 

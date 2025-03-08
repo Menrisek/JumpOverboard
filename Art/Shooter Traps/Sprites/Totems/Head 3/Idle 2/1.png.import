@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cllnlisusiqns"
-path="res://.godot/imported/1.png-d4fa8d49a7f9e24df753a9ff7faa2897.ctex"
+path="res://godot/imported/1.png-d4fa8d49a7f9e24df753a9ff7faa2897.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Shooter Traps/Sprites/Totems/Head 3/Idle 2/1.png"
-dest_files=["res://.godot/imported/1.png-d4fa8d49a7f9e24df753a9ff7faa2897.ctex"]
+dest_files=["res://godot/imported/1.png-d4fa8d49a7f9e24df753a9ff7faa2897.ctex"]
 
 [params]
 

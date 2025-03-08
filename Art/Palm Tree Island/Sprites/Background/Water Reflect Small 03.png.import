@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crhdxx26cqowd"
-path="res://.godot/imported/Water Reflect Small 03.png-03df5a50484c8538a7b75887f17f1102.ctex"
+path="res://godot/imported/Water Reflect Small 03.png-03df5a50484c8538a7b75887f17f1102.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Background/Water Reflect Small 03.png"
-dest_files=["res://.godot/imported/Water Reflect Small 03.png-03df5a50484c8538a7b75887f17f1102.ctex"]
+dest_files=["res://godot/imported/Water Reflect Small 03.png-03df5a50484c8538a7b75887f17f1102.ctex"]
 
 [params]
 

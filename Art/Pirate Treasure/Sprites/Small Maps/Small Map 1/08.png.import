@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djqctroije3ag"
-path="res://.godot/imported/08.png-d1d8d0d73c7a43e5a024a19ff978a389.ctex"
+path="res://godot/imported/08.png-d1d8d0d73c7a43e5a024a19ff978a389.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Small Maps/Small Map 1/08.png"
-dest_files=["res://.godot/imported/08.png-d1d8d0d73c7a43e5a024a19ff978a389.ctex"]
+dest_files=["res://godot/imported/08.png-d1d8d0d73c7a43e5a024a19ff978a389.ctex"]
 
 [params]
 

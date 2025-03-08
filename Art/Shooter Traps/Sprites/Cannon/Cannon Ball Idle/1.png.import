@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dshiyaijcbdq2"
-path="res://.godot/imported/1.png-7079d485c893376a2208ddc56d8024e5.ctex"
+path="res://godot/imported/1.png-7079d485c893376a2208ddc56d8024e5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Shooter Traps/Sprites/Cannon/Cannon Ball Idle/1.png"
-dest_files=["res://.godot/imported/1.png-7079d485c893376a2208ddc56d8024e5.ctex"]
+dest_files=["res://godot/imported/1.png-7079d485c893376a2208ddc56d8024e5.ctex"]
 
 [params]
 

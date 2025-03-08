@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbcsv6xq70nf0"
-path="res://.godot/imported/1.png-b76b4d81191e07bb12bfb0ef89899429.ctex"
+path="res://godot/imported/1.png-b76b4d81191e07bb12bfb0ef89899429.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Chest Key/Idle/1.png"
-dest_files=["res://.godot/imported/1.png-b76b4d81191e07bb12bfb0ef89899429.ctex"]
+dest_files=["res://godot/imported/1.png-b76b4d81191e07bb12bfb0ef89899429.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg2324vtib0r3"
-path="res://.godot/imported/Jump 06.png-1c7d602131b980d262ede2636c47fde3.ctex"
+path="res://godot/imported/Jump 06.png-1c7d602131b980d262ede2636c47fde3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Dust Particles/Jump 06.png"
-dest_files=["res://.godot/imported/Jump 06.png-1c7d602131b980d262ede2636c47fde3.ctex"]
+dest_files=["res://godot/imported/Jump 06.png-1c7d602131b980d262ede2636c47fde3.ctex"]
 
 [params]
 

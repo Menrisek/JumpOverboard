@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhn3rd6spnrsf"
-path="res://.godot/imported/5.png-0c71498e09601268def2ceebaed01979.ctex"
+path="res://godot/imported/5.png-0c71498e09601268def2ceebaed01979.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Mobile Buttons/Mobile Buttons Cooldown/5.png"
-dest_files=["res://.godot/imported/5.png-0c71498e09601268def2ceebaed01979.ctex"]
+dest_files=["res://godot/imported/5.png-0c71498e09601268def2ceebaed01979.ctex"]
 
 [params]
 

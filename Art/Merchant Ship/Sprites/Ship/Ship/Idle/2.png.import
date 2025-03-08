@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc8ad2ihlq6n2"
-path="res://.godot/imported/2.png-4e1f0f78a621dd995d13b26e0b902670.ctex"
+path="res://godot/imported/2.png-4e1f0f78a621dd995d13b26e0b902670.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Ship/Ship/Idle/2.png"
-dest_files=["res://.godot/imported/2.png-4e1f0f78a621dd995d13b26e0b902670.ctex"]
+dest_files=["res://godot/imported/2.png-4e1f0f78a621dd995d13b26e0b902670.ctex"]
 
 [params]
 

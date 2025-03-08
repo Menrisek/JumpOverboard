@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo0sd4wois17b"
-path="res://.godot/imported/Sword Idle 04.png-37912aebcf687873557d1c181cb847ef.ctex"
+path="res://godot/imported/Sword Idle 04.png-37912aebcf687873557d1c181cb847ef.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 04.png"
-dest_files=["res://.godot/imported/Sword Idle 04.png-37912aebcf687873557d1c181cb847ef.ctex"]
+dest_files=["res://godot/imported/Sword Idle 04.png-37912aebcf687873557d1c181cb847ef.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckp2bhn1jms53"
-path="res://.godot/imported/Fall 04.png-d4459a16254d7a323c56b0700e7f8be0.ctex"
+path="res://godot/imported/Fall 04.png-d4459a16254d7a323c56b0700e7f8be0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Dust Particles/Fall 04.png"
-dest_files=["res://.godot/imported/Fall 04.png-d4459a16254d7a323c56b0700e7f8be0.ctex"]
+dest_files=["res://godot/imported/Fall 04.png-d4459a16254d7a323c56b0700e7f8be0.ctex"]
 
 [params]
 

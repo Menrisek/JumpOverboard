@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqfrtaex03vdg"
-path="res://.godot/imported/Platform.png-1aa200ae3237d781079347ea72cb8e8a.ctex"
+path="res://godot/imported/Platform.png-1aa200ae3237d781079347ea72cb8e8a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Objects/Flag/Platform.png"
-dest_files=["res://.godot/imported/Platform.png-1aa200ae3237d781079347ea72cb8e8a.ctex"]
+dest_files=["res://godot/imported/Platform.png-1aa200ae3237d781079347ea72cb8e8a.ctex"]
 
 [params]
 

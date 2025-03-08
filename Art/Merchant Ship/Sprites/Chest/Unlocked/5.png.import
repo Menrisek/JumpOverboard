@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sxutm4sjsh67"
-path="res://.godot/imported/5.png-39d61beeece9492467a63163f683111a.ctex"
+path="res://godot/imported/5.png-39d61beeece9492467a63163f683111a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Merchant Ship/Sprites/Chest/Unlocked/5.png"
-dest_files=["res://.godot/imported/5.png-39d61beeece9492467a63163f683111a.ctex"]
+dest_files=["res://godot/imported/5.png-39d61beeece9492467a63163f683111a.ctex"]
 
 [params]
 

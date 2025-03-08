@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iji5844ducat"
-path="res://.godot/imported/Hit 01.png-5ac60815a2e303c29ac722755ee94267.ctex"
+path="res://godot/imported/Hit 01.png-5ac60815a2e303c29ac722755ee94267.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/The Crusty Crew/Sprites/Fierce Tooth/08-Hit/Hit 01.png"
-dest_files=["res://.godot/imported/Hit 01.png-5ac60815a2e303c29ac722755ee94267.ctex"]
+dest_files=["res://godot/imported/Hit 01.png-5ac60815a2e303c29ac722755ee94267.ctex"]
 
 [params]
 

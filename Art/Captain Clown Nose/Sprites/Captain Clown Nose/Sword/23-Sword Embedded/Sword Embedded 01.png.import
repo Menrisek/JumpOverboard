@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uotlamevtdm0"
-path="res://.godot/imported/Sword Embedded 01.png-eb3fbe8b7c9257ad2fd902798774495e.ctex"
+path="res://godot/imported/Sword Embedded 01.png-eb3fbe8b7c9257ad2fd902798774495e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 01.png"
-dest_files=["res://.godot/imported/Sword Embedded 01.png-eb3fbe8b7c9257ad2fd902798774495e.ctex"]
+dest_files=["res://godot/imported/Sword Embedded 01.png-eb3fbe8b7c9257ad2fd902798774495e.ctex"]
 
 [params]
 

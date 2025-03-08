@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr32ns68nnj7s"
-path="res://.godot/imported/13.png-3b14b2e834a726ad460b3308f1dec1f9.ctex"
+path="res://godot/imported/13.png-3b14b2e834a726ad460b3308f1dec1f9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Orange Paper/13.png"
-dest_files=["res://.godot/imported/13.png-3b14b2e834a726ad460b3308f1dec1f9.ctex"]
+dest_files=["res://godot/imported/13.png-3b14b2e834a726ad460b3308f1dec1f9.ctex"]
 
 [params]
 

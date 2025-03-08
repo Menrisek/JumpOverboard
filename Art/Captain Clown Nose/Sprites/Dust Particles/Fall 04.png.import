@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhfunxa56u26d"
-path="res://.godot/imported/Fall 04.png-532f07679eabb613ca8a00ba0572752f.ctex"
+path="res://godot/imported/Fall 04.png-532f07679eabb613ca8a00ba0572752f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Dust Particles/Fall 04.png"
-dest_files=["res://.godot/imported/Fall 04.png-532f07679eabb613ca8a00ba0572752f.ctex"]
+dest_files=["res://godot/imported/Fall 04.png-532f07679eabb613ca8a00ba0572752f.ctex"]
 
 [params]
 

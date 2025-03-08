@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvc22o1l8rww7"
-path="res://.godot/imported/18.png-3e5c75a484819feea9b8c1960aff1945.ctex"
+path="res://godot/imported/18.png-3e5c75a484819feea9b8c1960aff1945.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Wood and Paper UI/Sprites/Big Banner/18.png"
-dest_files=["res://.godot/imported/18.png-3e5c75a484819feea9b8c1960aff1945.ctex"]
+dest_files=["res://godot/imported/18.png-3e5c75a484819feea9b8c1960aff1945.ctex"]
 
 [params]
 

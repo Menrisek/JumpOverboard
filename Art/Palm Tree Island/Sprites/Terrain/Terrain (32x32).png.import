@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k6rbj01m6q1a"
-path="res://.godot/imported/Terrain (32x32).png-257bc2a75e516b7c283c9782b1da29a5.ctex"
+path="res://godot/imported/Terrain (32x32).png-257bc2a75e516b7c283c9782b1da29a5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png"
-dest_files=["res://.godot/imported/Terrain (32x32).png-257bc2a75e516b7c283c9782b1da29a5.ctex"]
+dest_files=["res://godot/imported/Terrain (32x32).png-257bc2a75e516b7c283c9782b1da29a5.ctex"]
 
 [params]
 

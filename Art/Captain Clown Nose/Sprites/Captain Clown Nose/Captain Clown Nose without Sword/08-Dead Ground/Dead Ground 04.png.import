@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8lxkoaartf11"
-path="res://.godot/imported/Dead Ground 04.png-a3f6410cdc43dd7f9e4eccc3ddd4b59d.ctex"
+path="res://godot/imported/Dead Ground 04.png-a3f6410cdc43dd7f9e4eccc3ddd4b59d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 04.png"
-dest_files=["res://.godot/imported/Dead Ground 04.png-a3f6410cdc43dd7f9e4eccc3ddd4b59d.ctex"]
+dest_files=["res://godot/imported/Dead Ground 04.png-a3f6410cdc43dd7f9e4eccc3ddd4b59d.ctex"]
 
 [params]
 

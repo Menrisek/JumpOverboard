@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxmgoxmrev40b"
-path="res://.godot/imported/Unlocked.png-ecfa4a46a2b8945e034b0a3b2bfe90cf.ctex"
+path="res://godot/imported/Unlocked.png-ecfa4a46a2b8945e034b0a3b2bfe90cf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/World Map/Unlocked.png"
-dest_files=["res://.godot/imported/Unlocked.png-ecfa4a46a2b8945e034b0a3b2bfe90cf.ctex"]
+dest_files=["res://godot/imported/Unlocked.png-ecfa4a46a2b8945e034b0a3b2bfe90cf.ctex"]
 
 [params]
 

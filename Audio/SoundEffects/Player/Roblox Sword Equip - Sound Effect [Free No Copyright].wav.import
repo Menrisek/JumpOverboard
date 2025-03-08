@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://6r62d24060kf"
-path="res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"
+path="res://godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"
 
 [deps]
 
 source_file="res://Audio/SoundEffects/Player/Roblox Sword Equip - Sound Effect [Free No Copyright].wav"
-dest_files=["res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"]
+dest_files=["res://godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].wav-430a8ebab28adc86f38a0cdc6aaddf8e.sample"]
 
 [params]
 

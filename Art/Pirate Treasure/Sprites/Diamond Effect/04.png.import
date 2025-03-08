@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2clmf576noq6"
-path="res://.godot/imported/04.png-9cdaca3fbc285dedf858cbe83861ba5a.ctex"
+path="res://godot/imported/04.png-9cdaca3fbc285dedf858cbe83861ba5a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Pirate Treasure/Sprites/Diamond Effect/04.png"
-dest_files=["res://.godot/imported/04.png-9cdaca3fbc285dedf858cbe83861ba5a.ctex"]
+dest_files=["res://godot/imported/04.png-9cdaca3fbc285dedf858cbe83861ba5a.ctex"]
 
 [params]
 

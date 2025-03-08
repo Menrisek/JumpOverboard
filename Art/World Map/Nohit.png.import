@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bao8f4iwe5n4y"
-path="res://.godot/imported/Nohit.png-d72f450a5904183c5a48ec111c8d5d9a.ctex"
+path="res://godot/imported/Nohit.png-d72f450a5904183c5a48ec111c8d5d9a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/World Map/Nohit.png"
-dest_files=["res://.godot/imported/Nohit.png-d72f450a5904183c5a48ec111c8d5d9a.ctex"]
+dest_files=["res://godot/imported/Nohit.png-d72f450a5904183c5a48ec111c8d5d9a.ctex"]
 
 [params]
 

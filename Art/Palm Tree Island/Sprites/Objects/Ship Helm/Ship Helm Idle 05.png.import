@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bavx6ylytjdcb"
-path="res://.godot/imported/Ship Helm Idle 05.png-0368a5b66400bd8207ab4af6fda87169.ctex"
+path="res://godot/imported/Ship Helm Idle 05.png-0368a5b66400bd8207ab4af6fda87169.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://Art/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 05.png"
-dest_files=["res://.godot/imported/Ship Helm Idle 05.png-0368a5b66400bd8207ab4af6fda87169.ctex"]
+dest_files=["res://godot/imported/Ship Helm Idle 05.png-0368a5b66400bd8207ab4af6fda87169.ctex"]
 
 [params]
 
