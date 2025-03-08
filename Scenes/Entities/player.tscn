@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene load_steps=49 format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -35,6 +35,9 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3krsy"]
 height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_35s87"]
+height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ayb"]
 size = Vector2(19, 20)
@@ -321,18 +324,19 @@ speed = 250.0
 jump_height = -300.0
 max_health = 3
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_3krsy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6vciq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-4, 12, -6, 11, -10, 4, -10, -7, -6, -15, 0, -16, 6, -15, 10, -7, 10, 5, 3, 12)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_35s87")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
@@ -354,6 +358,10 @@ shape = SubResource("RectangleShape2D_q3ayb")
 visible = false
 offset_top = 15.0
 offset_bottom = 15.0
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 

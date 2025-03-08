@@ -1491,7 +1491,7 @@ position = Vector2(556, -68)
 position = Vector2(689, -172)
 
 [node name="Coin19" parent="." instance=ExtResource("10_whwfm")]
-position = Vector2(848, -174)
+position = Vector2(864, -208)
 
 [node name="Coin20" parent="." instance=ExtResource("10_whwfm")]
 position = Vector2(946, -170)
@@ -1513,6 +1513,9 @@ position = Vector2(1340, -183)
 
 [node name="Coin26" parent="." instance=ExtResource("10_whwfm")]
 position = Vector2(1472, -35)
+
+[node name="Spikes21" parent="." instance=ExtResource("16_y3ljm")]
+position = Vector2(865, -175)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]
