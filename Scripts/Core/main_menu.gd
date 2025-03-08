@@ -6,8 +6,9 @@ func _ready():
 	$VBoxContainer/Start.grab_focus()
 	
 	#vytvoří/uloží save po zapnutí main menu
-	SaveManager.save_game()
-
+	if not SaveManager.save_exists():
+		SaveManager.save_game()
+	
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Level1.tscn")
 

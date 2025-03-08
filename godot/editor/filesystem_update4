@@ -9,3 +9,4 @@ res://Scenes/WorldScenes/Level5.tscn
 res://Scenes/WorldScenes/Level6.tscn
 res://Scenes/WorldScenes/world_map.tscn
 res://Scenes/Entities/player.tscn
+res://Scripts/Core/main_menu.gd
