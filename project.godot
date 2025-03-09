@@ -31,6 +31,7 @@ config/image="res://Art/Icons/cjhead.png"
 GameManager="*res://Scripts/Core/GameManager.gd"
 LevelData="*res://Scripts/Core/LevelData.gd"
 SaveManager="*res://Scripts/Core/SaveManager.gd"
+GlobalSettings="*res://Scripts/Core/global_settings.gd"
 
 [display]
 

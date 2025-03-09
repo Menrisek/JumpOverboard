@@ -1071,6 +1071,7 @@ text = "World map"
 stream = ExtResource("11_uocx8")
 volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [node name="LoreSharks" type="Label" parent="."]
 offset_left = -112.0

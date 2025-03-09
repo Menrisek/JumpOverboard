@@ -845,6 +845,7 @@ text = "World map"
 stream = ExtResource("12_efktx")
 volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_g7ih2")]
 position = Vector2(770, 91)

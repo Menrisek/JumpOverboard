@@ -811,6 +811,7 @@ text = "World map"
 stream = ExtResource("9_84dm2")
 volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [node name="SpikesLabel" type="Label" parent="."]
 offset_left = 191.0

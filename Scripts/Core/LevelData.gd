@@ -18,6 +18,18 @@ var level_dictionary = {
 		"beaten" : false,
 	}
 }
+#nefunguje
+var game_data = {
+	"fullscreen_on": false,
+	"vsync_on": false,
+	"display_fps": false,
+	"max_fps": 0,
+	"bloom_on": false,
+	"brightness": 1,
+	"master_vol": -10,
+	"music_vol": -10,
+	"sfx_vol": -10,
+}
 
 #automaticky se mu bude vytvářet dictionary, abych ho nemusel dělat manuálně
 func generate_level(level):

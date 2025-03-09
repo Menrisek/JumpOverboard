@@ -41,12 +41,12 @@ func flip():
 		speed = abs(speed) * -1
 
 func take_damage(damage_amount):
-	if can_take_damage:
-		immunityframes()
-		
 	if !dead:
-		animation.play("hit")
-		health -= damage_amount
+		#na 0.2 sekundy bude nesmrtelný (imunity frames)
+		if can_take_damage:
+			immunityframes()
+			animation.play("hit")
+			health -= damage_amount
 		
 		get_node("Healthbar").update_healthbar(health, max_health)
 		
@@ -67,7 +67,7 @@ func get_hit():
 func immunityframes():
 	can_take_damage = false
 	#hráč bude mít imunitu na x sekundy
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.2).timeout
 	can_take_damage = true
 
 func die():
