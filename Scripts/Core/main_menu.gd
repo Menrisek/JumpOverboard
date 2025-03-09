@@ -5,7 +5,7 @@ class_name MainMenu
 func _ready():
 	$VBoxContainer/Start.grab_focus()
 	
-	#vytvoří/uloží save po zapnutí main menu
+	#vytvoří/uloží save po zapnutí main menu + chekuje jestli existuje už save (pokud ne, tak ho vytvoří)
 	if not SaveManager.save_exists():
 		SaveManager.save_game()
 	

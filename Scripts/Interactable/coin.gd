@@ -14,6 +14,6 @@ func _on_area_2d_area_entered(area):
 		GameManager.gain_coins(coins)
 		GameManager.score += score
 		$AnimationPlayer.play("coin_taken")
-		#po animaci se přehraje
-		await $AnimationPlayer.animation_finished
-		queue_free()
+		#KDYBYCH CHTĚL ABY COIN ZMIZEL PO DOKONČENÍ ANIMACE
+		#await $AnimationPlayer.animation_finished
+		#queue_free()

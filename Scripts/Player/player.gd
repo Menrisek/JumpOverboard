@@ -19,6 +19,7 @@ var can_take_damage = true
 var current_position_x = velocity.x
 
 var time = GameManager.speedrun_time
+var jump_buffering = 0.0
 
 func _ready():
 	GameManager.damage_taken = 0
@@ -50,12 +51,17 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	if Input.is_action_just_pressed("jump"):
+		jump_buffering = 0.1
+	jump_buffering -= delta
+	
 	# úprava intezity skoku
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y *= 0.4
 		
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or !coyote_timer.is_stopped()):
+	if jump_buffering > 0 and (is_on_floor() or !coyote_timer.is_stopped()):
+		jump_buffering = 0.0
 		velocity.y = jump_height
 
 	# Get the input direction and handle the movement/deceleration.
@@ -175,4 +181,7 @@ func update_ui():
 func level_intro_text():
 	$PlayerUI/LevelNumber/AnimationPlayer.play("level_title_appear")
 	#title je nadefinován v RunTimeLevelu
-	$PlayerUI/LevelNumber.text = get_parent().level_title
+	if "level_title" in get_parent():
+		$PlayerUI/LevelNumber.text = get_parent().level_title
+	else:
+		$PlayerUI/LevelNumber.text = "Tento level nemá title"

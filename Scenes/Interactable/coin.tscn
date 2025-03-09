@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bm4hkqi2x4k2p"]
+[gd_scene load_steps=15 format=3 uid="uid://bm4hkqi2x4k2p"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable/coin.gd" id="1_r13hm"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_vjbyg"]
 [ext_resource type="Texture2D" uid="uid://jpihdvbku3ig" path="res://Art/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_ohd7d"]
+[ext_resource type="Texture2D" uid="uid://bst2ojln2a6cq" path="res://Art/Pirate Treasure/Sprites/Gold Coin/coin_taken.png" id="2_rt47d"]
 [ext_resource type="Texture2D" uid="uid://bltq2ce2wmtes" path="res://Art/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_s1s1w"]
 [ext_resource type="Texture2D" uid="uid://de2kulriwun5i" path="res://Art/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_3uaqt"]
 [ext_resource type="Texture2D" uid="uid://dvd60w7pohhxi" path="res://Art/Pirate Treasure/Sprites/Coin Effect/01.png" id="6_4oafk"]
@@ -29,7 +30,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_mhqyk"]
 resource_name = "coin_taken"
-length = 0.2
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -37,10 +38,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("6_4oafk"), ExtResource("7_vslcs"), ExtResource("8_lxd1i")]
+"values": [ExtResource("6_4oafk"), ExtResource("7_vslcs"), ExtResource("8_lxd1i"), ExtResource("2_rt47d")]
 }
 
 [sub_resource type="Animation" id="Animation_pf06a"]

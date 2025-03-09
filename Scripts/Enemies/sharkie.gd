@@ -13,6 +13,7 @@ var dead = false
 var health = 0
 var hit = false
 var can_attack = true
+var can_take_damage = true
 
 func _ready():
 	health = max_health
@@ -40,6 +41,9 @@ func flip():
 		speed = abs(speed) * -1
 
 func take_damage(damage_amount):
+	if can_take_damage:
+		immunityframes()
+		
 	if !dead:
 		animation.play("hit")
 		health -= damage_amount
@@ -59,6 +63,12 @@ func get_hit():
 		speed = current_speed
 		can_attack = true
 		animation.play("run")
+
+func immunityframes():
+	can_take_damage = false
+	#hráč bude mít imunitu na x sekundy
+	await get_tree().create_timer(0.1).timeout
+	can_take_damage = true
 
 func die():
 	GameManager.score += score

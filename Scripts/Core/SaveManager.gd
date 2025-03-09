@@ -10,6 +10,7 @@ func save_game():
 	DirAccess.make_dir_absolute(save_path)
 	save_data.level_dictionary = LevelData.level_dictionary
 	ResourceSaver.save(save_data, save_path + save_name)
+	print("Game saved")
 
 func save_exists():
 	return FileAccess.file_exists(save_path + save_name)
