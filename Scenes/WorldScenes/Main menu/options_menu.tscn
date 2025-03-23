@@ -43,20 +43,21 @@ text = "Back to main menu"
 
 [node name="Choosing Menu" type="TabContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = 60.0
-offset_right = -100.0
-offset_bottom = -60.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -480.0
+offset_right = 400.0
+offset_bottom = 480.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Audio" type="TabBar" parent="Choosing Menu"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -92,82 +93,6 @@ text = "Mute audio"
 [node name="Mute" type="CheckBox" parent="Choosing Menu/Audio/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Video" type="TabBar" parent="Choosing Menu"]
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="Choosing Menu/Video"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Choosing Menu/Video/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
-
-[node name="Label" type="Label" parent="Choosing Menu/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Resolution (NEFUNGUJE)
-
-"
-
-[node name="Resolutions" type="OptionButton" parent="Choosing Menu/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-selected = 0
-item_count = 3
-popup/item_0/text = "1920x1080"
-popup/item_1/text = "1600x900"
-popup/item_1/id = 1
-popup/item_2/text = "1280x720"
-popup/item_2/id = 2
-
-[node name="Gameplay" type="TabBar" parent="Choosing Menu"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Choosing Menu/Gameplay"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Choosing Menu/Gameplay/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
-
-[node name="Label" type="Label" parent="Choosing Menu/Gameplay/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "NEFUNGUJE"
-
-[node name="Label2" type="Label" parent="Choosing Menu/Gameplay/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "NEFUNGUJE"
-
-[node name="Label3" type="Label" parent="Choosing Menu/Gameplay/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "NEFUNGUJE"
-
-[node name="Label4" type="Label" parent="Choosing Menu/Gameplay/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "NEFUNGUJE"
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_pressed"]
 [connection signal="value_changed" from="Choosing Menu/Audio/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="Choosing Menu/Audio/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
-[connection signal="item_selected" from="Choosing Menu/Video/MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]

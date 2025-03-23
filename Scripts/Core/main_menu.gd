@@ -17,9 +17,9 @@ func _on_load_pressed():
 	print("Game was loaded")
 
 func _on_options_pressed():
-	GameManager.load_options_menu()
+	#GameManager.load_options_menu()
 	#nefunguje
-	#$SettingsMenu.popup_centered()
+	$SettingsMenu.popup_centered()
 
 func _on_world_map_pressed():
 	GameManager.load_world()

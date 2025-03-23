@@ -1,13 +1,7 @@
-res://Scenes/WorldScenes/Level1.tscn
-res://Scripts/Core/SaveManager.gd
-res://Scripts/Core/SaveData.gd
-res://Scripts/Core/main_menu.gd
-res://Scripts/Core/LevelData.gd
-res://Scripts/UI/settings_menu.gd
-res://Scripts/Core/global_settings.gd
 res://Scenes/WorldScenes/Main menu/main_menu.tscn
 res://Scenes/WorldScenes/Main menu/options_menu.tscn
 res://Scenes/WorldScenes/Main menu/settings_menu.tscn
+res://Scenes/WorldScenes/Level1.tscn
 res://Scenes/WorldScenes/Level2.tscn
 res://Scenes/WorldScenes/Level3.tscn
 res://Scenes/WorldScenes/Level4.tscn
@@ -15,3 +9,4 @@ res://Scenes/WorldScenes/Level5.tscn
 res://Scenes/WorldScenes/Level6.tscn
 res://Scenes/WorldScenes/Level7.tscn
 res://Scenes/WorldScenes/world_map.tscn
+res://Scripts/Core/global_settings.gd
