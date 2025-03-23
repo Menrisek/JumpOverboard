@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dgdoy45wl66xt"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/Cannon/cannon.gd" id="1_2j8br"]
+[ext_resource type="Script" uid="uid://woppjr5u4ivs" path="res://Scripts/Interactable/Cannon/cannon.gd" id="1_2j8br"]
 [ext_resource type="Texture2D" uid="uid://bj3l4b0hcjkt1" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Idle/1.png" id="1_km1j0"]
 [ext_resource type="Texture2D" uid="uid://cug81x11076qq" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Fire/1.png" id="3_5vvdx"]
 [ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="3_i35x5"]
@@ -107,9 +107,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qie3q"]
 _data = {
-"RESET": SubResource("Animation_e3uy0"),
-"fire": SubResource("Animation_a6cuk"),
-"hit": SubResource("Animation_3jylq")
+&"RESET": SubResource("Animation_e3uy0"),
+&"fire": SubResource("Animation_a6cuk"),
+&"hit": SubResource("Animation_3jylq")
 }
 
 [node name="Canon" type="StaticBody2D" groups=["Enemies"]]

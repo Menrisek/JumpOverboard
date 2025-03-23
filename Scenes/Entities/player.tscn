@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=3 uid="uid://dxsv5s41vypro"]
 
-[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
+[ext_resource type="Script" uid="uid://bxneabdd14pa" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
 [ext_resource type="Texture2D" uid="uid://8gdraysrg80r" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 01.png" id="3_3govv"]
 [ext_resource type="Texture2D" uid="uid://n1k1p663tm1r" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 02.png" id="3_c0vwy"]
@@ -75,8 +75,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c6ssy"]
 _data = {
-"RESET": SubResource("Animation_ppdhv"),
-"level_title_appear": SubResource("Animation_ukrnk")
+&"RESET": SubResource("Animation_ppdhv"),
+&"level_title_appear": SubResource("Animation_ukrnk")
 }
 
 [sub_resource type="Animation" id="Animation_yyty4"]
@@ -306,15 +306,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqntf"]
 _data = {
-"RESET": SubResource("Animation_yyty4"),
-"attack": SubResource("Animation_3q5ea"),
-"attack2": SubResource("Animation_14wsn"),
-"death": SubResource("Animation_q2r4y"),
-"fall": SubResource("Animation_jptf1"),
-"hit": SubResource("Animation_81bef"),
-"idle": SubResource("Animation_8j128"),
-"jump": SubResource("Animation_m75j5"),
-"run": SubResource("Animation_jwh15")
+&"RESET": SubResource("Animation_yyty4"),
+&"attack": SubResource("Animation_3q5ea"),
+&"attack2": SubResource("Animation_14wsn"),
+&"death": SubResource("Animation_q2r4y"),
+&"fall": SubResource("Animation_jptf1"),
+&"hit": SubResource("Animation_81bef"),
+&"idle": SubResource("Animation_8j128"),
+&"jump": SubResource("Animation_m75j5"),
+&"run": SubResource("Animation_jwh15")
 }
 
 [node name="Player" type="CharacterBody2D"]

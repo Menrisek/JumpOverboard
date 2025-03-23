@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://ddhu733seikpa"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/checkpoint.gd" id="1_1wsyu"]
+[ext_resource type="Script" uid="uid://s7qg7kwelaqm" path="res://Scripts/Interactable/checkpoint.gd" id="1_1wsyu"]
 [ext_resource type="Texture2D" uid="uid://cytsti2a2ekur" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_bn0j6"]
 [ext_resource type="Texture2D" uid="uid://bcyj3ottxt2ej" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="2_ib84q"]
 [ext_resource type="Texture2D" uid="uid://d01ql8e60uut0" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="3_dewev"]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_851k5"]
 _data = {
-"RESET": SubResource("Animation_l0jt1"),
-"activated": SubResource("Animation_i7jld")
+&"RESET": SubResource("Animation_l0jt1"),
+&"activated": SubResource("Animation_i7jld")
 }
 
 [node name="Checkpoint" type="Node2D"]

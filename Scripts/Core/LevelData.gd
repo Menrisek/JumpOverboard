@@ -18,12 +18,6 @@ var level_dictionary = {
 		"beaten" : false,
 	}
 }
-#nefunguje
-var game_data = {
-	"master_vol": -10,
-	"music_vol": -10,
-	"sfx_vol": -10,
-}
 
 #automaticky se mu bude vytvářet dictionary, abych ho nemusel dělat manuálně
 func generate_level(level):

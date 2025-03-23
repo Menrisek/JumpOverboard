@@ -23,7 +23,7 @@ func _ready():
 	#vypíše celkový počet coinů do konzole
 	for level in SaveManager.save_data.level_dictionary:
 		total_coins += SaveManager.save_data.level_dictionary[level]["coins"]
-		print("Total coins: " + str(total_coins))
+		print("Total amount of coins: " + str(total_coins))
 	#vypisuje to na mapu
 	update_coin_display()
 

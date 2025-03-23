@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://bjpdewaeiii73"]
 
 [ext_resource type="Texture2D" uid="uid://cb43bwjta00ow" path="res://Art/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 01.png" id="1_3igom"]
-[ext_resource type="Script" path="res://Scripts/Enemies/sharkie.gd" id="1_ujwol"]
+[ext_resource type="Script" uid="uid://d2fuc3gmu0bob" path="res://Scripts/Enemies/sharkie.gd" id="1_ujwol"]
 [ext_resource type="Texture2D" uid="uid://bn1aliusm5iov" path="res://Art/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 02.png" id="2_mcida"]
 [ext_resource type="Texture2D" uid="uid://cjf51kkx3vp23" path="res://Art/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 03.png" id="3_6wba3"]
 [ext_resource type="Texture2D" uid="uid://cxaoycr5h8gae" path="res://Art/The Crusty Crew/Sprites/Fierce Tooth/09-Dead Hit/Dead Hit 01.png" id="3_tqvoc"]
@@ -150,11 +150,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cj7e0"]
 _data = {
-"RESET": SubResource("Animation_gf0ce"),
-"die": SubResource("Animation_4wbw0"),
-"hit": SubResource("Animation_5xrpn"),
-"idle": SubResource("Animation_g7dvp"),
-"run": SubResource("Animation_y0wj5")
+&"RESET": SubResource("Animation_gf0ce"),
+&"die": SubResource("Animation_4wbw0"),
+&"hit": SubResource("Animation_5xrpn"),
+&"idle": SubResource("Animation_g7dvp"),
+&"run": SubResource("Animation_y0wj5")
 }
 
 [node name="Sharkie" type="CharacterBody2D" groups=["Enemies"]]

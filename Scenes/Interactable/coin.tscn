@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bm4hkqi2x4k2p"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/coin.gd" id="1_r13hm"]
+[ext_resource type="Script" uid="uid://bsyn7lc6opccc" path="res://Scripts/Interactable/coin.gd" id="1_r13hm"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_vjbyg"]
 [ext_resource type="Texture2D" uid="uid://jpihdvbku3ig" path="res://Art/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_ohd7d"]
 [ext_resource type="Texture2D" uid="uid://bst2ojln2a6cq" path="res://Art/Pirate Treasure/Sprites/Gold Coin/coin_taken.png" id="2_rt47d"]
@@ -64,9 +64,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vkmt8"]
 _data = {
-"RESET": SubResource("Animation_etinq"),
-"coin_taken": SubResource("Animation_mhqyk"),
-"idle": SubResource("Animation_pf06a")
+&"RESET": SubResource("Animation_etinq"),
+&"coin_taken": SubResource("Animation_mhqyk"),
+&"idle": SubResource("Animation_pf06a")
 }
 
 [node name="Coin" type="Node2D"]

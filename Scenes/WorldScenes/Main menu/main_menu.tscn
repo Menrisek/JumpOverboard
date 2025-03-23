@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyregojhxb3o0"]
+[gd_scene load_steps=5 format=3 uid="uid://dyregojhxb3o0"]
 
-[ext_resource type="Script" path="res://Scripts/Core/main_menu.gd" id="1_3v0hf"]
-[ext_resource type="VideoStream" path="res://Art/Main Menu/IntroVideo.ogv" id="2_6hvww"]
-[ext_resource type="PackedScene" uid="uid://blt80r8f1qt8w" path="res://Scenes/WorldScenes/Main menu/settings_menu.tscn" id="3_05m7e"]
+[ext_resource type="Script" uid="uid://d12i36hyhhro5" path="res://Scripts/Core/main_menu.gd" id="1_3v0hf"]
 [ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="4_780r2"]
 
 [sub_resource type="SystemFont" id="SystemFont_annme"]
@@ -22,19 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3v0hf")
-
-[node name="Background Video" type="VideoStreamPlayer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("2_6hvww")
-volume_db = -80.0
-autoplay = true
-expand = true
-loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -87,9 +72,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "JUMP OVERBOARD"
 label_settings = SubResource("LabelSettings_68qry")
-
-[node name="SettingsMenu" parent="." instance=ExtResource("3_05m7e")]
-visible = false
 
 [node name="Soundtrack" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_780r2")

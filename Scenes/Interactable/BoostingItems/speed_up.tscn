@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmxlrk2br3k7s"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/BoostingItems/speed_up.gd" id="1_a6jh7"]
+[ext_resource type="Script" uid="uid://bld6cvodyj4bt" path="res://Scripts/Interactable/BoostingItems/speed_up.gd" id="1_a6jh7"]
 [ext_resource type="Texture2D" uid="uid://bci22oly3t21j" path="res://Art/Boosting Items/SpeedBoost.png" id="2_jwoe4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hnv7"]

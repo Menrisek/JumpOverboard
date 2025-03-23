@@ -18,7 +18,7 @@ config/name_localized={
 run/main_scene="res://Scenes/WorldScenes/Main menu/main_menu.tscn"
 config/use_hidden_project_data_directory=false
 config/use_custom_user_dir=true
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0.329412, 0.105882, 1)
 boot_splash/image="res://Art/Icons/cjhead.png"
 config/icon="res://Art/Icons/cjhead.png"
@@ -31,7 +31,6 @@ config/image="res://Art/Icons/cjhead.png"
 GameManager="*res://Scripts/Core/GameManager.gd"
 LevelData="*res://Scripts/Core/LevelData.gd"
 SaveManager="*res://Scripts/Core/SaveManager.gd"
-GlobalSettings="*res://Scripts/Core/global_settings.gd"
 
 [display]
 
@@ -39,6 +38,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 

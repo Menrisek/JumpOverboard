@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bshenrt8rw6ri"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/Cannon/cannon_ball.gd" id="1_733rt"]
+[ext_resource type="Script" uid="uid://c2u1ohgd06qrv" path="res://Scripts/Interactable/Cannon/cannon_ball.gd" id="1_733rt"]
 [ext_resource type="Texture2D" uid="uid://dshiyaijcbdq2" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Ball Idle/1.png" id="2_k4kua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8otyf"]
@@ -54,8 +54,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1m7bf"]
 _data = {
-"RESET": SubResource("Animation_q3oqy"),
-"hit": SubResource("Animation_4cb0t")
+&"RESET": SubResource("Animation_q3oqy"),
+&"hit": SubResource("Animation_4cb0t")
 }
 
 [node name="CannonBall" type="Node2D"]

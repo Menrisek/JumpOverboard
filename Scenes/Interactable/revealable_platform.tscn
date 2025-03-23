@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cpsnr3nhgbl5n"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/revealable_platform.gd" id="1_cijhk"]
+[ext_resource type="Script" uid="uid://dj37oetrd4lmr" path="res://Scripts/Interactable/revealable_platform.gd" id="1_cijhk"]
 [ext_resource type="Texture2D" uid="uid://c7mjdck7bu70e" path="res://Art/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 01.png" id="2_8p23g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18l2h"]
@@ -58,9 +58,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8gw4y"]
 _data = {
-"FadeIn": SubResource("Animation_asmee"),
-"FadeOut": SubResource("Animation_p4dxa"),
-"RESET": SubResource("Animation_l4p36")
+&"FadeIn": SubResource("Animation_asmee"),
+&"FadeOut": SubResource("Animation_p4dxa"),
+&"RESET": SubResource("Animation_l4p36")
 }
 
 [node name="RevealablePlatform" type="StaticBody2D"]

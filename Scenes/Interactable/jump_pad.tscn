@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b8wub4clrsene"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/jump_pad.gd" id="1_m3brt"]
+[ext_resource type="Script" uid="uid://cotduyr83spou" path="res://Scripts/Interactable/jump_pad.gd" id="1_m3brt"]
 [ext_resource type="Texture2D" uid="uid://b3kg3suuo1yaj" path="res://Art/Jump Pad/Tornado 01.png" id="2_66y0v"]
 [ext_resource type="Texture2D" uid="uid://cqvmb3y8p6trt" path="res://Art/Jump Pad/Tornado 02.png" id="3_b8p2x"]
 [ext_resource type="Texture2D" uid="uid://drrrli7mc4sc8" path="res://Art/Jump Pad/Tornado 03.png" id="4_y6cmf"]
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ud5y"]
 _data = {
-"RESET": SubResource("Animation_slwxb"),
-"spinn": SubResource("Animation_x8gy1")
+&"RESET": SubResource("Animation_slwxb"),
+&"spinn": SubResource("Animation_x8gy1")
 }
 
 [node name="JumpPad" type="Node2D"]

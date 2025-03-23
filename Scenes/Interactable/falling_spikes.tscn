@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ctx6tx0t2e8ag"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/falling_spikes.gd" id="1_j00yl"]
+[ext_resource type="Script" uid="uid://brlm1ixfrk70u" path="res://Scripts/Interactable/falling_spikes.gd" id="1_j00yl"]
 [ext_resource type="Texture2D" uid="uid://dfbayclakaw1h" path="res://Art/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_mwxpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_coftw"]
@@ -54,8 +54,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fuu11"]
 _data = {
-"RESET": SubResource("Animation_iqg1c"),
-"Shake": SubResource("Animation_r04lx")
+&"RESET": SubResource("Animation_iqg1c"),
+&"Shake": SubResource("Animation_r04lx")
 }
 
 [node name="FallingSpikes" type="Node2D"]

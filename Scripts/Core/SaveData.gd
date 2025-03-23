@@ -1,13 +1,6 @@
 extends Resource
 class_name SaveData
 
-#nefunguje
-@export var game_data = {
-	"master_vol": -10,
-	"music_vol": -10,
-	"sfx_vol": -10,
-}
-
 @export var level_dictionary = {
 	"Level1" : {
 		"unlocked" : true,

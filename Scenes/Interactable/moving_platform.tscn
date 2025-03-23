@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://6h0t80g6fsmf"]
 
 [ext_resource type="Texture2D" uid="uid://dahhfwhl6hg2s" path="res://Art/Moving Platform/Moving Platform.png" id="1_f6c8i"]
-[ext_resource type="Script" path="res://Scripts/Interactable/moving_platform.gd" id="1_sdnb6"]
+[ext_resource type="Script" uid="uid://bgl1ltackgdku" path="res://Scripts/Interactable/moving_platform.gd" id="1_sdnb6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oeel3"]
 size = Vector2(96, 32)
@@ -58,9 +58,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fax0o"]
 _data = {
-"RESET": SubResource("Animation_ugqnf"),
-"move": SubResource("Animation_7dm62"),
-"move_up": SubResource("Animation_se420")
+&"RESET": SubResource("Animation_ugqnf"),
+&"move": SubResource("Animation_7dm62"),
+&"move_up": SubResource("Animation_se420")
 }
 
 [node name="MovingPlatform" type="Node2D"]

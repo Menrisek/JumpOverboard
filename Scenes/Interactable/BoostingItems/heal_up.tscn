@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpg7s5dyy5cym"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/BoostingItems/heal_up.gd" id="1_1ttxp"]
+[ext_resource type="Script" uid="uid://v3nkgm3rpxlw" path="res://Scripts/Interactable/BoostingItems/heal_up.gd" id="1_1ttxp"]
 [ext_resource type="Texture2D" uid="uid://cqnuisu1gh2os" path="res://Art/Healing Items/Rum.png" id="2_tri0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml64g"]

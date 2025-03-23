@@ -8,7 +8,7 @@ func _ready():
 	#vytvoří/uloží save po zapnutí main menu + chekuje jestli existuje už save (pokud ne, tak ho vytvoří)
 	if not SaveManager.save_exists():
 		SaveManager.save_game()
-	
+
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Level1.tscn")
 
@@ -17,9 +17,7 @@ func _on_load_pressed():
 	print("Game was loaded")
 
 func _on_options_pressed():
-	#GameManager.load_options_menu()
-	#nefunguje
-	$SettingsMenu.popup_centered()
+	pass
 
 func _on_world_map_pressed():
 	GameManager.load_world()

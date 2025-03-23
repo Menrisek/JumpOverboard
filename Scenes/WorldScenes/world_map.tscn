@@ -1,10 +1,10 @@
 [gd_scene load_steps=30 format=3 uid="uid://cd65ved8crkmy"]
 
 [ext_resource type="Texture2D" uid="uid://ch70c123fh43" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_jim1w"]
-[ext_resource type="Script" path="res://Scripts/Core/WorldMap.gd" id="1_wpf7j"]
+[ext_resource type="Script" uid="uid://bbv8nfprmbt5f" path="res://Scripts/Core/WorldMap.gd" id="1_wpf7j"]
 [ext_resource type="Texture2D" uid="uid://b2saoxk6o5y4u" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="2_1hwth"]
 [ext_resource type="Texture2D" uid="uid://bsrjb0q4ix33q" path="res://Art/World Map/World Map.png" id="2_274kt"]
-[ext_resource type="Script" path="res://Scripts/Core/WorldMapLevel.gd" id="2_rdguj"]
+[ext_resource type="Script" uid="uid://c7n05xpvnbgql" path="res://Scripts/Core/WorldMapLevel.gd" id="2_rdguj"]
 [ext_resource type="Texture2D" uid="uid://38vjocs50d1t" path="res://Art/World Map/Locked.png" id="3_rrpgb"]
 [ext_resource type="Texture2D" uid="uid://dms6d1h1bp0am" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xqcxy"]
 [ext_resource type="Texture2D" uid="uid://demr2vb8p7hyh" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_k6ub6"]
@@ -175,8 +175,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_66m1q"]
 _data = {
-"RESET": SubResource("Animation_4nca5"),
-"show": SubResource("Animation_ne5yh")
+&"RESET": SubResource("Animation_4nca5"),
+&"show": SubResource("Animation_ne5yh")
 }
 
 [sub_resource type="Animation" id="Animation_mbxmc"]
@@ -246,10 +246,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a21r6"]
 _data = {
-"RESET": SubResource("Animation_mbxmc"),
-"idle": SubResource("Animation_6nx36"),
-"run": SubResource("Animation_4lavj"),
-"select": SubResource("Animation_nm4vp")
+&"RESET": SubResource("Animation_mbxmc"),
+&"idle": SubResource("Animation_6nx36"),
+&"run": SubResource("Animation_4lavj"),
+&"select": SubResource("Animation_nm4vp")
 }
 
 [node name="WorldMap" type="Node2D"]
@@ -431,7 +431,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level1/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level2" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
@@ -467,7 +467,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level2/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level3" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "left", "right")]
@@ -504,7 +504,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level3/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level4" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left")]
@@ -540,7 +540,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level4/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level5" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
@@ -576,7 +576,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level5/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level6" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
@@ -612,7 +612,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level6/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level7" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "right")]
@@ -648,7 +648,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level7/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level8" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left", "right")]
@@ -685,7 +685,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level8/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level9" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
@@ -721,7 +721,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level9/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Level10" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left")]
@@ -756,7 +756,7 @@ texture = ExtResource("7_r6m06")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level10/StatsDisplay"]
 libraries = {
-"": SubResource("AnimationLibrary_66m1q")
+&"": SubResource("AnimationLibrary_66m1q")
 }
 
 [node name="Player" type="Sprite2D" parent="."]
@@ -765,7 +765,7 @@ texture = ExtResource("1_jim1w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
-"": SubResource("AnimationLibrary_a21r6")
+&"": SubResource("AnimationLibrary_a21r6")
 }
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
