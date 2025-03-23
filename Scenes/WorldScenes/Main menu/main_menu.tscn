@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dyregojhxb3o0"]
 
 [ext_resource type="Script" uid="uid://d12i36hyhhro5" path="res://Scripts/Core/main_menu.gd" id="1_3v0hf"]
-[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="4_780r2"]
+[ext_resource type="AudioStream" uid="uid://bhjhvgnph6fes" path="res://Audio/Soundtrack/main_menu demo_01.wav" id="2_carj2"]
 
 [sub_resource type="SystemFont" id="SystemFont_annme"]
 font_names = PackedStringArray("Impact")
@@ -20,6 +20,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3v0hf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.737255, 0.941176, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -73,10 +90,11 @@ grow_vertical = 2
 text = "JUMP OVERBOARD"
 label_settings = SubResource("LabelSettings_68qry")
 
-[node name="Soundtrack" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_780r2")
-volume_db = -10.0
+[node name="Main Menu Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_carj2")
+volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddhu733seikpa"]
+[gd_scene load_steps=16 format=3 uid="uid://ddhu733seikpa"]
 
 [ext_resource type="Script" uid="uid://s7qg7kwelaqm" path="res://Scripts/Interactable/checkpoint.gd" id="1_1wsyu"]
 [ext_resource type="Texture2D" uid="uid://cytsti2a2ekur" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_bn0j6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bd4hdd42m8ijl" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="7_v4kjm"]
 [ext_resource type="Texture2D" uid="uid://bu76yjo3kfdn" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="8_xsjk7"]
 [ext_resource type="Texture2D" uid="uid://cj1tl7qqidqrh" path="res://Art/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="9_eop08"]
+[ext_resource type="AudioStream" uid="uid://du1bjubjirk3u" path="res://Audio/SoundEffects/Interactable/Waving flag.wav" id="11_qhx2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iy4jj"]
 size = Vector2(33, 91.5)
@@ -70,7 +71,13 @@ shape = SubResource("RectangleShape2D_iy4jj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_851k5")
+&"": SubResource("AnimationLibrary_851k5")
 }
+
+[node name="SFX Checkpoint taken" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_qhx2b")
+volume_db = 10.0
+max_distance = 500.0
+bus = &"SFX"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

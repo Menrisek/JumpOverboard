@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dgdoy45wl66xt"]
+[gd_scene load_steps=21 format=3 uid="uid://dgdoy45wl66xt"]
 
 [ext_resource type="Script" uid="uid://woppjr5u4ivs" path="res://Scripts/Interactable/Cannon/cannon.gd" id="1_2j8br"]
 [ext_resource type="Texture2D" uid="uid://bj3l4b0hcjkt1" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Idle/1.png" id="1_km1j0"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://qtl2a6wqndf3" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/2.png" id="10_ccv3u"]
 [ext_resource type="Texture2D" uid="uid://dl68c342i1r5" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/3.png" id="11_jncys"]
 [ext_resource type="Texture2D" uid="uid://cettr86g2tals" path="res://Art/Shooter Traps/Sprites/Cannon/Cannon Hit/4.png" id="12_xb8le"]
+[ext_resource type="AudioStream" uid="uid://sapt0ei2aqbo" path="res://Audio/SoundEffects/Interactable/Canon/CanonFire.wav" id="14_raous"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ok0ho"]
 size = Vector2(23, 23)
@@ -140,5 +141,10 @@ offset_bottom = -12.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_qie3q")
+&"": SubResource("AnimationLibrary_qie3q")
 }
+
+[node name="SFX CanonFire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_raous")
+volume_db = -10.0
+max_distance = 600.0

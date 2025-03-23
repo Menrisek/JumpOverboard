@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6tbtl8d223r5"]
+[gd_scene load_steps=5 format=3 uid="uid://b6tbtl8d223r5"]
 
 [ext_resource type="Script" uid="uid://bxm1cllu7yw0r" path="res://Scripts/Interactable/BoostingItems/jump_up.gd" id="1_itgrn"]
 [ext_resource type="Texture2D" uid="uid://bl0hun0cqoqmp" path="res://Art/Boosting Items/JumpBoost.png" id="2_psxbu"]
+[ext_resource type="AudioStream" uid="uid://cm3pgiss8l0r6" path="res://Audio/SoundEffects/Interactable/powerUpJump.wav" id="3_x0054"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of0s5"]
 size = Vector2(16, 16.75)
@@ -18,5 +19,10 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_of0s5")
+
+[node name="SFX JumpUp taken" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x0054")
+volume_db = -15.0
+bus = &"SFX"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

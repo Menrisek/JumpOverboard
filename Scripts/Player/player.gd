@@ -4,8 +4,13 @@ class_name Player
 @onready var animation= $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var attack_area = $AttackArea
-@onready var sfx_sword_swing = $"SFX Sword Swing"
 @onready var coyote_timer = $CoyoteTimer
+
+#sound effekty
+@onready var sfx_sword_swing = $"SFX Sword Swing"
+@onready var sfx_get_hit = $"SFX Hit"
+@onready var sfx_heal_taken = $"SFX Heal taken"
+@onready var sfx_jump = $"SFX Jump"
 
 @export var speed = 300.0
 @export var jump_height = -400.0
@@ -36,7 +41,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("attack") && !hit:
 		attack()
 	time = float(time) + delta
-	update_ui()
+	update_timer_ui()
 
 func _physics_process(delta):
 	#přehazuje strany postavy a attack arei
@@ -61,6 +66,7 @@ func _physics_process(delta):
 		
 	# Handle jump.
 	if jump_buffering > 0 and (is_on_floor() or !coyote_timer.is_stopped()):
+		sfx_jump.play()
 		jump_buffering = 0.0
 		velocity.y = jump_height
 
@@ -130,6 +136,7 @@ func take_damage(damage_amouth : int):
 		hit = true
 		attacking = false
 		animation.play("hit")
+		sfx_get_hit.play()
 		
 		
 		GameManager.damage_taken +=1
@@ -149,6 +156,7 @@ func update_heart_display():
 		hearts_list[i].visible = i < health
 
 func heal(amount: int):
+	sfx_heal_taken.play()
 	if health < max_health:
 		health += amount
 		#zajistím aby zdraví nepřekročilo maximum
@@ -166,7 +174,7 @@ func immunityframes():
 	await get_tree().create_timer(0.2).timeout
 	can_take_damage = true
 
-func update_ui():
+func update_timer_ui():
 	#formát s dvěmi decimálními čísly
 	var formatted_time = str(time)
 	var decimal_index = formatted_time.find(".")

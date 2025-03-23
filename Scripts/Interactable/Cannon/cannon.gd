@@ -6,6 +6,8 @@ class_name Cannon
 var cannon_ball = load("res://Scenes/Interactable/Cannon/cannon_ball.tscn")
 var debris = load("res://Scenes/Interactable/Cannon/cannon_debris.tscn")
 
+@onready var sfx_canon_fire = $"SFX CanonFire"
+
 @export var shooting : bool
 #jak často bude střílet (v sekundách)
 @export var fire_rate = 1.5
@@ -33,6 +35,8 @@ func fire():
 	spawned_ball.global_position = firepoint.position
 	#přidá se to do "stromu"
 	add_child(spawned_ball)
+	sfx_canon_fire.play()
+	
 
 func die():
 	# kdybych chtěl abyse kanón počátal jako enemy, ale to bych to musel předělat ještě v RunTimeLevel
