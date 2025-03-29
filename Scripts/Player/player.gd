@@ -12,6 +12,8 @@ class_name Player
 @onready var sfx_heal_taken = $"SFX Heal taken"
 @onready var sfx_jump = $"SFX Jump"
 
+@export var show_hp = true
+
 @export var speed = 300.0
 @export var jump_height = -400.0
 var attacking = false
@@ -36,6 +38,8 @@ func _ready():
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	level_intro_text()
+	if show_hp == false:
+		$PlayerUI/HeartsContainer.hide()
 
 func _process(delta):
 	if Input.is_action_just_pressed("attack") && !hit:

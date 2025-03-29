@@ -8,14 +8,19 @@ class_name SpeedUp
 
 var item_taken = false
 
+func _ready():
+	$AnimationPlayer.play("float")
+
 func _on_area_2d_area_entered(area):
 	if area.get_parent() is Player and !item_taken:
 		item_taken = true
 		sfx_speed_up_taken.play()
 		area.get_parent().speed += speed_change
+		print("Speed boost taken")
 		self.visible = false
 		await get_tree().create_timer(speeding_time).timeout
 		area.get_parent().speed -= speed_change
+		print("Speed boost gone")
 		respawn()
 
 func respawn():

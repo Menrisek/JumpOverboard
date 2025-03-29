@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://d1l8xkbwuxjhe" path="res://Audio/SoundEffects/Player/Sword Swing1.wav" id="32_yu82y"]
 [ext_resource type="AudioStream" uid="uid://co5piityssxie" path="res://Audio/SoundEffects/Player/hitHurt.wav" id="33_d6fof"]
 [ext_resource type="AudioStream" uid="uid://ll0dh01ut8qp" path="res://Audio/SoundEffects/Interactable/HealUp.wav" id="34_hi0an"]
+[ext_resource type="AudioStream" uid="uid://cbeerqvssfnqn" path="res://Audio/SoundEffects/Player/JumpSound1.wav" id="35_2mdcc"]
 [ext_resource type="AudioStream" uid="uid://caqcxujoflfgu" path="res://Audio/SoundEffects/Player/JumpSound2.wav" id="36_2mdcc"]
 [ext_resource type="AudioStream" uid="uid://hfy4c7fou2y3" path="res://Audio/SoundEffects/Player/JumpSound3.wav" id="37_ol88v"]
 
@@ -321,11 +322,9 @@ _data = {
 &"run": SubResource("Animation_jwh15")
 }
 
-[sub_resource type="AudioStream" id="AudioStream_2mdcc"]
-
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cx7vx"]
 streams_count = 3
-stream_0/stream = SubResource("AudioStream_2mdcc")
+stream_0/stream = ExtResource("35_2mdcc")
 stream_1/stream = ExtResource("36_2mdcc")
 stream_2/stream = ExtResource("37_ol88v")
 

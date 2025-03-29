@@ -9,8 +9,3 @@ res://Scenes/WorldScenes/Level5.tscn
 res://Scenes/WorldScenes/Level6.tscn
 res://Scenes/WorldScenes/Level7.tscn
 res://Scenes/WorldScenes/world_map.tscn
-res://Scenes/Interactable/BoostingItems/heal_up.tscn
-res://Scenes/Interactable/checkpoint.tscn
-res://Scripts/Interactable/checkpoint.gd
-res://Scripts/Player/player.gd
-res://Scripts/Core/RunTimeLevel.gd

@@ -30,7 +30,7 @@ func _ready():
 func update_levels():
 	for level in levels:
 		if level.name in LevelData.level_dictionary:
-			#dívám se do dictionary zda je lvl odemknutý nebo poražený, nebo zamknutý
+			#dívám se do dictionary zda je lvl odemknutý (unlocked), nebo poražený (beaten), nebo zamknutý (beaten)
 			if LevelData.level_dictionary[level.name]["unlocked"] == true:
 				level.get_node("Sprite2D").texture = load("res://Art/World Map/Unlocked.png")
 				if LevelData.level_dictionary[level.name]["beaten"] == true:

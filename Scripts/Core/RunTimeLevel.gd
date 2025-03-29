@@ -5,7 +5,6 @@ class_name RunTimeLevel
 @onready var player = $Player
 
 @export var level_title : String
-@export var show_hp = true
 
 var max_score = 0
 var max_coins = 0

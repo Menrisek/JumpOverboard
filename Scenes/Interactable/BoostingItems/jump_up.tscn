@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6tbtl8d223r5"]
+[gd_scene load_steps=8 format=3 uid="uid://b6tbtl8d223r5"]
 
 [ext_resource type="Script" uid="uid://bxm1cllu7yw0r" path="res://Scripts/Interactable/BoostingItems/jump_up.gd" id="1_itgrn"]
 [ext_resource type="Texture2D" uid="uid://bl0hun0cqoqmp" path="res://Art/Boosting Items/JumpBoost.png" id="2_psxbu"]
@@ -6,6 +6,43 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of0s5"]
 size = Vector2(16, 16.75)
+
+[sub_resource type="Animation" id="Animation_tsxum"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -2), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k86m5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3uuwo"]
+_data = {
+&"RESET": SubResource("Animation_k86m5"),
+&"float": SubResource("Animation_tsxum")
+}
 
 [node name="JumpUp" type="Node2D"]
 script = ExtResource("1_itgrn")
@@ -24,5 +61,10 @@ shape = SubResource("RectangleShape2D_of0s5")
 stream = ExtResource("3_x0054")
 volume_db = -15.0
 bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3uuwo")
+}
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmxlrk2br3k7s"]
+[gd_scene load_steps=8 format=3 uid="uid://bmxlrk2br3k7s"]
 
 [ext_resource type="Script" uid="uid://bld6cvodyj4bt" path="res://Scripts/Interactable/BoostingItems/speed_up.gd" id="1_a6jh7"]
 [ext_resource type="Texture2D" uid="uid://bci22oly3t21j" path="res://Art/Boosting Items/SpeedBoost.png" id="2_jwoe4"]
@@ -6,6 +6,43 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hnv7"]
 size = Vector2(23.5, 18)
+
+[sub_resource type="Animation" id="Animation_tsxum"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -2), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k86m5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3uuwo"]
+_data = {
+&"RESET": SubResource("Animation_k86m5"),
+&"float": SubResource("Animation_tsxum")
+}
 
 [node name="SpeedUp" type="Node2D"]
 script = ExtResource("1_a6jh7")
@@ -24,5 +61,10 @@ shape = SubResource("RectangleShape2D_3hnv7")
 stream = ExtResource("3_51dph")
 volume_db = -15.0
 bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3uuwo")
+}
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

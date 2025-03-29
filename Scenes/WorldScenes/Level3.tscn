@@ -847,6 +847,7 @@ tile_set = SubResource("TileSet_5giv2")
 
 [node name="Player" parent="." instance=ExtResource("6_itawo")]
 position = Vector2(-62, 99)
+show_hp = false
 
 [node name="UIManager" type="CanvasLayer" parent="."]
 process_mode = 3
