@@ -77,5 +77,5 @@ shape = SubResource("RectangleShape2D_oeel3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
 libraries = {
-"": SubResource("AnimationLibrary_fax0o")
+&"": SubResource("AnimationLibrary_fax0o")
 }

@@ -1,5 +1,5 @@
 extends Node2D
-class_name HealthUp
+class_name HealUp
 
 func _ready():
 	$AnimationPlayer.play("float")

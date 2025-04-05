@@ -14,6 +14,7 @@ var debris = load("res://Scenes/Interactable/Cannon/cannon_debris.tscn")
 @export var distance = 300
 @export var score = 0
 @export var max_health = 3
+@export var breakable = true
 var health = 0
 
 func _ready():
@@ -53,10 +54,11 @@ func die():
 	queue_free()
 
 func take_damage(damage_amount):
-	health -= damage_amount
-	
-	get_node("Healthbar").update_healthbar(health, max_health)
-	
-	animation.play("hit")
-	if health <=0:
-		die()
+	if breakable == true:
+		health -= damage_amount
+		
+		get_node("Healthbar").update_healthbar(health, max_health)
+		
+		animation.play("hit")
+		if health <=0:
+			die()
