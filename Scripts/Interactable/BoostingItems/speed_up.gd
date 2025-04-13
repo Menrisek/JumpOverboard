@@ -19,7 +19,9 @@ func _on_area_2d_area_entered(area):
 		print("Speed boost taken")
 		self.visible = false
 		await get_tree().create_timer(speeding_time).timeout
-		area.get_parent().speed -= speed_change
+		#pokud je rychlost stejná jako na začátku, tak to neodečtu
+		if area.get_parent().speed != area.get_parent().default_speed:
+			area.get_parent().speed -= speed_change
 		print("Speed boost gone")
 		respawn()
 

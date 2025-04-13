@@ -331,9 +331,6 @@ stream_2/stream = ExtResource("37_ol88v")
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_hcqxc")
-speed = 250.0
-jump_height = -300.0
-max_health = 3
 
 [node name="Hitbox" type="Area2D" parent="."]
 monitoring = false

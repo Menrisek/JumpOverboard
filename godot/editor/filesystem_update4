@@ -1,4 +1,18 @@
-res://Scenes/WorldScenes/Level5.tscn
+res://Scenes/WorldScenes/Main menu/main_menu.tscn
 res://Scripts/Interactable/BoostingItems/heal_up.gd
+res://Scenes/WorldScenes/Level1.tscn
+res://Scenes/WorldScenes/Level2.tscn
+res://Scenes/WorldScenes/Level3.tscn
 res://Scenes/WorldScenes/Level4.tscn
+res://Scenes/WorldScenes/Level5.tscn
 res://Scenes/WorldScenes/Level6.tscn
+res://Scenes/WorldScenes/Level7.tscn
+res://Scenes/WorldScenes/Level8.tscn
+res://Scenes/WorldScenes/Level9.tscn
+res://Scenes/WorldScenes/Level10.tscn
+res://Scenes/WorldScenes/world_map.tscn
+res://Scenes/Entities/player.tscn
+res://Scripts/Core/RunTimeLevel.gd
+res://Scripts/Player/player.gd
+res://Scripts/Interactable/BoostingItems/speed_up.gd
+res://Scripts/Interactable/BoostingItems/jump_up.gd

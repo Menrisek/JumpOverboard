@@ -19,7 +19,8 @@ func _on_area_2d_area_entered(area):
 		print("Jump boost taken")
 		self.visible = false
 		await get_tree().create_timer(jumping_time).timeout
-		area.get_parent().jump_height += jump_change
+		if area.get_parent().jump_height != area.get_parent().default_jump_height:
+			area.get_parent().jump_height += jump_change
 		print("Jump boost gone")
 		respawn()
 

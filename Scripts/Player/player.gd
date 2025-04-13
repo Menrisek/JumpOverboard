@@ -14,13 +14,15 @@ class_name Player
 
 @export var show_hp = true
 
-@export var speed = 300.0
-@export var jump_height = -400.0
+@export var speed = 250.0
+@export var jump_height = -300.0
+var default_speed = speed
+var default_jump_height = jump_height
 
 var attacking = false
 var hit = false
 
-@export var max_health = 2
+@export var max_health = 3
 @onready var health = 0
 var hearts_list : Array[TextureRect]
 var can_take_damage = true
@@ -82,7 +84,7 @@ func _physics_process(delta):
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-	
+
 	var was_on_floor = is_on_floor()
 	
 	move_and_slide()
@@ -118,6 +120,8 @@ func update_animation():
 
 func die():
 	GameManager.deaths += 1
+	speed = default_speed
+	jump_height = default_jump_height
 	GameManager.respawn_player()
 	update_heart_display()
 	# ZDE KDYBYCH CHTĚL HEALTHBAR POD HRÁČEM: get_node("Healthbar").update_healthbar(health, max_health)
