@@ -82,7 +82,7 @@ shape = SubResource("RectangleShape2D_7jch3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_8gw4y")
+&"": SubResource("AnimationLibrary_8gw4y")
 }
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

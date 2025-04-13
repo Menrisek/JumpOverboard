@@ -16,6 +16,7 @@ class_name Player
 
 @export var speed = 300.0
 @export var jump_height = -400.0
+
 var attacking = false
 var hit = false
 

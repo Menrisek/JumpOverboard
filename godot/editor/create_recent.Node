@@ -1,6 +1,6 @@
+TextureRect
 AnimationPlayer
 ColorRect
-TextureRect
 AudioStreamPlayer2D
 Button
 Label
@@ -12,4 +12,3 @@ CheckButton
 OptionButton
 TabBar
 TabContainer
-Popup
