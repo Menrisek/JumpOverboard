@@ -1,2 +1,4 @@
-res://Scenes/WorldScenes/Level9.tscn
+res://Scenes/WorldScenes/Level5.tscn
 res://Scripts/Interactable/BoostingItems/heal_up.gd
+res://Scenes/WorldScenes/Level4.tscn
+res://Scenes/WorldScenes/Level6.tscn

@@ -1344,7 +1344,7 @@ position = Vector2(2120, 173)
 position = Vector2(2524, -14)
 
 [node name="JumpPad7" parent="." instance=ExtResource("11_s4ulk")]
-position = Vector2(2623, -86)
+position = Vector2(2633, -88)
 
 [node name="Canon18" parent="." instance=ExtResource("12_7tw4s")]
 position = Vector2(3292, -47)
@@ -1491,6 +1491,15 @@ position = Vector2(2522, -40)
 
 [node name="Coin31" parent="." instance=ExtResource("16_ddj41")]
 position = Vector2(1973, 104)
+
+[node name="Coin42" parent="." instance=ExtResource("16_ddj41")]
+position = Vector2(4405, -106)
+
+[node name="Coin43" parent="." instance=ExtResource("16_ddj41")]
+position = Vector2(4405, -85)
+
+[node name="Coin44" parent="." instance=ExtResource("16_ddj41")]
+position = Vector2(4405, -63)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

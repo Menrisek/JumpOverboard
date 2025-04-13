@@ -1011,7 +1011,7 @@ shake = false
 [node name="FallingSpikes17" parent="." instance=ExtResource("17_xbpkq")]
 position = Vector2(1167, -778)
 speed = 250.0
-time_to_live = 0.3
+time_to_live = 1.0
 
 [node name="FallingSpikes19" parent="." instance=ExtResource("17_xbpkq")]
 position = Vector2(1697, -497)
