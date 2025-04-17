@@ -1053,11 +1053,12 @@ text = "Your crew is who knows where, and as the captain, you want only one thin
 autowrap_mode = 2
 
 [node name="Flag" type="Label" parent="."]
-offset_left = 3317.0
-offset_top = -69.0
-offset_right = 3523.0
-offset_bottom = -46.0
-text = "Flag works as a checkpoint"
+offset_left = 3300.0
+offset_top = -101.0
+offset_right = 3548.0
+offset_bottom = -52.0
+text = "Flag works as a checkpoint
+(waving flag = checkpoint taken)"
 
 [node name="Checkpoint" parent="." instance=ExtResource("5_5c3cm")]
 position = Vector2(-68, 91)

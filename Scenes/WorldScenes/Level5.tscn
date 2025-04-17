@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cphor2iyp47hv"]
+[gd_scene load_steps=28 format=4 uid="uid://cphor2iyp47hv"]
 
 [ext_resource type="Script" uid="uid://bq58fgdwgwtok" path="res://Scripts/Core/RunTimeLevel.gd" id="1_mlvom"]
 [ext_resource type="Texture2D" uid="uid://1y0yew5crxde" path="res://Art/Palm Tree Island/Sprites/Background/BG Image Night.png" id="2_h72yb"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bj7opw07a6exn" path="res://Scripts/UI/ui_manager.gd" id="7_tl5ar"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_tkodi"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_g7ih2"]
+[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="10_50mq8"]
 [ext_resource type="PackedScene" uid="uid://b8wub4clrsene" path="res://Scenes/Interactable/jump_pad.tscn" id="11_s4ulk"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="12_1y38l"]
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="12_7tw4s"]
@@ -807,7 +808,7 @@ shadow_color = Color(0, 0, 0, 0.682353)
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_mlvom")
-level_title = "Canon Ball"
+level_title = "Cannon Ball"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1374.0
@@ -1057,6 +1058,26 @@ offset_right = 350.0
 offset_bottom = -10.0
 grow_vertical = 0
 text = "World map"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_50mq8")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -461.0
+offset_top = 90.0
+offset_right = -136.0
+offset_bottom = 113.0
+text = "The night sky is beautiful, don’t you think?"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 321.0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 22.0
+text = "Be aware of the cannons"
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_g7ih2")]
 position = Vector2(-291, 203)

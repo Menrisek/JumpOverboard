@@ -1,9 +1,9 @@
+Label
 TextureRect
 AnimationPlayer
 ColorRect
 AudioStreamPlayer2D
 Button
-Label
 HSlider
 HBoxContainer
 GridContainer

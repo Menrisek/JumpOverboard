@@ -113,7 +113,7 @@ _data = {
 &"hit": SubResource("Animation_3jylq")
 }
 
-[node name="Canon" type="StaticBody2D" groups=["Enemies"]]
+[node name="Cannon" type="StaticBody2D" groups=["Enemies"]]
 script = ExtResource("1_2j8br")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

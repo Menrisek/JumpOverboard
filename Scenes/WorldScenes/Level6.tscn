@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://ccpil3v1c4xwi"]
+[gd_scene load_steps=30 format=4 uid="uid://ccpil3v1c4xwi"]
 
 [ext_resource type="Script" uid="uid://bq58fgdwgwtok" path="res://Scripts/Core/RunTimeLevel.gd" id="1_gktno"]
 [ext_resource type="Texture2D" uid="uid://ch77liydluqj1" path="res://Art/Palm Tree Island/Sprites/Background/BG Image.png" id="2_bkasp"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bqiha0o6viahq" path="res://Scenes/Interactable/one_way_platform_small.tscn" id="7_lbpj5"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_hloek"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_7giis"]
+[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="10_8a3sv"]
 [ext_resource type="PackedScene" uid="uid://6h0t80g6fsmf" path="res://Scenes/Interactable/moving_platform.tscn" id="10_pwsd2"]
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="12_aq3qf"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="14_xwrr0"]
@@ -811,6 +812,42 @@ offset_right = 350.0
 offset_bottom = -10.0
 grow_vertical = 0
 text = "World map"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_8a3sv")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -198.0
+offset_top = 84.0
+offset_right = -4.0
+offset_bottom = 107.0
+text = "Can we get much higher?"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1853.0
+offset_top = -692.0
+offset_right = 2058.0
+offset_bottom = -669.0
+text = "Stop! You violated the law!"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2201.0
+offset_top = -215.0
+offset_right = 2463.0
+offset_bottom = -192.0
+text = "Yeah you made it here, and what?"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1754.0
+offset_top = -60.0
+offset_right = 1950.0
+offset_bottom = -11.0
+text = "Gotta move fast!
+(wing boots will help you)"
+horizontal_alignment = 1
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_7giis")]
 position = Vector2(-258, 154)
