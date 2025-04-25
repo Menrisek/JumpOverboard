@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyregojhxb3o0"]
+[gd_scene load_steps=6 format=3 uid="uid://dyregojhxb3o0"]
 
 [ext_resource type="Script" uid="uid://d12i36hyhhro5" path="res://Scripts/Core/main_menu.gd" id="1_3v0hf"]
-[ext_resource type="AudioStream" uid="uid://bhjhvgnph6fes" path="res://Audio/Soundtrack/main_menu demo_01.wav" id="2_carj2"]
+[ext_resource type="AudioStream" uid="uid://if1g3b3681rf" path="res://Audio/Soundtrack/Jump Overboard Menu.wav" id="2_carj2"]
+[ext_resource type="AudioStream" uid="uid://dejd7jahxt24j" path="res://Audio/Soundtrack/Jump Overboard Menu - loop.wav" id="3_gdcn1"]
 
 [sub_resource type="SystemFont" id="SystemFont_annme"]
 font_names = PackedStringArray("Impact")
@@ -121,6 +122,11 @@ label_settings = SubResource("LabelSettings_68qry")
 stream = ExtResource("2_carj2")
 volume_db = -20.0
 autoplay = true
+bus = &"Music"
+
+[node name="Main Menu Soundtrack - loop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gdcn1")
+volume_db = -20.0
 bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

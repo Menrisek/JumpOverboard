@@ -8,6 +8,10 @@ func _ready():
 	#vytvoří/uloží save po zapnutí main menu + chekuje jestli existuje už save (pokud ne, tak ho vytvoří)
 	if not SaveManager.save_exists():
 		SaveManager.save_game()
+	
+	#zapne look soundtracku potom co dohraje intro soundtracku
+	await get_tree().create_timer(21.18).timeout
+	$"Main Menu Soundtrack - loop".play()
 
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Level1.tscn")
