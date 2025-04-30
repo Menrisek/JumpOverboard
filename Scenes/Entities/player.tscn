@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene load_steps=56 format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" uid="uid://bxneabdd14pa" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bddnh1vqdvr1i" path="res://Art/Icons/Health.png" id="4_cxmfn"]
 [ext_resource type="Texture2D" uid="uid://723vrwgetovq" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 03.png" id="4_kdide"]
 [ext_resource type="Texture2D" uid="uid://cpensctissjfe" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 04.png" id="5_kwr1w"]
+[ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="5_ol88v"]
 [ext_resource type="Texture2D" uid="uid://cohxflnxym28s" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 03.png" id="5_veji5"]
 [ext_resource type="Texture2D" uid="uid://dw7fpvs8un0wt" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 05.png" id="6_blq7k"]
 [ext_resource type="Texture2D" uid="uid://bqysm01hpefkl" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="6_nj5es"]
@@ -409,6 +410,8 @@ anchor_right = 1.0
 offset_left = -54.0
 offset_bottom = 23.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("5_ol88v")
+theme_override_font_sizes/font_size = 30
 text = "100.00"
 
 [node name="LevelNumber" type="Label" parent="PlayerUI"]
@@ -416,10 +419,14 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -54.0
-offset_bottom = 23.0
+offset_left = -160.0
+offset_top = 40.0
+offset_bottom = 91.0
 grow_horizontal = 2
 scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ol88v")
+theme_override_font_sizes/font_size = 30
 text = "Level 1"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerUI/LevelNumber"]

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsrjb0q4ix33q" path="res://Art/World Map/World Map.png" id="2_274kt"]
 [ext_resource type="Script" uid="uid://c7n05xpvnbgql" path="res://Scripts/Core/WorldMapLevel.gd" id="2_rdguj"]
 [ext_resource type="Texture2D" uid="uid://38vjocs50d1t" path="res://Art/World Map/Locked.png" id="3_rrpgb"]
+[ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="3_ws6nv"]
 [ext_resource type="Texture2D" uid="uid://dms6d1h1bp0am" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xqcxy"]
 [ext_resource type="Texture2D" uid="uid://demr2vb8p7hyh" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_k6ub6"]
 [ext_resource type="Texture2D" uid="uid://dtglk5yag70x1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="5_l3fuw"]
@@ -21,9 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://bs4froela1jyo" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="12_68veu"]
 [ext_resource type="Texture2D" uid="uid://d063y6ot8tlro" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="13_ywl50"]
 [ext_resource type="Texture2D" uid="uid://bibss45xewl1v" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="14_jg6u5"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_rm8rh"]
-font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_4nca5"]
 length = 0.001
@@ -272,7 +270,7 @@ grow_vertical = 2
 scale = Vector2(10, 10)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0.572549, 0.662745, 0.807843, 1)
+color = Color(0.105005, 0.383586, 0.802246, 1)
 
 [node name="Map" type="TextureRect" parent="."]
 offset_left = -456.0
@@ -288,11 +286,13 @@ texture = ExtResource("2_274kt")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 29.0
-offset_top = -70.0
-offset_right = 219.0
-offset_bottom = -20.0
+offset_left = 32.0
+offset_top = -80.0
+offset_right = 222.0
+offset_bottom = -30.0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ws6nv")
+theme_override_font_sizes/font_size = 20
 text = "Back to main menu"
 
 [node name="Label4" type="Label" parent="CanvasLayer"]
@@ -304,8 +304,9 @@ offset_top = -20.0
 offset_right = 232.0
 offset_bottom = 3.0
 grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ws6nv")
 text = "Move with WASD and Space"
-label_settings = SubResource("LabelSettings_rm8rh")
 
 [node name="CoinIcon" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 3
@@ -378,10 +379,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -215.0
 offset_top = -214.0
-offset_right = -67.0
+offset_right = -70.0
 offset_bottom = -191.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ws6nv")
 text = "Collected all coins -"
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
@@ -390,12 +392,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -215.0
+offset_left = -206.0
 offset_top = -150.0
-offset_right = -70.0
+offset_right = -72.0
 offset_bottom = -127.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ws6nv")
 text = "Killed all enemies -"
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
@@ -404,12 +407,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -293.0
+offset_left = -287.0
 offset_top = -85.0
-offset_right = -71.0
+offset_right = -73.0
 offset_bottom = -62.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ws6nv")
 text = "Finished without getting hit -"
 
 [node name="LevelHolder" type="Node2D" parent="."]

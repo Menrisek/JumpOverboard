@@ -1,8 +1,8 @@
 extends Node2D
 class_name Coin
 
-@export var score = 10
 @export var coins = 1
+var score = coins * 10
 
 @onready var sfx_coin_taken = $"SFX Coin Taken"
 

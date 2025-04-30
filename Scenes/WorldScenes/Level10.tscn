@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://juo8mlmslcnm"]
+[gd_scene load_steps=35 format=4 uid="uid://juo8mlmslcnm"]
 
 [ext_resource type="Script" uid="uid://bq58fgdwgwtok" path="res://Scripts/Core/RunTimeLevel.gd" id="1_vqajx"]
 [ext_resource type="Texture2D" uid="uid://ch77liydluqj1" path="res://Art/Palm Tree Island/Sprites/Background/BG Image.png" id="2_i7lrc"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_kgspc"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_h3uw1"]
 [ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="12_hajey"]
+[ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="13_05jos"]
 [ext_resource type="PackedScene" uid="uid://ctx6tx0t2e8ag" path="res://Scenes/Interactable/falling_spikes.tscn" id="13_inphf"]
 [ext_resource type="PackedScene" uid="uid://6h0t80g6fsmf" path="res://Scenes/Interactable/moving_platform.tscn" id="14_pwniw"]
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="15_ig0rr"]
@@ -1062,7 +1063,7 @@ sources/0 = SubResource("TileSetAtlasSource_3wtmh")
 sources/2 = SubResource("TileSetAtlasSource_501p2")
 sources/3 = SubResource("TileSetAtlasSource_dxv3e")
 
-[sub_resource type="LabelSettings" id="LabelSettings_qa4dr"]
+[sub_resource type="LabelSettings" id="LabelSettings_05jos"]
 font_size = 12
 font_color = Color(0.968627, 0.92549, 0.607843, 1)
 shadow_color = Color(0, 0, 0, 0.682353)
@@ -1137,7 +1138,7 @@ scale = Vector2(3, 3)
 theme_override_colors/font_color = Color(0.2, 0.196078, 0.239216, 1)
 theme_override_font_sizes/font_size = 12
 text = "0"
-label_settings = SubResource("LabelSettings_qa4dr")
+label_settings = SubResource("LabelSettings_05jos")
 vertical_alignment = 2
 
 [node name="PauseMenu" type="ColorRect" parent="UIManager"]
@@ -1150,7 +1151,7 @@ anchor_bottom = 0.5
 offset_left = -100.0
 offset_top = -130.0
 offset_right = 100.0
-offset_bottom = 130.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 0.905882)
@@ -1175,8 +1176,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="Resume" type="Button" parent="UIManager/PauseMenu/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 30
 text = "Resume"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="UIManager/PauseMenu/VBoxContainer"]
@@ -1184,8 +1187,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="Restart" type="Button" parent="UIManager/PauseMenu/VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 30
 text = "Restart"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="UIManager/PauseMenu/VBoxContainer"]
@@ -1193,8 +1198,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="WorldMap" type="Button" parent="UIManager/PauseMenu/VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 30
 text = "World Map
 "
 
@@ -1203,8 +1210,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="Main menu" type="Button" parent="UIManager/PauseMenu/VBoxContainer/HBoxContainer4"]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 30
 text = "Main Menu
 "
 
@@ -1213,8 +1222,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="Quit" type="Button" parent="UIManager/PauseMenu/VBoxContainer/HBoxContainer5"]
-custom_minimum_size = Vector2(140, 40)
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [node name="WinScreen" type="ColorRect" parent="UIManager"]
@@ -1225,25 +1236,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -180.5
-offset_top = -100.0
-offset_right = 180.5
-offset_bottom = 100.0
+offset_left = -180.0
+offset_top = -124.0
+offset_right = 181.0
+offset_bottom = 146.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 0.905882)
+
+[node name="YouWin" type="Label" parent="UIManager/WinScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.5
+offset_top = 22.0
+offset_right = 68.5
+offset_bottom = 42.0
+grow_horizontal = 2
+scale = Vector2(1.4, 1.4)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 28
+text = "Island completed"
+horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="UIManager/WinScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -89.0
-offset_top = 8.0
-offset_right = 40.0
-offset_bottom = 31.0
+offset_left = -124.5
+offset_top = 71.0
+offset_right = 58.5
+offset_bottom = 91.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 20
 text = "Your Score: 1300"
 horizontal_alignment = 1
 
@@ -1252,25 +1282,30 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -88.0
-offset_top = 40.0
-offset_right = 41.0
-offset_bottom = 63.0
+offset_left = -124.5
+offset_top = 103.0
+offset_right = 58.5
+offset_bottom = 123.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 20
 text = "Your Time: 38.56"
+horizontal_alignment = 1
 
 [node name="Death counter" type="Label" parent="UIManager/WinScreen"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -89.0
-offset_top = 71.0
-offset_right = 40.0
-offset_bottom = 94.0
+offset_left = -124.5
+offset_top = 134.0
+offset_right = 58.5
+offset_bottom = 154.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 20
 text = "Deaths: 69"
 horizontal_alignment = 1
 
@@ -1279,52 +1314,57 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -89.0
-offset_top = 105.0
-offset_right = 40.0
-offset_bottom = 128.0
+offset_left = -124.5
+offset_top = 168.0
+offset_right = 58.5
+offset_bottom = 188.0
 grow_horizontal = 2
 scale = Vector2(1.4, 1.4)
+theme_override_fonts/font = ExtResource("13_05jos")
+theme_override_font_sizes/font_size = 20
 text = "Coins: 420"
 horizontal_alignment = 1
 
 [node name="Main menu" type="Button" parent="UIManager/WinScreen"]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(110, 45)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = -50.0
-offset_right = 110.0
+offset_left = 5.0
+offset_top = -55.0
+offset_right = 115.0
 offset_bottom = -10.0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_05jos")
 text = "Main Menu"
 
 [node name="Restart" type="Button" parent="UIManager/WinScreen"]
-custom_minimum_size = Vector2(100, 40)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -50.0
-offset_top = 150.0
-offset_right = 50.0
-offset_bottom = 190.0
-grow_horizontal = 2
-text = "Restart"
-
-[node name="FinishLevel" type="Button" parent="UIManager/WinScreen"]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(110, 45)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 250.0
-offset_top = -50.0
-offset_right = 350.0
+offset_left = 125.5
+offset_top = -55.0
+offset_right = 235.5
 offset_bottom = -10.0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_05jos")
+text = "Restart"
+
+[node name="FinishLevel" type="Button" parent="UIManager/WinScreen"]
+custom_minimum_size = Vector2(110, 45)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 245.0
+offset_top = -55.0
+offset_right = 355.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_05jos")
 text = "World map"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
@@ -1338,6 +1378,7 @@ offset_left = -783.0
 offset_top = 90.0
 offset_right = -667.0
 offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("13_05jos")
 text = "I guess... 
 this is the end"
 
@@ -1346,6 +1387,7 @@ offset_left = 772.0
 offset_top = -1610.0
 offset_right = 1130.0
 offset_bottom = -1535.0
+theme_override_fonts/font = ExtResource("13_05jos")
 text = "Congratulations for completing your journey...
 
 See you on the sea "

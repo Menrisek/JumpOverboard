@@ -59,15 +59,19 @@ func restart():
 	score = 0
 	#kdyby lvl neměl checkpoint tak se budu snažit dostat na ten z předchozího
 	current_checkpoint = null
+	#reset při restartu
+	GameManager.paused = false
 	get_tree().reload_current_scene()
 	get_tree().paused = false
 
 func load_world():
 	get_tree().paused = false
+	GameManager.paused = false
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/world_map.tscn")
 
 func load_main_menu():
 	get_tree().paused = false
+	GameManager.paused = false
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Main menu/main_menu.tscn")
 
 func load_options_menu():

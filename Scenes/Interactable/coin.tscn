@@ -83,13 +83,13 @@ monitorable = false
 position = Vector2(0.4375, 0.375)
 shape = SubResource("CircleShape2D_yuqcs")
 
+[node name="SFX Coin Taken" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_s0kgj")
+volume_db = -15.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_vkmt8")
 }
-
-[node name="SFX Coin Taken" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_s0kgj")
-volume_db = -15.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

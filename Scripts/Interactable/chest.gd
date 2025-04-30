@@ -2,8 +2,9 @@ extends Node2D
 class_name Chest
 
 var health = 1
-@export var score = 100
+#kdyby něco nefungovalo bylo tady @export var score = 100 (10 krát počet coinů)
 @export var coins = 10
+var score = coins * 10
 
 func die_with_coins():
 	queue_free()
