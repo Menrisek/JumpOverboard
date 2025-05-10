@@ -21,7 +21,7 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor(): 
 		velocity += get_gravity() * delta
 	
 	if !$RayCast2D.is_colliding() && is_on_floor():

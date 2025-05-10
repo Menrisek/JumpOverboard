@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_5i04w"]
 [ext_resource type="PackedScene" uid="uid://b8wub4clrsene" path="res://Scenes/Interactable/jump_pad.tscn" id="9_fy0tm"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_nonl5"]
-[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="11_wreqq"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="11_xvaem"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="12_57iip"]
+[ext_resource type="AudioStream" uid="uid://jlph17eekaj5" path="res://Audio/Soundtrack/soundtrack demo2.wav" id="12_a1rix"]
 [ext_resource type="PackedScene" uid="uid://ctx6tx0t2e8ag" path="res://Scenes/Interactable/falling_spikes.tscn" id="12_fyt4h"]
 [ext_resource type="PackedScene" uid="uid://b6tbtl8d223r5" path="res://Scenes/Interactable/BoostingItems/jump_up.tscn" id="13_ucprl"]
 [ext_resource type="PackedScene" uid="uid://b6djtd6myo2f3" path="res://Scenes/Interactable/one_way_platform_large.tscn" id="14_ouayq"]
@@ -1110,7 +1110,7 @@ theme_override_fonts/font = ExtResource("12_57iip")
 text = "World map"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_wreqq")
+stream = ExtResource("12_a1rix")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"

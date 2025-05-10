@@ -10,8 +10,8 @@
 [ext_resource type="Script" uid="uid://bj7opw07a6exn" path="res://Scripts/UI/ui_manager.gd" id="7_tl5ar"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_tkodi"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_g7ih2"]
-[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="10_50mq8"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="11_g3eao"]
+[ext_resource type="AudioStream" uid="uid://jlph17eekaj5" path="res://Audio/Soundtrack/soundtrack demo2.wav" id="11_g7l8d"]
 [ext_resource type="PackedScene" uid="uid://b8wub4clrsene" path="res://Scenes/Interactable/jump_pad.tscn" id="11_s4ulk"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="12_1y38l"]
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="12_7tw4s"]
@@ -1100,7 +1100,7 @@ theme_override_fonts/font = ExtResource("11_g3eao")
 text = "World map"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_50mq8")
+stream = ExtResource("11_g7l8d")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"

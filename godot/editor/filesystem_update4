@@ -1,5 +1,7 @@
-res://Scenes/WorldScenes/Main menu/main_menu.tscn
+res://Scenes/Interactable/falling_spikes.tscn
 res://Scripts/Interactable/BoostingItems/heal_up.gd
+res://Scripts/Interactable/falling_spikes.gd
+res://Scenes/WorldScenes/Main menu/main_menu.tscn
 res://Scenes/WorldScenes/Level1.tscn
 res://Scenes/WorldScenes/Level2.tscn
 res://Scenes/WorldScenes/Level3.tscn
@@ -12,4 +14,12 @@ res://Scenes/WorldScenes/Level9.tscn
 res://Scenes/WorldScenes/Level10.tscn
 res://Scenes/WorldScenes/world_map.tscn
 res://Scenes/Entities/player.tscn
+res://Scenes/Interactable/coin.tscn
+res://Scenes/UI/gui.tscn
 res://Scripts/Core/GameManager.gd
+res://Scenes/Interactable/Cannon/cannon_ball.tscn
+res://Scenes/Enemies/sharkie.tscn
+res://Scenes/Interactable/Cannon/cannon.tscn
+res://Scenes/Interactable/Cannon/cannon_debris.tscn
+res://Scripts/Interactable/Cannon/cannon_ball.gd
+res://Scripts/Enemies/sharkie.gd

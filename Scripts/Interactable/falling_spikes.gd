@@ -6,9 +6,9 @@ class_name FallingSpikes
 
 @export var speed = 300.0
 @export var time_to_live = 2.5
-#(-1,0)= levo, (1,0) = pravo, (0,-1) = nahoru, můžu i diagonálně (1,1),(-1,1)// kdyžtak se zeptat lukáše atd.
+#(-1,0)= levo, (1,0) = pravo, (0,-1) = nahoru, můžu i diagonálně (1,1),(-1,1)
 @export var direction: Vector2 = Vector2(0, 1)
-@export var shake : bool = true
+@export var shake = true
 
 var current_speed = 0.0
 

@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bw3854j6u431o" path="res://Scenes/Interactable/chest.tscn" id="7_64cki"]
 [ext_resource type="Script" uid="uid://bj7opw07a6exn" path="res://Scripts/UI/ui_manager.gd" id="7_u0or0"]
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="8_5h1vm"]
-[ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="9_gpjja"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="9_utmmf"]
 [ext_resource type="PackedScene" uid="uid://bm4hkqi2x4k2p" path="res://Scenes/Interactable/coin.tscn" id="10_po5uh"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="11_0lrbp"]
+[ext_resource type="AudioStream" uid="uid://jlph17eekaj5" path="res://Audio/Soundtrack/soundtrack demo2.wav" id="11_bt43p"]
 [ext_resource type="PackedScene" uid="uid://dgdoy45wl66xt" path="res://Scenes/Interactable/Cannon/cannon.tscn" id="12_jrpxj"]
 [ext_resource type="PackedScene" uid="uid://bjpdewaeiii73" path="res://Scenes/Enemies/sharkie.tscn" id="13_64cki"]
 [ext_resource type="PackedScene" uid="uid://b8wub4clrsene" path="res://Scenes/Interactable/jump_pad.tscn" id="14_0lrbp"]
@@ -1108,7 +1108,7 @@ theme_override_fonts/font = ExtResource("11_0lrbp")
 text = "World map"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_gpjja")
+stream = ExtResource("11_bt43p")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"

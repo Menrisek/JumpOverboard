@@ -185,7 +185,7 @@ offset_bottom = -12.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_cj7e0")
+&"": SubResource("AnimationLibrary_cj7e0")
 }
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

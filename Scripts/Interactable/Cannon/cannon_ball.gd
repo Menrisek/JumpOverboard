@@ -29,6 +29,7 @@ func _on_area_2d_area_entered(area):
 		#dá vždycky instakill, ale s queue_free mi to nefunguje
 		area.get_parent().die() #take_damage(100)
 		die()
+	#tohle bych mohl možná oddělat, v tu chvíli by se při kontaktu s něčím jiným (enemák idk) by se to nezničilo
 	elif area.get_parent() is not Cannon:
 		die()
 

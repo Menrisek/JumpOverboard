@@ -73,7 +73,7 @@ shape = SubResource("CircleShape2D_8otyf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1m7bf")
+&"": SubResource("AnimationLibrary_1m7bf")
 }
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

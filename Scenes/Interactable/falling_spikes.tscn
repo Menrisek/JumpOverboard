@@ -80,7 +80,7 @@ shape = SubResource("RectangleShape2D_coftw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_fuu11")
+&"": SubResource("AnimationLibrary_fuu11")
 }
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
