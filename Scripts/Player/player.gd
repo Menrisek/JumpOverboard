@@ -16,6 +16,7 @@ class_name Player
 
 @export var speed = 250.0
 @export var jump_height = -300.0
+@export var dash_power = 2.5
 var default_speed = speed
 var default_jump_height = jump_height
 
@@ -76,7 +77,7 @@ func _physics_process(delta):
 		sfx_jump.play()
 		jump_buffering = 0.0
 		velocity.y = jump_height
-
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
@@ -86,6 +87,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	var was_on_floor = is_on_floor()
+	
+	# dash
+	if Input.is_action_just_pressed("dash"):
+		$DashTimer.start()
+		speed *= dash_power
+		velocity.x = direction * speed
 	
 	move_and_slide()
 	
@@ -202,3 +209,7 @@ func level_intro_text():
 		$PlayerUI/LevelNumber.text = get_parent().level_title
 	else:
 		$PlayerUI/LevelNumber.text = "Tento level nemá title"
+
+func _on_dash_timer_timeout() -> void:
+	#reset speed to normal
+	speed = default_speed

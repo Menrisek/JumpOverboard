@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccbbccwsl63rd"]
+
+[ext_resource type="Script" uid="uid://d212qndh5ride" path="res://Scripts/Enemies/flying_enemy.gd" id="1_slg0n"]
+[ext_resource type="Texture2D" uid="uid://bddnh1vqdvr1i" path="res://Art/Icons/Health.png" id="2_ewn43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slg0n"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn43"]
+size = Vector2(16, 16)
+
+[node name="flying_enemy" type="CharacterBody2D" groups=["Enemies"]]
+script = ExtResource("1_slg0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ewn43")
+
+[node name="KolizeSobjekty" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_slg0n")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_ewn43")

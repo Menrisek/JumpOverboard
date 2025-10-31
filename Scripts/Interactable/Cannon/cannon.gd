@@ -40,7 +40,7 @@ func fire():
 	
 
 func die():
-	# kdybych chtěl abyse kanón počátal jako enemy, ale to bych to musel předělat ještě v RunTimeLevel
+	# kdybych chtěl aby se kanón počátal jako enemy, ale to bych to musel předělat ještě v RunTimeLevel
 	# GameManager.enemies_beaten += 1
 	GameManager.score += score
 	#vytvoří trosky kanónu
