@@ -66,7 +66,7 @@ func get_hit():
 
 func immunityframes():
 	can_take_damage = false
-	#hráč bude mít imunitu na x sekundy
+	#enemy bude mít imunitu na x sekundy
 	await get_tree().create_timer(0.2).timeout
 	can_take_damage = true
 
@@ -79,6 +79,6 @@ func die():
 	animation.play("die")
 
 #utok do hráče
-func _on_hitbox_area_entered(area):
+func _on_attack_area_area_entered(area):
 	if area.get_parent() is Player && !dead && can_attack:
 		area.get_parent().take_damage(1)

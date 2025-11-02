@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene load_steps=60 format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" uid="uid://bxneabdd14pa" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -34,8 +34,11 @@
 [ext_resource type="Texture2D" uid="uid://b8lxkoaartf11" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 04.png" id="31_3hcnw"]
 [ext_resource type="AudioStream" uid="uid://d1l8xkbwuxjhe" path="res://Audio/SoundEffects/Player/Sword Swing1.wav" id="32_yu82y"]
 [ext_resource type="AudioStream" uid="uid://co5piityssxie" path="res://Audio/SoundEffects/Player/hitHurt.wav" id="33_d6fof"]
+[ext_resource type="Texture2D" uid="uid://4lv7r45monfs" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 01.png" id="33_oiqwr"]
 [ext_resource type="AudioStream" uid="uid://ll0dh01ut8qp" path="res://Audio/SoundEffects/Interactable/HealUp.wav" id="34_hi0an"]
+[ext_resource type="Texture2D" uid="uid://cibuclkv5fuqo" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 02.png" id="34_r7dsx"]
 [ext_resource type="AudioStream" uid="uid://cbeerqvssfnqn" path="res://Audio/SoundEffects/Player/JumpSound1.wav" id="35_2mdcc"]
+[ext_resource type="Texture2D" uid="uid://b67766hasycw7" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 03.png" id="35_6q8pc"]
 [ext_resource type="AudioStream" uid="uid://caqcxujoflfgu" path="res://Audio/SoundEffects/Player/JumpSound2.wav" id="36_2mdcc"]
 [ext_resource type="AudioStream" uid="uid://hfy4c7fou2y3" path="res://Audio/SoundEffects/Player/JumpSound3.wav" id="37_ol88v"]
 
@@ -310,11 +313,41 @@ tracks/0/keys = {
 "values": [ExtResource("11_l60d3"), ExtResource("15_kfyqh"), ExtResource("13_5y8yt"), ExtResource("14_ox6tn"), ExtResource("15_kfyqh"), ExtResource("16_3ul8q")]
 }
 
+[sub_resource type="Animation" id="Animation_5emx0"]
+resource_name = "attack3"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("33_oiqwr"), ExtResource("34_r7dsx"), ExtResource("35_6q8pc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqntf"]
 _data = {
 &"RESET": SubResource("Animation_yyty4"),
 &"attack": SubResource("Animation_3q5ea"),
 &"attack2": SubResource("Animation_14wsn"),
+&"attack3": SubResource("Animation_5emx0"),
 &"death": SubResource("Animation_q2r4y"),
 &"fall": SubResource("Animation_jptf1"),
 &"hit": SubResource("Animation_81bef"),

@@ -135,14 +135,19 @@ func die():
 
 func attack():
 	var overlapping_objects = attack_area.get_overlapping_areas()
-	
 	for area in overlapping_objects:
 		if area.get_parent().is_in_group("Enemies"):
 			area.get_parent().take_damage(1)
 	
 	attacking = true
 	sfx_sword_swing.play()
-	animation.play("attack2")
+	var random_attack = randi_range(1, 3)  # náhodně vybere mezi 1. nebo 2. nebo 3. útokem
+	if random_attack == 1:
+		animation.play("attack")
+	elif random_attack == 2:
+		animation.play("attack2")
+	elif random_attack == 3:
+		animation.play("attack3")
 
 func take_damage(damage_amouth : int):
 	if can_take_damage:

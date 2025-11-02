@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccbbccwsl63rd"]
+[gd_scene load_steps=6 format=3 uid="uid://ccbbccwsl63rd"]
 
 [ext_resource type="Script" uid="uid://d212qndh5ride" path="res://Scripts/Enemies/flying_enemy.gd" id="1_slg0n"]
 [ext_resource type="Texture2D" uid="uid://bddnh1vqdvr1i" path="res://Art/Icons/Health.png" id="2_ewn43"]
+[ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="3_nb6un"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slg0n"]
-size = Vector2(16, 16)
+size = Vector2(14, 14)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewn43"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb6un"]
 size = Vector2(16, 16)
 
 [node name="flying_enemy" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 2
 script = ExtResource("1_slg0n")
+max_health = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ewn43")
@@ -18,7 +21,13 @@ texture = ExtResource("2_ewn43")
 [node name="KolizeSobjekty" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_slg0n")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("RectangleShape2D_ewn43")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("RectangleShape2D_nb6un")
+
+[node name="Healthbar" parent="." instance=ExtResource("3_nb6un")]
+offset_top = -11.0
+offset_bottom = -11.0
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]

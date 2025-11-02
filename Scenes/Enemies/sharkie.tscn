@@ -169,9 +169,9 @@ texture = ExtResource("1_3igom")
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_r1ebp")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_iph7k")
 
@@ -188,4 +188,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_cj7e0")
 }
 
-[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
