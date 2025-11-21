@@ -1,10 +1,2 @@
 res://Scenes/Enemies/flying_enemy.tscn
-res://Scripts/Interactable/BoostingItems/heal_up.gd
-res://Scripts/Enemies/flying_enemy.gd
-res://Scenes/WorldScenes/Main menu/main_menu.tscn
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scenes/WorldScenes/world_map.tscn
-res://Scenes/Entities/player.tscn
-res://Scenes/Enemies/sharkie.tscn
-res://Scripts/Enemies/sharkie.gd
-res://Scripts/Player/player.gd

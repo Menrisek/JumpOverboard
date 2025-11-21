@@ -35,6 +35,7 @@ offset_top = -11.0
 offset_bottom = -11.0
 
 [node name="ChasingArea" type="Area2D" parent="."]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChasingArea"]
 rotation = 4.71239
