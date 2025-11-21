@@ -4,12 +4,13 @@ class_name Sharkie
 @onready var animation= $AnimationPlayer
 @onready var sprite = $Sprite2D
 
-var speed = -60.0
+@export var max_health = 2
+@export var score = 100
+@export var speed = -60.0
+
 var current_speed = 0.0
 var facing_right = false
 var dead = false
-@export var max_health = 2
-@export var score = 100
 var health = 0
 var hit = false
 var can_attack = true

@@ -1181,10 +1181,29 @@ position = Vector2(5099, -21)
 win_condition = true
 
 [node name="flying_enemy" parent="." instance=ExtResource("13_ow7s5")]
-position = Vector2(104, 32)
+position = Vector2(208, 0)
 
 [node name="Sharkie" parent="." instance=ExtResource("14_4q25a")]
 position = Vector2(48, 96)
+
+[node name="Coin38" parent="." instance=ExtResource("13_e87rq")]
+position = Vector2(-424, 56)
+
+[node name="Coin39" parent="." instance=ExtResource("13_e87rq")]
+position = Vector2(-192, 56)
+
+[node name="flying_enemy2" parent="." node_paths=PackedStringArray("patrol_point_a", "patrol_point_b") instance=ExtResource("13_ow7s5")]
+position = Vector2(-312, 56)
+flying_speed = 45
+enable_patrol = true
+patrol_point_a = NodePath("../Coin38")
+patrol_point_b = NodePath("../Coin39")
+
+[node name="flying_enemy3" parent="." node_paths=PackedStringArray("patrol_point_a", "patrol_point_b") instance=ExtResource("13_ow7s5")]
+position = Vector2(-56, -48)
+enable_patrol = true
+patrol_point_a = NodePath("../flying_enemy")
+patrol_point_b = NodePath("../flying_enemy2")
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

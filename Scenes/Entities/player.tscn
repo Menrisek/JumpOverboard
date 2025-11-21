@@ -139,35 +139,6 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_3q5ea"]
-resource_name = "attack"
-length = 0.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_lewhk"), ExtResource("18_v2iy3"), ExtResource("19_arptd")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:attacking")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="Animation" id="Animation_14wsn"]
 resource_name = "attack2"
 length = 0.2
@@ -183,6 +154,35 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("20_iecb8"), ExtResource("21_0c4l8"), ExtResource("22_pmrni")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5emx0"]
+resource_name = "attack3"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("33_oiqwr"), ExtResource("34_r7dsx"), ExtResource("35_6q8pc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -313,8 +313,8 @@ tracks/0/keys = {
 "values": [ExtResource("11_l60d3"), ExtResource("15_kfyqh"), ExtResource("13_5y8yt"), ExtResource("14_ox6tn"), ExtResource("15_kfyqh"), ExtResource("16_3ul8q")]
 }
 
-[sub_resource type="Animation" id="Animation_5emx0"]
-resource_name = "attack3"
+[sub_resource type="Animation" id="Animation_3q5ea"]
+resource_name = "attack1"
 length = 0.2
 step = 0.1
 tracks/0/type = "value"
@@ -327,7 +327,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("33_oiqwr"), ExtResource("34_r7dsx"), ExtResource("35_6q8pc")]
+"values": [ExtResource("17_lewhk"), ExtResource("18_v2iy3"), ExtResource("19_arptd")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -345,7 +345,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqntf"]
 _data = {
 &"RESET": SubResource("Animation_yyty4"),
-&"attack": SubResource("Animation_3q5ea"),
+&"attack1": SubResource("Animation_3q5ea"),
 &"attack2": SubResource("Animation_14wsn"),
 &"attack3": SubResource("Animation_5emx0"),
 &"death": SubResource("Animation_q2r4y"),
@@ -409,6 +409,10 @@ one_shot = true
 
 [node name="DashTimer" type="Timer" parent="."]
 wait_time = 0.12
+
+[node name="DashCooldownTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
@@ -496,3 +500,4 @@ stream = SubResource("AudioStreamRandomizer_cx7vx")
 bus = &"SFX"
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="DashCooldownTimer" to="." method="_on_dash_cooldown_timer_timeout"]

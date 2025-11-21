@@ -17,6 +17,8 @@ class_name Player
 @export var speed = 250.0
 @export var jump_height = -300.0
 @export var dash_power = 2.5
+var has_dashed_in_air = false
+var can_dash = true
 var default_speed = speed
 var default_jump_height = jump_height
 
@@ -27,7 +29,6 @@ var hit = false
 @onready var health = 0
 var hearts_list : Array[TextureRect]
 var can_take_damage = true
-var current_position_x = velocity.x
 
 var time = GameManager.speedrun_time
 var jump_buffering = 0.0
@@ -89,13 +90,17 @@ func _physics_process(delta):
 	var was_on_floor = is_on_floor()
 	
 	# dash
+	# pokud je na zemi tak může dashnout (a neovlivňuje to has_dashed_in_air)
+	# pokud je ve vzduchu tak může dashnout pouze pokud ještě v něm nedashnul
 	if Input.is_action_just_pressed("dash"):
-		$DashTimer.start()
-		speed *= dash_power
-		velocity.x = direction * speed
+		handle_dash(direction)
 	
 	move_and_slide()
 	
+	if not was_on_floor and is_on_floor():
+		has_dashed_in_air = false
+		#tady můžu přidat nějakou přistávací animaci
+		
 	# pokud je a nebo není na podlaze zapne se timer
 	if was_on_floor and !is_on_floor():
 		coyote_timer.start()
@@ -129,6 +134,9 @@ func die():
 	GameManager.deaths += 1
 	speed = default_speed
 	jump_height = default_jump_height
+	# resetuju
+	can_dash = true
+	has_dashed_in_air = false
 	GameManager.respawn_player()
 	update_heart_display()
 	# ZDE KDYBYCH CHTĚL HEALTHBAR POD HRÁČEM: get_node("Healthbar").update_healthbar(health, max_health)
@@ -142,12 +150,7 @@ func attack():
 	attacking = true
 	sfx_sword_swing.play()
 	var random_attack = randi_range(1, 3)  # náhodně vybere mezi 1. nebo 2. nebo 3. útokem
-	if random_attack == 1:
-		animation.play("attack")
-	elif random_attack == 2:
-		animation.play("attack2")
-	elif random_attack == 3:
-		animation.play("attack3")
+	animation.play("attack" + str(random_attack))
 
 func take_damage(damage_amouth : int):
 	if can_take_damage:
@@ -218,3 +221,26 @@ func level_intro_text():
 func _on_dash_timer_timeout() -> void:
 	#reset speed to normal
 	speed = default_speed
+
+func _on_dash_cooldown_timer_timeout() -> void:
+		can_dash = true
+		
+func handle_dash(direction):
+	if not can_dash:
+		return
+
+	if is_on_floor():
+		can_dash = false
+		$DashCooldownTimer.start() # zapne dash cooldown
+		$DashTimer.start()
+		speed *= dash_power
+		velocity.x = direction * speed
+		# když dashne na zemi, nechám možnost dashnout znovu i ve vzduchu (reset)
+		has_dashed_in_air = false
+	else:
+		if not has_dashed_in_air:
+			$DashTimer.start()
+			speed *= dash_power
+			velocity.x = direction * speed
+			# označíme, že už dashoval ve vzduchu — další dash ve vzduchu nebude možný
+			has_dashed_in_air = true
