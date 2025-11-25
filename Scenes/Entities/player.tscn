@@ -139,6 +139,35 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_3q5ea"]
+resource_name = "attack1"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("17_lewhk"), ExtResource("18_v2iy3"), ExtResource("19_arptd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_14wsn"]
 resource_name = "attack2"
 length = 0.2
@@ -313,35 +342,6 @@ tracks/0/keys = {
 "values": [ExtResource("11_l60d3"), ExtResource("15_kfyqh"), ExtResource("13_5y8yt"), ExtResource("14_ox6tn"), ExtResource("15_kfyqh"), ExtResource("16_3ul8q")]
 }
 
-[sub_resource type="Animation" id="Animation_3q5ea"]
-resource_name = "attack1"
-length = 0.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_lewhk"), ExtResource("18_v2iy3"), ExtResource("19_arptd")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:attacking")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqntf"]
 _data = {
 &"RESET": SubResource("Animation_yyty4"),
@@ -364,7 +364,7 @@ stream_0/stream = ExtResource("35_2mdcc")
 stream_1/stream = ExtResource("36_2mdcc")
 stream_2/stream = ExtResource("37_ol88v")
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_hcqxc")
 

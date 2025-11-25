@@ -1,2 +1,3 @@
-res://Scenes/Enemies/flying_enemy.tscn
 res://Scenes/WorldScenes/LevelTest.tscn
+res://Scenes/Enemies/ShootingEnemies/bullet.tscn
+res://Scripts/Enemies/ShootingEnemies/bullet.gd

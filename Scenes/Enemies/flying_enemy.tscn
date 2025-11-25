@@ -22,7 +22,7 @@ max_health = 3
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ewn43")
 
-[node name="KolizeSobjekty" type="CollisionShape2D" parent="."]
+[node name="KolizeSObjekty" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_slg0n")
 
 [node name="AttackArea" type="Area2D" parent="."]

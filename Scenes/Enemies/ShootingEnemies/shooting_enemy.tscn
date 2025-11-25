@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://gu04kor5gen0"]
+
+[ext_resource type="Script" uid="uid://c1ah2s44bi86f" path="res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd" id="1_ieuth"]
+[ext_resource type="PackedScene" uid="uid://d3fxq2u3i0ofg" path="res://Scenes/Enemies/ShootingEnemies/bullet.tscn" id="2_4b31h"]
+[ext_resource type="Texture2D" uid="uid://cjwx3aupl087i" path="res://Art/Merchant Ship/Sprites/Barrel/Hit/4.png" id="2_g2c6s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ieuth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2c6s"]
+size = Vector2(192, 20)
+
+[node name="shooting_enemy" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 2
+script = ExtResource("1_ieuth")
+bullet_scene = ExtResource("2_4b31h")
+
+[node name="FirePoint" type="Marker2D" parent="."]
+position = Vector2(16, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g2c6s")
+
+[node name="KolizeSObjekty" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ieuth")
+debug_color = Color(0.9573751, 1.0588765e-06, 0.5355218, 0.41960785)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("RectangleShape2D_g2c6s")
+
+[node name="ShootCooldown" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

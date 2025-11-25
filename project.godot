@@ -48,6 +48,7 @@ project/assembly_name="Forest Adventures.v2"
 [global_group]
 
 Enemies="Enemies of the player"
+Player="Players"
 
 [input]
 
