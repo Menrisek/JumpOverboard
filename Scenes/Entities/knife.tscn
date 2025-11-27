@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0poubs61y6wb"]
+
+[ext_resource type="Script" uid="uid://7yay8nn07w7b" path="res://Scripts/Player/knife.gd" id="1_s1ino"]
+[ext_resource type="Texture2D" uid="uid://bi4ompdp0rhah" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 01.png" id="1_sruik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1ino"]
+size = Vector2(19, 7)
+
+[node name="Knife" type="Node2D"]
+script = ExtResource("1_s1ino")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sruik")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_s1ino")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

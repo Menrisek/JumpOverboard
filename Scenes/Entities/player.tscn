@@ -374,6 +374,7 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_3krsy")
+debug_color = Color(0.32267833, 0.6248632, 0, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6vciq")
@@ -397,6 +398,10 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(20, 2)
 shape = SubResource("RectangleShape2D_q3ayb")
+debug_color = Color(1, 0.0058438913, 0.081275724, 0.41960785)
+
+[node name="FiringPoint" type="Marker2D" parent="."]
+position = Vector2(25, 5)
 
 [node name="Healthbar" parent="." instance=ExtResource("27_u0465")]
 visible = false

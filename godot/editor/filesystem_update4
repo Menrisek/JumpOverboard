@@ -1,3 +1,5 @@
+res://Scenes/Entities/knife.tscn
+res://Scripts/Player/knife.gd
+res://Scenes/Entities/player.tscn
+res://Scripts/Player/player.gd
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scenes/Enemies/ShootingEnemies/bullet.tscn
-res://Scripts/Enemies/ShootingEnemies/bullet.gd

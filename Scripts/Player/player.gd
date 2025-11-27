@@ -5,6 +5,7 @@ class_name Player
 @onready var sprite = $Sprite2D
 @onready var attack_area = $AttackArea
 @onready var coyote_timer = $CoyoteTimer
+@onready var firing_point = $FiringPoint
 
 #sound effekty
 @onready var sfx_sword_swing = $"SFX Sword Swing"
@@ -21,6 +22,8 @@ var has_dashed_in_air = false
 var can_dash = true
 var default_speed = speed
 var default_jump_height = jump_height
+
+var knife_path=preload("res://Scenes/Entities/knife.tscn")
 
 var attacking = false
 var hit = false
@@ -55,12 +58,19 @@ func _process(delta):
 func _physics_process(delta):
 	#přehazuje strany postavy a attack arei
 	if Input.is_action_just_pressed("left"):
-		sprite.flip_h = true
 		attack_area.scale.x = abs(attack_area.scale.x) * -1
+		firing_point.scale.x = abs(firing_point.scale.x) * -1
+		sprite.flip_h = true
 	if Input.is_action_just_pressed("right"):
-		sprite.flip_h = false
 		attack_area.scale.x = abs(attack_area.scale.x)
-		
+		firing_point.scale.x = abs(firing_point.scale.x)
+		sprite.flip_h = false
+	
+	# házení nožů
+	if Input.is_action_just_pressed("throw"):
+		throw()
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -244,3 +254,17 @@ func handle_dash(direction):
 			velocity.x = direction * speed
 			# označíme, že už dashoval ve vzduchu — další dash ve vzduchu nebude možný
 			has_dashed_in_air = true
+
+func throw():
+	var knife = knife_path.instantiate()
+
+	# nastavíme spawn
+	knife.global_position = firing_point.global_position
+	
+	# směr podle sprite.flip_h
+	knife.direction = -1 if sprite.flip_h else 1
+
+	# otočení sprite nože (volitelné)
+	knife.rotation = 0 if knife.direction == 1 else PI
+
+	get_parent().add_child(knife)

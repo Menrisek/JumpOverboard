@@ -1,11 +1,11 @@
 Area2D
 Node2D
+Timer
 CollisionShape2D
+Marker2D
+Sprite2D
 CharacterBody2D
 VisibleOnScreenEnabler2D
-Sprite2D
-Marker2D
-Timer
 AnimationPlayer
 AudioStreamPlayer2D
 CanvasLayer
