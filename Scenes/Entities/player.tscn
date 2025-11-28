@@ -401,7 +401,7 @@ shape = SubResource("RectangleShape2D_q3ayb")
 debug_color = Color(1, 0.0058438913, 0.081275724, 0.41960785)
 
 [node name="FiringPoint" type="Marker2D" parent="."]
-position = Vector2(25, 5)
+position = Vector2(14, 6)
 
 [node name="Healthbar" parent="." instance=ExtResource("27_u0465")]
 visible = false

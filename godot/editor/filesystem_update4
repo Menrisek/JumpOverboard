@@ -1,5 +1,5 @@
-res://Scenes/Entities/knife.tscn
-res://Scripts/Player/knife.gd
 res://Scenes/Entities/player.tscn
+res://Scenes/Entities/knife.tscn
 res://Scripts/Player/player.gd
 res://Scenes/WorldScenes/LevelTest.tscn
+res://Scripts/Player/knife.gd

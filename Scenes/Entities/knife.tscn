@@ -8,11 +8,14 @@ size = Vector2(19, 7)
 
 [node name="Knife" type="Node2D"]
 script = ExtResource("1_s1ino")
+speed = 1200
+lifetime = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sruik")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, 0.5)

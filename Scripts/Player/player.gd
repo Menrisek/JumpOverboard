@@ -24,6 +24,7 @@ var default_speed = speed
 var default_jump_height = jump_height
 
 var knife_path=preload("res://Scenes/Entities/knife.tscn")
+@onready var firing_offset_x = firing_point.position.x
 
 var attacking = false
 var hit = false
@@ -59,13 +60,14 @@ func _physics_process(delta):
 	#přehazuje strany postavy a attack arei
 	if Input.is_action_just_pressed("left"):
 		attack_area.scale.x = abs(attack_area.scale.x) * -1
-		firing_point.scale.x = abs(firing_point.scale.x) * -1
+		firing_point.position.x = -firing_offset_x
 		sprite.flip_h = true
+		
 	if Input.is_action_just_pressed("right"):
 		attack_area.scale.x = abs(attack_area.scale.x)
-		firing_point.scale.x = abs(firing_point.scale.x)
+		firing_point.position.x = firing_offset_x
 		sprite.flip_h = false
-	
+
 	# házení nožů
 	if Input.is_action_just_pressed("throw"):
 		throw()
@@ -257,14 +259,20 @@ func handle_dash(direction):
 
 func throw():
 	var knife = knife_path.instantiate()
+	# směr podle sprite.flip_h
+	if sprite.flip_h:
+		knife.direction = -1
+		knife.scale.y = -1
+	else:
+		knife.direction = 1
+		knife.scale.y = 1
 
-	# nastavíme spawn
 	knife.global_position = firing_point.global_position
 	
-	# směr podle sprite.flip_h
-	knife.direction = -1 if sprite.flip_h else 1
-
-	# otočení sprite nože (volitelné)
-	knife.rotation = 0 if knife.direction == 1 else PI
-
+	# otočení sprite nože
+	if knife.direction == 1:
+		knife.rotation = 0.0
+	else:
+		knife.rotation = PI
+	
 	get_parent().add_child(knife)

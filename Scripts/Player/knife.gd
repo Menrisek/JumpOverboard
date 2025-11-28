@@ -32,8 +32,5 @@ func _on_area_2d_area_entered(area):
 		parent.take_damage(1)
 		die()
 
-	else:
-		die()
-
-func set_distance(distance: int):
-	lifetime = distance / speed
+func set_distance(distance: float):
+	lifetime = distance/speed
