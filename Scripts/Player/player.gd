@@ -23,6 +23,10 @@ var can_dash = true
 var default_speed = speed
 var default_jump_height = jump_height
 
+
+var ghosting_effect_scene = preload("res://Scenes/Entities/ghosting_effect.tscn")
+var ghosting = false
+
 var knife_path=preload("res://Scenes/Entities/knife.tscn")
 @onready var firing_offset_x = firing_point.position.x
 
@@ -233,11 +237,20 @@ func level_intro_text():
 func _on_dash_timer_timeout() -> void:
 	#reset speed to normal
 	speed = default_speed
+	
+	ghosting = false
+	$GhostingEffectTimer.stop()
+
+
 
 func _on_dash_cooldown_timer_timeout() -> void:
 		can_dash = true
 		
 func handle_dash(direction):
+	ghosting = true
+	spawn_ghost()
+	$GhostingEffectTimer.start()
+	
 	if not can_dash:
 		return
 
@@ -276,3 +289,26 @@ func throw():
 		knife.rotation = PI
 	
 	get_parent().add_child(knife)
+
+#ghosting effect
+func spawn_ghost():
+	var ghost = ghosting_effect_scene.instantiate()
+	var ghost_sprite = ghost.get_node("Sprite2D")
+	
+	#Zkopíruju texturu + flipnutí postavy
+	ghost.global_position = global_position
+	ghost_sprite.texture = sprite.texture
+	ghost_sprite.hframes = sprite.hframes
+	ghost_sprite.vframes = sprite.vframes
+	ghost_sprite.frame = sprite.frame
+	ghost_sprite.flip_h = sprite.flip_h
+
+	get_parent().add_child(ghost)
+
+func _on_GhostTimer_timeout():
+	if ghosting:
+		spawn_ghost()
+
+func _on_ghosting_effect_timer_timeout() -> void:
+	if ghosting:
+		spawn_ghost()

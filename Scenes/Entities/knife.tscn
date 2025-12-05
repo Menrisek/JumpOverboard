@@ -24,3 +24,4 @@ shape = SubResource("RectangleShape2D_s1ino")
 [node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

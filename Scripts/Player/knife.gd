@@ -32,5 +32,13 @@ func _on_area_2d_area_entered(area):
 		parent.take_damage(1)
 		die()
 
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if hit:
+		return
+
+	# pokud to není nepřítel, nůž se zničí
+	if not body.is_in_group("Enemies"):
+		die()
+
 func set_distance(distance: float):
 	lifetime = distance/speed

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb1pwrsols2bv"]
+
+[ext_resource type="Script" uid="uid://b36nmk3ecbgyt" path="res://Scripts/Player/ghosting_effect.gd" id="1_d5nxl"]
+[ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="1_usgs1"]
+
+[node name="GhostingEffect" type="Node2D"]
+script = ExtResource("1_d5nxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+texture = ExtResource("1_usgs1")
