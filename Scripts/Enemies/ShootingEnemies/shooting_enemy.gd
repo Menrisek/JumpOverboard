@@ -1,94 +1,159 @@
 extends CharacterBody2D
-class_name EnemyShooter
+class_name TargetDummy
 
-@onready var sprite = $Sprite2D
-@onready var animation = $AnimationPlayer
-@onready var fire_point = $FirePoint
-@onready var detection_area = $DetectionArea
+# =========================
+# 🔧 NASTAVENÍ
+# =========================
 
-@export var bullet_scene: PackedScene
-@export var max_health := 3
-@export var fire_rate := 1.2
-@export var shoot_range := 500
-@export var move_speed := 40
-@export var can_move := false  # když chceš, aby chodil
+@export_category("Health")
+@export var max_health := 20
+@export var can_die := true
+@export var respawn_time := 2.0
+
+@export_category("DPS")
+@export var enable_dps := true
+@export var dps_reset_time := 1.5
+
+@export_category("Hit Numbers")
+@export var enable_hit_numbers := true
+
+@export_category("Movement")
+@export var enable_movement := false
+@export var move_speed := 40.0
+@export var move_distance := 100.0
+
+# =========================
+# 🔗 NODY
+# =========================
+
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var hitbox: Area2D = $Hitbox
+@onready var damage_label: Label = $DamageLabel
+@onready var dps_label: Label = $DPSLabel
+@onready var respawn_timer: Timer = $RespawnTimer
+@onready var hit_number_spawner: Node2D = $HitNumberSpawner
+
+# =========================
+# 📊 DATA
+# =========================
 
 var health := 0
-var can_shoot := true
-var dead := false
-var player: Player = null
+var total_damage := 0
+var dps_timer := 0.0
+var start_position := Vector2.ZERO
+var direction := 1
+
+# =========================
+# 🚀 READY
+# =========================
 
 func _ready():
+	add_to_group("Enemies")
 	health = max_health
-	detection_area.area_entered.connect(_on_area_entered)
-	detection_area.area_exited.connect(_on_area_exited)
+	start_position = global_position
+	
+	if not enable_dps:
+		dps_label.hide()
+	if not enable_hit_numbers:
+		damage_label.hide()
+	
+	respawn_timer.timeout.connect(respawn)
 
-func _physics_process(delta):
-	if dead: return
+# =========================
+# 💥 DAMAGE
+# =========================
 
-	if player:
-		_face_player()
-		if can_move:
-			_move_to_player(delta)
-		if can_shoot:
-			_start_shooting()
-	else:
-		velocity.x = 0
-		move_and_slide()
-
-# -------------------------------------------------------------
-# ZÁKLADNÍ FUNKCE
-# -------------------------------------------------------------
-
-func _face_player():
-	if player.global_position.x > global_position.x:
-		sprite.scale.x = abs(sprite.scale.x)
-	else:
-		sprite.scale.x = -abs(sprite.scale.x)
-
-func _move_to_player(_delta):
-	var dir = sign(player.global_position.x - global_position.x)
-	velocity.x = dir * move_speed
-	move_and_slide()
-
-func _start_shooting():
-	can_shoot = false
-	await get_tree().create_timer(fire_rate).timeout
-	can_shoot = true
-
-# Zavolá animace "shoot"
-func fire():
-	if dead: return
-	var b = bullet_scene.instantiate()
-	b.global_position = fire_point.global_position
-	b.direction = sign(sprite.scale.x)
-	get_tree().current_scene.add_child(b)
-
-# -------------------------------------------------------------
-# DETEKCE HRÁČE
-# -------------------------------------------------------------
-
-func _on_area_entered(area):
-	var p = area.get_parent()
-	if p is Player:
-		player = p
-		fire()
-
-func _on_area_exited(area):
-	if area.get_parent() == player:
-		player = null
-
-# -------------------------------------------------------------
-# ZDRAVÍ, HIT, SMRT
-# -------------------------------------------------------------
-
-func take_damage(amount):
-	if dead: return
-	health -= amount
-
+func take_damage(amount: int):
 	if health <= 0:
+		return
+	
+	health -= amount
+	total_damage += amount
+	dps_timer = 0.0
+	
+	show_hit(amount)
+	flash()
+	
+	if anim and anim.has_animation("hit"):
+		anim.play("hit")
+	
+	update_labels()
+
+	if health <= 0 and can_die:
 		die()
 
+# =========================
+# ☠️ DEATH / RESPAWN
+# =========================
+
 func die():
-	dead = true
-	velocity = Vector2.ZERO
+	sprite.hide()
+	hitbox.set_deferred("monitoring", false)
+	respawn_timer.start(respawn_time)
+
+func respawn():
+	health = max_health
+	total_damage = 0
+	dps_timer = 0.0
+	sprite.show()
+	hitbox.set_deferred("monitoring", true)
+	update_labels()
+
+# =========================
+# 📈 DPS LOGIKA
+# =========================
+
+func _process(delta):
+	if enable_dps:
+		dps_timer += delta
+		
+		if dps_timer > dps_reset_time:
+			total_damage = 0
+		
+		var dps : float = total_damage / max(dps_timer, 0.01)
+		dps_label.text = "DPS: %.1f" % dps
+	
+	if enable_movement:
+		move_dummy(delta)
+
+# =========================
+# 🚶 POHYB DUMMYHO
+# =========================
+
+func move_dummy(_delta):
+	velocity.x = direction * move_speed
+	move_and_slide()
+	
+	if abs(global_position.x - start_position.x) > move_distance:
+		direction *= -1
+		sprite.flip_h = direction < 0
+
+# =========================
+# 🩸 HIT NUMBERS
+# =========================
+
+func show_hit(amount: int):
+	if not enable_hit_numbers:
+		return
+	
+	damage_label.text = "-" + str(amount)
+	damage_label.modulate = Color(1, 0.2, 0.2)
+	damage_label.show()
+	
+	damage_label.scale = Vector2.ONE * 1.2
+	await get_tree().create_timer(0.3).timeout
+	damage_label.hide()
+
+# =========================
+# ✨ FEEDBACK
+# =========================
+
+func flash():
+	sprite.modulate = Color(1, 0.5, 0.5)
+	await get_tree().create_timer(0.08).timeout
+	sprite.modulate = Color(1, 1, 1)
+
+func update_labels():
+	if damage_label:
+		damage_label.text = "HP: " + str(health)

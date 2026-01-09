@@ -1,34 +1,52 @@
 [gd_scene load_steps=6 format=3 uid="uid://gu04kor5gen0"]
 
 [ext_resource type="Script" uid="uid://c1ah2s44bi86f" path="res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd" id="1_ieuth"]
-[ext_resource type="PackedScene" uid="uid://d3fxq2u3i0ofg" path="res://Scenes/Enemies/ShootingEnemies/bullet.tscn" id="2_4b31h"]
 [ext_resource type="Texture2D" uid="uid://cjwx3aupl087i" path="res://Art/Merchant Ship/Sprites/Barrel/Hit/4.png" id="2_g2c6s"]
+[ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="3_g2c6s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ieuth"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2c6s"]
-size = Vector2(192, 20)
+[sub_resource type="LabelSettings" id="LabelSettings_g2c6s"]
+font_size = 12
+shadow_size = 0
 
 [node name="shooting_enemy" type="CharacterBody2D" groups=["Enemies"]]
 collision_layer = 2
 script = ExtResource("1_ieuth")
-bullet_scene = ExtResource("2_4b31h")
-
-[node name="FirePoint" type="Marker2D" parent="."]
-position = Vector2(16, 0)
+max_health = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_g2c6s")
 
 [node name="KolizeSObjekty" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ieuth")
-debug_color = Color(0.9573751, 1.0588765e-06, 0.5355218, 0.41960785)
 
-[node name="DetectionArea" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-shape = SubResource("RectangleShape2D_g2c6s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_ieuth")
+debug_color = Color(0.9493024, 0.11014249, 0.49786323, 0.41960785)
 
-[node name="ShootCooldown" type="Timer" parent="."]
+[node name="Healthbar" parent="." instance=ExtResource("3_g2c6s")]
+offset_top = -16.0
+offset_bottom = -16.0
+
+[node name="DamageLabel" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -34.0
+offset_right = 14.0
+offset_bottom = -17.0
+text = "HP"
+label_settings = SubResource("LabelSettings_g2c6s")
+
+[node name="DPSLabel" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -54.0
+offset_right = 26.0
+offset_bottom = -31.0
+
+[node name="HitNumberSpawner" type="Node2D" parent="."]
+
+[node name="RespawnTimer" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,10 +1,5 @@
+res://Scenes/Enemies/ShootingEnemies/shooting_enemy.tscn
+res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd
 res://Scenes/WorldScenes/LevelTest.tscn
 res://Scripts/Player/knife.gd
-res://Scenes/Entities/knife.tscn
-res://Scenes/Entities/player.tscn
-res://Scenes/Entities/ghosting_effect.tscn
-res://Scripts/Player/ghosting_effect.gd
-res://Scripts/Player/player.gd
-res://Scenes/Interactable/Cannon/cannon.tscn
-res://Scripts/Interactable/BoostingItems/heal_up.gd
-res://Scenes/Interactable/BoostingItems/heal_up.tscn
+res://Scenes/Enemies/sharkie.tscn
