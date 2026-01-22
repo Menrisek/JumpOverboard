@@ -4,7 +4,9 @@ class_name FlyingEnemy
 @export var max_health = 2
 @export var score = 150
 @export var flying_speed = 150
+@export var damage_to_player := 1
 
+@export_category("Patrol settings")
 @export var enable_patrol = false        # jestli má patrolovat
 @export var patrol_point_a: Node2D        # první patrol point
 @export var patrol_point_b: Node2D        # druhý patrol point
@@ -127,7 +129,7 @@ func die():
 #ATTACK
 func _on_attack_area_area_entered(area):
 	if area.get_parent() is Player and can_attack and !dead:
-		area.get_parent().take_damage(1)
+		area.get_parent().take_damage(damage_to_player)
 
 		flying_speed = -knockback
 		await get_tree().create_timer(0.35).timeout

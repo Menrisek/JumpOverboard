@@ -22,6 +22,14 @@ class_name TargetDummy
 @export var move_speed := 40.0
 @export var move_distance := 100.0
 
+@export_category("Attack")
+@export var can_attack := true
+@export var damage_to_player := 1
+@export var attack_cooldown := 1.0
+
+@export_category("Knife Attack")
+var knife_path=preload("res://Scenes/Entities/knife.tscn")
+
 # =========================
 # 🔗 NODY
 # =========================
@@ -33,6 +41,8 @@ class_name TargetDummy
 @onready var dps_label: Label = $DPSLabel
 @onready var respawn_timer: Timer = $RespawnTimer
 @onready var hit_number_spawner: Node2D = $HitNumberSpawner
+@onready var firing_point = $FiringPoint
+@onready var firing_offset_x = firing_point.position.x
 
 # =========================
 # 📊 DATA
@@ -43,6 +53,7 @@ var total_damage := 0
 var dps_timer := 0.0
 var start_position := Vector2.ZERO
 var direction := 1
+var can_hit := true
 
 # =========================
 # 🚀 READY
@@ -59,9 +70,10 @@ func _ready():
 		damage_label.hide()
 	
 	respawn_timer.timeout.connect(respawn)
+	hitbox.body_entered.connect(_on_hitbox_area_entered)
 
 # =========================
-# 💥 DAMAGE
+# 💥 DAMAGE (DUMMY)
 # =========================
 
 func take_damage(amount: int):
@@ -78,8 +90,9 @@ func take_damage(amount: int):
 	if anim and anim.has_animation("hit"):
 		anim.play("hit")
 	
+	update_healthbar()
 	update_labels()
-
+	
 	if health <= 0 and can_die:
 		die()
 
@@ -99,9 +112,10 @@ func respawn():
 	sprite.show()
 	hitbox.set_deferred("monitoring", true)
 	update_labels()
+	update_healthbar()
 
 # =========================
-# 📈 DPS LOGIKA
+# 📈 DPS + UPDATE
 # =========================
 
 func _process(delta):
@@ -118,7 +132,7 @@ func _process(delta):
 		move_dummy(delta)
 
 # =========================
-# 🚶 POHYB DUMMYHO
+# 🚶 POHYB
 # =========================
 
 func move_dummy(_delta):
@@ -157,3 +171,52 @@ func flash():
 func update_labels():
 	if damage_label:
 		damage_label.text = "HP: " + str(health)
+
+func update_healthbar():
+	get_node("Healthbar").update_healthbar(health, max_health)
+
+# =========================
+# ⚔️ ATTACK (PLAYER DAMAGE)
+# =========================
+
+func _on_hitbox_area_entered(area):
+	if not can_attack:
+		return
+	
+	if not can_hit:
+		return
+	
+	if health <= 0:
+		return
+	
+	var player = area.get_parent()
+	if player is Player:
+		player.take_damage(damage_to_player)
+		start_attack_cooldown()
+		throw()
+
+
+func start_attack_cooldown():
+	can_hit = false
+	await get_tree().create_timer(attack_cooldown).timeout
+	can_hit = true
+
+func throw():
+	var knife = knife_path.instantiate()
+	# směr podle sprite.flip_h
+	if sprite.flip_h:
+		knife.direction = -1
+		knife.scale.y = -1
+	else:
+		knife.direction = 1
+		knife.scale.y = 1
+
+	knife.global_position = firing_point.global_position
+	
+	# otočení sprite nože
+	if knife.direction == 1:
+		knife.rotation = 0.0
+	else:
+		knife.rotation = PI
+	
+	get_parent().add_child(knife)
