@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://gu04kor5gen0"]
+[gd_scene load_steps=7 format=3 uid="uid://gu04kor5gen0"]
 
 [ext_resource type="Script" uid="uid://c1ah2s44bi86f" path="res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd" id="1_ieuth"]
 [ext_resource type="Texture2D" uid="uid://cjwx3aupl087i" path="res://Art/Merchant Ship/Sprites/Barrel/Hit/4.png" id="2_g2c6s"]
 [ext_resource type="PackedScene" uid="uid://h0k2oed15t5q" path="res://Scenes/UI/healthbar.tscn" id="3_g2c6s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ieuth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2c6s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g2c6s"]
 font_size = 12
@@ -29,7 +31,13 @@ shape = SubResource("CapsuleShape2D_ieuth")
 debug_color = Color(0.9493024, 0.11014249, 0.49786323, 0.41960785)
 
 [node name="FiringPoint" type="Marker2D" parent="."]
-position = Vector2(-14, 0)
+position = Vector2(14, 0)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_g2c6s")
 
 [node name="Healthbar" parent="." instance=ExtResource("3_g2c6s")]
 offset_top = -16.0
@@ -52,7 +60,9 @@ offset_bottom = -31.0
 [node name="HitNumberSpawner" type="Node2D" parent="."]
 
 [node name="RespawnTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="DetectionArea" to="." method="_on_detection_area_area_entered"]

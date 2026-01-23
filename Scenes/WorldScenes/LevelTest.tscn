@@ -1260,6 +1260,7 @@ position = Vector2(216, 96)
 
 [node name="shooting_enemy" parent="." instance=ExtResource("27_t3v56")]
 position = Vector2(-272, 96)
+max_health = 10
 enable_movement = true
 can_attack = true
 

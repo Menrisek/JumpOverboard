@@ -272,6 +272,8 @@ func handle_dash(direction):
 
 func throw():
 	var knife = knife_path.instantiate()
+	knife.owner_type = Knife.OwnerType.PLAYER
+
 	# směr podle sprite.flip_h
 	if sprite.flip_h:
 		knife.direction = -1

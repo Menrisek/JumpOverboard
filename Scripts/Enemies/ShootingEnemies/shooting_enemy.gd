@@ -1,9 +1,6 @@
 extends CharacterBody2D
-class_name TargetDummy
+class_name ShootingEnemy
 
-# =========================
-# 🔧 NASTAVENÍ
-# =========================
 
 @export_category("Health")
 @export var max_health := 20
@@ -30,9 +27,6 @@ class_name TargetDummy
 @export_category("Knife Attack")
 var knife_path=preload("res://Scenes/Entities/knife.tscn")
 
-# =========================
-# 🔗 NODY
-# =========================
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
@@ -43,10 +37,8 @@ var knife_path=preload("res://Scenes/Entities/knife.tscn")
 @onready var hit_number_spawner: Node2D = $HitNumberSpawner
 @onready var firing_point = $FiringPoint
 @onready var firing_offset_x = firing_point.position.x
+@onready var attack_area = $DetectionArea
 
-# =========================
-# 📊 DATA
-# =========================
 
 var health := 0
 var total_damage := 0
@@ -55,9 +47,7 @@ var start_position := Vector2.ZERO
 var direction := 1
 var can_hit := true
 
-# =========================
-# 🚀 READY
-# =========================
+
 
 func _ready():
 	add_to_group("Enemies")
@@ -72,10 +62,7 @@ func _ready():
 	respawn_timer.timeout.connect(respawn)
 	hitbox.body_entered.connect(_on_hitbox_area_entered)
 
-# =========================
-# 💥 DAMAGE (DUMMY)
-# =========================
-
+#dostávání dmg 
 func take_damage(amount: int):
 	if health <= 0:
 		return
@@ -84,22 +71,20 @@ func take_damage(amount: int):
 	total_damage += amount
 	dps_timer = 0.0
 	
+	
 	show_hit(amount)
 	flash()
 	
 	if anim and anim.has_animation("hit"):
 		anim.play("hit")
 	
-	update_healthbar()
 	update_labels()
+	update_healthbar()
 	
 	if health <= 0 and can_die:
 		die()
 
-# =========================
-# ☠️ DEATH / RESPAWN
-# =========================
-
+#smrt a respawn
 func die():
 	sprite.hide()
 	hitbox.set_deferred("monitoring", false)
@@ -114,10 +99,7 @@ func respawn():
 	update_labels()
 	update_healthbar()
 
-# =========================
-# 📈 DPS + UPDATE
-# =========================
-
+#damage per sec
 func _process(delta):
 	if enable_dps:
 		dps_timer += delta
@@ -131,10 +113,7 @@ func _process(delta):
 	if enable_movement:
 		move_dummy(delta)
 
-# =========================
-# 🚶 POHYB
-# =========================
-
+#pohyb
 func move_dummy(_delta):
 	velocity.x = direction * move_speed
 	move_and_slide()
@@ -142,11 +121,19 @@ func move_dummy(_delta):
 	if abs(global_position.x - start_position.x) > move_distance:
 		direction *= -1
 		sprite.flip_h = direction < 0
+		
+		var ligma = -1 if sprite.flip_h else 1
+		firing_point.scale.x = abs(firing_point.scale.x) * ligma
+		attack_area.scale.x = abs(attack_area.scale.x) * ligma
 
-# =========================
-# 🩸 HIT NUMBERS
-# =========================
 
+
+#updatování healthbaru
+func update_healthbar():
+	get_node("Healthbar").update_healthbar(health, max_health)
+
+
+#ukazování kolik mu zbývá hp
 func show_hit(amount: int):
 	if not enable_hit_numbers:
 		return
@@ -159,10 +146,8 @@ func show_hit(amount: int):
 	await get_tree().create_timer(0.3).timeout
 	damage_label.hide()
 
-# =========================
-# ✨ FEEDBACK
-# =========================
 
+#testování dummyho (zakomentovat později)
 func flash():
 	sprite.modulate = Color(1, 0.5, 0.5)
 	await get_tree().create_timer(0.08).timeout
@@ -172,13 +157,8 @@ func update_labels():
 	if damage_label:
 		damage_label.text = "HP: " + str(health)
 
-func update_healthbar():
-	get_node("Healthbar").update_healthbar(health, max_health)
 
-# =========================
-# ⚔️ ATTACK (PLAYER DAMAGE)
-# =========================
-
+#nože
 func _on_hitbox_area_entered(area):
 	if not can_attack:
 		return
@@ -193,7 +173,6 @@ func _on_hitbox_area_entered(area):
 	if player is Player:
 		player.take_damage(damage_to_player)
 		start_attack_cooldown()
-		throw()
 
 
 func start_attack_cooldown():
@@ -203,6 +182,8 @@ func start_attack_cooldown():
 
 func throw():
 	var knife = knife_path.instantiate()
+	knife.owner_type = Knife.OwnerType.ENEMY
+
 	# směr podle sprite.flip_h
 	if sprite.flip_h:
 		knife.direction = -1
@@ -220,3 +201,7 @@ func throw():
 		knife.rotation = PI
 	
 	get_parent().add_child(knife)
+
+
+func _on_detection_area_area_entered(_area):
+	call_deferred("throw") # musím zpozdit vytvoření nože o jeden frame, aby godot neměl problém
