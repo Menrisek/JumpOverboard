@@ -7,6 +7,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ieuth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2c6s"]
+size = Vector2(60, 22)
 
 [sub_resource type="LabelSettings" id="LabelSettings_g2c6s"]
 font_size = 12
@@ -31,13 +32,14 @@ shape = SubResource("CapsuleShape2D_ieuth")
 debug_color = Color(0.9493024, 0.11014249, 0.49786323, 0.41960785)
 
 [node name="FiringPoint" type="Marker2D" parent="."]
-position = Vector2(14, 0)
+position = Vector2(15, 0)
 
 [node name="DetectionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(24, 0)
+position = Vector2(43, -1)
 shape = SubResource("RectangleShape2D_g2c6s")
+debug_color = Color(1, 0.011764706, 0, 0.41960785)
 
 [node name="Healthbar" parent="." instance=ExtResource("3_g2c6s")]
 offset_top = -16.0

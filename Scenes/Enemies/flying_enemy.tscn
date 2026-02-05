@@ -29,6 +29,7 @@ shape = SubResource("RectangleShape2D_slg0n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 shape = SubResource("RectangleShape2D_nb6un")
+debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Healthbar" parent="." instance=ExtResource("3_nb6un")]
 offset_top = -11.0
@@ -40,6 +41,7 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChasingArea"]
 rotation = 4.71239
 shape = SubResource("CapsuleShape2D_nb6un")
+debug_color = Color(0, 0.6, 0, 0.41960785)
 
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_entered" from="ChasingArea" to="." method="_on_chasing_area_area_entered"]

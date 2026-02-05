@@ -1259,15 +1259,15 @@ position = Vector2(-1096, 96)
 position = Vector2(216, 96)
 
 [node name="shooting_enemy" parent="." instance=ExtResource("27_t3v56")]
-position = Vector2(-272, 96)
+position = Vector2(-352, -56)
 max_health = 10
-enable_movement = true
+can_die = false
 can_attack = true
 
 [node name="shooting_enemy2" parent="." instance=ExtResource("27_t3v56")]
-position = Vector2(-520, 24)
-enable_movement = true
-move_distance = 50.0
+position = Vector2(-176, -48)
+max_health = 10
+can_attack = true
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

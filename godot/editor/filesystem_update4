@@ -1,5 +1,6 @@
-res://Scenes/Enemies/ShootingEnemies/shooting_enemy.tscn
+res://Scenes/Entities/player.tscn
 res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd
+res://Scenes/Enemies/ShootingEnemies/shooting_enemy.tscn
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scripts/Player/knife.gd
-res://Scripts/Player/player.gd
+res://Scenes/Enemies/flying_enemy.tscn
+res://Scenes/Entities/knife.tscn

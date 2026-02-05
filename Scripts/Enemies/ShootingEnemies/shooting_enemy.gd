@@ -1,10 +1,11 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 class_name ShootingEnemy
 
 
 @export_category("Health")
 @export var max_health := 20
 @export var can_die := true
+@export var can_respawn := false
 @export var respawn_time := 2.0
 
 @export_category("DPS")
@@ -15,7 +16,7 @@ class_name ShootingEnemy
 @export var enable_hit_numbers := true
 
 @export_category("Movement")
-@export var enable_movement := false
+@export var enable_movement := true
 @export var move_speed := 40.0
 @export var move_distance := 100.0
 
@@ -43,16 +44,16 @@ var knife_path=preload("res://Scenes/Entities/knife.tscn")
 var health := 0
 var total_damage := 0
 var dps_timer := 0.0
-var start_position := Vector2.ZERO
-var direction := 1
-var can_hit := true
+var spawn_position := Vector2.ZERO
+var move_direction := 1
+var can_damage_player := true
 
 
 
 func _ready():
 	add_to_group("Enemies")
 	health = max_health
-	start_position = global_position
+	spawn_position = global_position
 	
 	if not enable_dps:
 		dps_label.hide()
@@ -88,7 +89,14 @@ func take_damage(amount: int):
 func die():
 	sprite.hide()
 	hitbox.set_deferred("monitoring", false)
-	respawn_timer.start(respawn_time)
+	can_attack = false
+	enable_movement = false
+
+	if can_respawn:
+		respawn_timer.start(respawn_time)
+	else:
+		queue_free()
+
 
 func respawn():
 	health = max_health
@@ -111,20 +119,34 @@ func _process(delta):
 		dps_label.text = "DPS: %.1f" % dps
 	
 	if enable_movement:
-		move_dummy(delta)
+		patrol(delta)
+
+
+func _physics_process(delta):
+	if not is_on_floor():
+		velocity.y += get_gravity().y * delta
+	else:
+		velocity.y = 0
+
+	if enable_movement:
+		patrol(delta)
+
 
 #pohyb
-func move_dummy(_delta):
-	velocity.x = direction * move_speed
+func patrol(_delta):
+	velocity.x = move_direction * move_speed
 	move_and_slide()
 	
-	if abs(global_position.x - start_position.x) > move_distance:
-		direction *= -1
-		sprite.flip_h = direction < 0
-		
-		var ligma = -1 if sprite.flip_h else 1
-		firing_point.scale.x = abs(firing_point.scale.x) * ligma
-		attack_area.scale.x = abs(attack_area.scale.x) * ligma
+	if abs(global_position.x - spawn_position.x) > move_distance:
+		move_direction *= -1
+		sprite.flip_h = move_direction < 0
+
+	if sprite.flip_h:
+		firing_point.position.x = -abs(firing_offset_x)
+		attack_area.scale.x = -abs(attack_area.scale.x)
+	else:
+		firing_point.position.x = abs(firing_offset_x)
+		attack_area.scale.x = abs(attack_area.scale.x)
 
 
 
@@ -163,7 +185,7 @@ func _on_hitbox_area_entered(area):
 	if not can_attack:
 		return
 	
-	if not can_hit:
+	if not can_damage_player:
 		return
 	
 	if health <= 0:
@@ -176,9 +198,9 @@ func _on_hitbox_area_entered(area):
 
 
 func start_attack_cooldown():
-	can_hit = false
+	can_damage_player = false
 	await get_tree().create_timer(attack_cooldown).timeout
-	can_hit = true
+	can_damage_player = true
 
 func throw():
 	var knife = knife_path.instantiate()
@@ -203,5 +225,10 @@ func throw():
 	get_parent().add_child(knife)
 
 
-func _on_detection_area_area_entered(_area):
+func _on_detection_area_area_entered(area):
+	var body = area.get_parent()
+
+	if not body.is_in_group("Player"):
+		return
+
 	call_deferred("throw") # musím zpozdit vytvoření nože o jeden frame, aby godot neměl problém
