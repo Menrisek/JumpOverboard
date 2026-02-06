@@ -28,9 +28,11 @@ var start_position               # místo kde se objevil
 var patrol_target                # aktuální cíl patrolování
 
 @onready var target = get_parent().get_node("Player")
+@onready var anim= $AnimationPlayer
 
 
 func _ready():
+	anim.play("run")
 	health = max_health
 	default_flying_speed = flying_speed
 	start_position = position

@@ -49,6 +49,7 @@ project/assembly_name="Forest Adventures.v2"
 
 Enemies="Enemies of the player"
 Player="Players"
+EnemyHitbox=""
 
 [input]
 

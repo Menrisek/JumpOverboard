@@ -1,3 +1,4 @@
+AnimationPlayer
 CollisionShape2D
 Area2D
 Timer
@@ -8,7 +9,6 @@ Line2D
 Marker2D
 CharacterBody2D
 VisibleOnScreenEnabler2D
-AnimationPlayer
 AudioStreamPlayer2D
 CanvasLayer
 TextureRect

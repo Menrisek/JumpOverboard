@@ -52,6 +52,7 @@ var can_damage_player := true
 
 func _ready():
 	add_to_group("Enemies")
+	anim.play("run")
 	health = max_health
 	spawn_position = global_position
 	
@@ -62,6 +63,20 @@ func _ready():
 	
 	respawn_timer.timeout.connect(respawn)
 	hitbox.body_entered.connect(_on_hitbox_area_entered)
+
+#damage per sec a zapnutí pohybu
+func _process(delta):
+	if enable_dps:
+		dps_timer += delta
+		
+		if dps_timer > dps_reset_time:
+			total_damage = 0
+		
+		var dps : float = total_damage / max(dps_timer, 0.01)
+		dps_label.text = "DPS: %.1f" % dps
+	
+	if enable_movement:
+		patrol(delta)
 
 #dostávání dmg 
 func take_damage(amount: int):
@@ -75,10 +90,6 @@ func take_damage(amount: int):
 	
 	show_hit(amount)
 	flash()
-	
-	if anim and anim.has_animation("hit"):
-		anim.play("hit")
-	
 	update_labels()
 	update_healthbar()
 	
@@ -89,14 +100,16 @@ func take_damage(amount: int):
 func die():
 	sprite.hide()
 	hitbox.set_deferred("monitoring", false)
+	hitbox.set_deferred("monitorable", false)
 	can_attack = false
 	enable_movement = false
 
 	if can_respawn:
 		respawn_timer.start(respawn_time)
+		await get_tree().create_timer(respawn_time).timeout
+		enable_movement = true
 	else:
 		queue_free()
-
 
 func respawn():
 	health = max_health
@@ -104,22 +117,9 @@ func respawn():
 	dps_timer = 0.0
 	sprite.show()
 	hitbox.set_deferred("monitoring", true)
+	hitbox.set_deferred("monitorable",true)
 	update_labels()
 	update_healthbar()
-
-#damage per sec
-func _process(delta):
-	if enable_dps:
-		dps_timer += delta
-		
-		if dps_timer > dps_reset_time:
-			total_damage = 0
-		
-		var dps : float = total_damage / max(dps_timer, 0.01)
-		dps_label.text = "DPS: %.1f" % dps
-	
-	if enable_movement:
-		patrol(delta)
 
 
 func _physics_process(delta):
@@ -171,6 +171,7 @@ func show_hit(amount: int):
 
 #testování dummyho (zakomentovat později)
 func flash():
+	anim.play("hit")
 	sprite.modulate = Color(1, 0.5, 0.5)
 	await get_tree().create_timer(0.08).timeout
 	sprite.modulate = Color(1, 1, 1)

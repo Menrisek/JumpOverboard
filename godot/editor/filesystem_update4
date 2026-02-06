@@ -1,6 +1,5 @@
-res://Scenes/Entities/player.tscn
-res://Scripts/Enemies/ShootingEnemies/shooting_enemy.gd
-res://Scenes/Enemies/ShootingEnemies/shooting_enemy.tscn
+res://Scenes/Enemies/starbird.tscn
+res://Scripts/Enemies/starbird.gd
+res://Scenes/Enemies/ShootingEnemies/crabby.tscn
+res://Scripts/Enemies/ShootingEnemies/crabby.gd
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scenes/Enemies/flying_enemy.tscn
-res://Scenes/Entities/knife.tscn

@@ -170,7 +170,7 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_r1ebp")
 debug_color = Color(0.9519114, 5.7756904e-07, 0.56373394, 0.41960785)
 
-[node name="AttackArea" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="." groups=["EnemyHitbox"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(0, 2)

@@ -33,9 +33,15 @@ func _on_area_2d_area_entered(area):
 	
 	match owner_type:
 		OwnerType.PLAYER:
-			if parent.is_in_group("Enemies"):
-				parent.take_damage(1)
+			# reaguj POUZE na hitbox
+			if not area.is_in_group("EnemyHitbox"):
+				return
+
+			var enemy = area.get_parent()
+			if enemy.is_in_group("Enemies"):
+				enemy.take_damage(1)
 				die()
+
 		
 		OwnerType.ENEMY:
 			if parent is Player:
