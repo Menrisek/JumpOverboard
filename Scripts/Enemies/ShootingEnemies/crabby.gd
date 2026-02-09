@@ -1,15 +1,15 @@
 extends CharacterBody2D 
-class_name ShootingEnemy
+class_name Crabby
 
 
 @export_category("Health")
-@export var max_health := 20
+@export var max_health := 5
 @export var can_die := true
 @export var can_respawn := false
 @export var respawn_time := 2.0
 
 @export_category("DPS")
-@export var enable_dps := true
+@export var enable_dps := false
 @export var dps_reset_time := 1.5
 
 @export_category("Hit Numbers")
@@ -47,14 +47,15 @@ var dps_timer := 0.0
 var spawn_position := Vector2.ZERO
 var move_direction := 1
 var can_damage_player := true
-
-
+var is_dead := false
+var is_hit := false
+var can_take_damage = true
 
 func _ready():
 	add_to_group("Enemies")
-	anim.play("run")
 	health = max_health
 	spawn_position = global_position
+	anim.play("run")
 	
 	if not enable_dps:
 		dps_label.hide()
@@ -82,28 +83,50 @@ func _process(delta):
 func take_damage(amount: int):
 	if health <= 0:
 		return
-	
-	health -= amount
+		
+	if can_take_damage:
+			immunityframes()
+			is_hit = true
+			enable_movement = false
+			velocity.x = 0
+			anim.play("hit")
+			health -= amount
+
 	total_damage += amount
 	dps_timer = 0.0
-	
 	
 	show_hit(amount)
 	flash()
 	update_labels()
 	update_healthbar()
 	
+	await anim.animation_finished
+	is_hit = false
+	
+	enable_movement = true
+	
 	if health <= 0 and can_die:
 		die()
 
+func immunityframes():
+	can_take_damage = false
+	#bude mít imunitu na x sekundy
+	await get_tree().create_timer(0.2).timeout
+	can_take_damage = true
+	
 #smrt a respawn
 func die():
+	is_dead = true
+	anim.play("die")
+
 	sprite.hide()
 	hitbox.set_deferred("monitoring", false)
 	hitbox.set_deferred("monitorable", false)
 	can_attack = false
 	enable_movement = false
-
+	
+	await anim.animation_finished
+	
 	if can_respawn:
 		respawn_timer.start(respawn_time)
 		await get_tree().create_timer(respawn_time).timeout
@@ -112,12 +135,17 @@ func die():
 		queue_free()
 
 func respawn():
+	is_dead = false
 	health = max_health
 	total_damage = 0
 	dps_timer = 0.0
+	
 	sprite.show()
 	hitbox.set_deferred("monitoring", true)
 	hitbox.set_deferred("monitorable",true)
+	enable_movement = true
+	
+	anim.play("run")
 	update_labels()
 	update_healthbar()
 
@@ -136,6 +164,14 @@ func _physics_process(delta):
 func patrol(_delta):
 	velocity.x = move_direction * move_speed
 	move_and_slide()
+	
+	#řešení animací
+	if velocity.x != 0 and not is_hit:
+		if anim.current_animation != "run":
+			anim.play("run")
+	else:
+		if anim.current_animation != "idle" and not is_hit:
+			anim.play("idle")
 	
 	if abs(global_position.x - spawn_position.x) > move_distance:
 		move_direction *= -1

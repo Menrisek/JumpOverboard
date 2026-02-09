@@ -1,5 +1,8 @@
+res://Scenes/WorldScenes/LevelTest.tscn
+res://Scripts/Enemies/ShootingEnemies/crabby.gd
+res://Scenes/Enemies/ShootingEnemies/crabby.tscn
 res://Scenes/Enemies/starbird.tscn
 res://Scripts/Enemies/starbird.gd
-res://Scenes/Enemies/ShootingEnemies/crabby.tscn
-res://Scripts/Enemies/ShootingEnemies/crabby.gd
-res://Scenes/WorldScenes/LevelTest.tscn
+res://Scripts/Player/player.gd
+res://Scripts/Interactable/BoostingItems/speed_up.gd
+res://Scenes/Interactable/BoostingItems/speed_up.tscn

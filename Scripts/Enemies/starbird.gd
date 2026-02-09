@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name FlyingEnemy
+class_name Starbird
 
 @export var max_health = 2
 @export var score = 150
@@ -18,6 +18,7 @@ var can_attack = true
 var can_take_damage = true
 var dead = false
 var knockback = 120
+var is_hit = false
 
 var chasing = false              # hráč je v detekční zóně
 var chase_timer_running = false  # časovač pro doběh honění
@@ -43,7 +44,9 @@ func _ready():
 
 
 func _physics_process(delta):
-	if dead:
+	if dead or is_hit:
+		velocity = Vector2.ZERO
+		move_and_slide()
 		return
 
 	#CHASE PLAYER
@@ -72,7 +75,8 @@ func _chase_player():
 	velocity = dir * flying_speed
 	look_at(target.position)
 	move_and_slide()
-
+	if anim.current_animation != "run":
+		anim.play("run")
 
 #PATROLLING
 func _patrol(_delta):
@@ -87,6 +91,8 @@ func _patrol(_delta):
 	
 	velocity = dir.normalized() * (flying_speed * 0.6)
 	move_and_slide()
+	if anim.current_animation != "run":
+		anim.play("run")
 
 
 
@@ -95,22 +101,36 @@ func _return_to_origin(_delta):
 	var dir = (start_position - position)
 	if dir.length() < 5:
 		velocity = Vector2.ZERO
+		if anim.current_animation != "idle":
+			anim.play("idle")
 		return
 	
 	velocity = dir.normalized() * (flying_speed * 0.6)
 	move_and_slide()
+	
+	if anim.current_animation != "run":
+		anim.play("run")
 
 
 #DAMAGE SYSTEM
 func take_damage(damage_amount):
-	if !dead and can_take_damage:
-		immunityframes()
-		health -= damage_amount
-	
+	if dead or !can_take_damage:
+		return
+
+	immunityframes()
+	is_hit = true
+	velocity = Vector2.ZERO
+	anim.play("hit")
+
+	health -= damage_amount
 	get_node("Healthbar").update_healthbar(health, max_health)
+
+	await anim.animation_finished
+	is_hit = false
 
 	if health <= 0:
 		die()
+
 
 
 func immunityframes():
@@ -122,8 +142,14 @@ func immunityframes():
 func die():
 	GameManager.score += score
 	GameManager.enemies_beaten += 1
+	
 	dead = true
+	is_hit = false
+	velocity = Vector2.ZERO
 	flying_speed = 0
+	
+	anim.play("die")
+	await anim.animation_finished
 	queue_free()
 
 

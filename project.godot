@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Jump Overboard"
@@ -18,9 +22,9 @@ config/name_localized={
 run/main_scene="res://Scenes/WorldScenes/Main menu/main_menu.tscn"
 config/use_hidden_project_data_directory=false
 config/use_custom_user_dir=true
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.423529, 0.494118, 0.980392, 1)
-boot_splash/fullsize=false
+boot_splash/stretch_mode=0
 boot_splash/image="uid://cgelurlx64lqs"
 config/icon="uid://db0t3p4a0itw8"
 config/windows_native_icon="res://Art/Icons/Hat favicon.ico"
