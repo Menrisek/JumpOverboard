@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cigkc5emwtm71"]
+
+[ext_resource type="Script" uid="uid://balw72maljcd0" path="res://Scripts/Interactable/moving_saw.gd" id="1_31i8u"]
+[ext_resource type="Texture2D" uid="uid://cegh2uwbebgga" path="res://Art/Merchant Ship/Sprites/Ship/Anchor/1.png" id="2_p5qp3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r8fy3"]
+
+[node name="MovingSaw" type="Node2D" unique_id=341678809]
+script = ExtResource("1_31i8u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1411701261 groups=["Enemies"]]
+position = Vector2(37.5, 0)
+texture = ExtResource("2_p5qp3")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=807363207]
+position = Vector2(37.5, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1059226290]
+shape = SubResource("CircleShape2D_r8fy3")
+debug_color = Color(0.9764706, 0, 0, 0.41960785)
+
+[node name="Marker2D LeftPoint" type="Marker2D" parent="." unique_id=1032921525]
+
+[node name="Marker2D RightPoint" type="Marker2D" parent="." unique_id=111004766]
+position = Vector2(73, 0)
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]

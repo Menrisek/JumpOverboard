@@ -49,27 +49,27 @@ func _physics_process(delta):
 		move_and_slide()
 		return
 
-	#CHASE PLAYER
+	#pronásledování hráče
 	if chasing:
 		_chase_player()
 		return
 		
-	#CHASE DELAY AFTER LOSING PLAYER
+	#ještě chvíli počkat i když hráč vyjde z arei pro pronásledování
 	elif chase_timer_running:
 		_chase_player()
 		return
 
-	#PATROLLING
+	#patrolování
 	elif patrolling:
 		_patrol(delta)
 		return
 
-	#RETURN TO ORIGIN WHEN NOT PATROLLING
+	#návrat na startovní pozici pokud nepatroluje
 	else:
 		_return_to_origin(delta)
 
 
-#CHASING
+#pronásledování
 func _chase_player():
 	var dir = (target.position - position).normalized()
 	velocity = dir * flying_speed
@@ -78,7 +78,7 @@ func _chase_player():
 	if anim.current_animation != "run":
 		anim.play("run")
 
-#PATROLLING
+#patrolování
 func _patrol(_delta):
 	if patrol_target == null:
 		return
@@ -96,7 +96,7 @@ func _patrol(_delta):
 
 
 
-#RETURN TO START POSITION
+#návrat na startovní pozici
 func _return_to_origin(_delta):
 	var dir = (start_position - position)
 	if dir.length() < 5:
@@ -112,7 +112,7 @@ func _return_to_origin(_delta):
 		anim.play("run")
 
 
-#DAMAGE SYSTEM
+#dmg systém
 func take_damage(damage_amount):
 	if dead or !can_take_damage:
 		return
@@ -154,7 +154,7 @@ func die():
 
 
 
-#ATTACK
+#útok
 func _on_attack_area_area_entered(area):
 	if area.get_parent() is Player and can_attack and !dead:
 		area.get_parent().take_damage(damage_to_player)
@@ -164,7 +164,7 @@ func _on_attack_area_area_entered(area):
 		flying_speed = default_flying_speed
 
 
-#DETECTION ZONE
+#detekční zóna
 func _on_chasing_area_area_entered(area):
 	if area.get_parent() is Player:
 		chasing = true

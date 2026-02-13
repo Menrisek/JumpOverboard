@@ -1,8 +1,5 @@
+res://Scripts/Interactable/moving_saw.gd
+res://Scenes/Interactable/moving_saw.tscn
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scripts/Enemies/ShootingEnemies/crabby.gd
-res://Scenes/Enemies/ShootingEnemies/crabby.tscn
 res://Scenes/Enemies/starbird.tscn
 res://Scripts/Enemies/starbird.gd
-res://Scripts/Player/player.gd
-res://Scripts/Interactable/BoostingItems/speed_up.gd
-res://Scenes/Interactable/BoostingItems/speed_up.tscn
