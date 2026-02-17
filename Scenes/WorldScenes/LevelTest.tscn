@@ -793,6 +793,9 @@ offset_bottom = 612.0
 texture = ExtResource("2_4q25a")
 expand_mode = 2
 
+[node name="MovingSaw" parent="." unique_id=1571716391 instance=ExtResource("28_t3v56")]
+position = Vector2(116, 112)
+
 [node name="TileMap" type="TileMap" parent="." unique_id=466564479]
 tile_set = SubResource("TileSet_5giv2")
 format = 2
@@ -1270,9 +1273,6 @@ enable_hit_numbers = false
 
 [node name="Chest2" parent="." unique_id=1340594597 instance=ExtResource("19_lh4kg")]
 position = Vector2(-149, 95)
-
-[node name="MovingSaw" parent="." unique_id=1571716391 instance=ExtResource("28_t3v56")]
-position = Vector2(45, 101)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

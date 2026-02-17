@@ -1,5 +1,3 @@
-res://Scripts/Interactable/moving_saw.gd
 res://Scenes/Interactable/moving_saw.tscn
+res://Scripts/Interactable/moving_saw.gd
 res://Scenes/WorldScenes/LevelTest.tscn
-res://Scenes/Enemies/starbird.tscn
-res://Scripts/Enemies/starbird.gd
