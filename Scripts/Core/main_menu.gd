@@ -18,10 +18,9 @@ func _on_start_pressed():
 
 func _on_load_pressed():
 	SaveManager.load_game()
-	print("Game was loaded")
 
 func _on_options_pressed():
-	pass
+	GameManager.load_options_menu()
 
 func _on_world_map_pressed():
 	GameManager.load_world()

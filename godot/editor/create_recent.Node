@@ -1,3 +1,8 @@
+Button
+ColorRect
+VBoxContainer
+HSlider
+Label
 Marker2D
 Node2D
 CollisionShape2D
@@ -6,9 +11,4 @@ CharacterBody2D
 Sprite2D
 AnimationPlayer
 Timer
-Label
 Line2D
-VisibleOnScreenEnabler2D
-AudioStreamPlayer2D
-CanvasLayer
-TextureRect

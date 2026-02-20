@@ -72,10 +72,12 @@ func load_world():
 func load_main_menu():
 	get_tree().paused = false
 	GameManager.paused = false
-	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Main menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Menu/main_menu.tscn")
 
 func load_options_menu():
-	pass
+	get_tree().paused = false
+	GameManager.paused = false
+	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Menu/settings_menu.tscn")
 
 func quit():
 	get_tree().quit()

@@ -1,3 +1,10 @@
-res://Scenes/Interactable/moving_saw.tscn
-res://Scripts/Interactable/moving_saw.gd
+res://Scripts/Core/GameManager.gd
 res://Scenes/WorldScenes/LevelTest.tscn
+res://Scripts/Core/settings_menu.gd
+res://Scenes/WorldScenes/Menu/settings_menu.tscn
+res://Scripts/Core/SaveData.gd
+res://default_bus_layout.tres
+res://Scripts/Core/AudioManager.gd
+res://Scripts/Core/SaveManager.gd
+res://Scenes/WorldScenes/Menu/main_menu.tscn
+res://Scripts/Core/main_menu.gd

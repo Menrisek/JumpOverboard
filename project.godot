@@ -19,7 +19,7 @@ config/name_localized={
 "cs": "Skok Přes Palubu",
 "en": "Jump Overboard"
 }
-run/main_scene="res://Scenes/WorldScenes/Main menu/main_menu.tscn"
+run/main_scene="res://Scenes/WorldScenes/Menu/main_menu.tscn"
 config/use_hidden_project_data_directory=false
 config/use_custom_user_dir=true
 config/features=PackedStringArray("4.6", "Forward Plus")
@@ -31,11 +31,16 @@ config/windows_native_icon="res://Art/Icons/Hat favicon.ico"
 boot_splash/minimum_display_time=3000
 config/minimum_display_time=3
 
+[audio]
+
+buses/default_bus_layout="uid://ds5vsgnfwsjhk"
+
 [autoload]
 
 GameManager="*res://Scripts/Core/GameManager.gd"
 LevelData="*res://Scripts/Core/LevelData.gd"
 SaveManager="*res://Scripts/Core/SaveManager.gd"
+AudioManager="*uid://ccbhycgn45tc7"
 
 [display]
 
