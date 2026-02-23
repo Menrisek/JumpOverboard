@@ -7,6 +7,7 @@ class_name Crabby
 @export var can_die := true
 @export var can_respawn := false
 @export var respawn_time := 2.0
+@export var score = 200
 
 @export_category("DPS")
 @export var enable_dps := false
@@ -116,6 +117,9 @@ func immunityframes():
 	
 #smrt a respawn
 func die():
+	GameManager.score += score
+	GameManager.enemies_beaten += 1
+	
 	is_dead = true
 	anim.play("die")
 

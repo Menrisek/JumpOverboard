@@ -165,6 +165,7 @@ offset_top = -16.0
 offset_bottom = -16.0
 
 [node name="DamageLabel" type="Label" parent="." unique_id=1177802478]
+visible = false
 offset_left = -13.0
 offset_top = -34.0
 offset_right = 14.0

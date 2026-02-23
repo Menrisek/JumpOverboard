@@ -30,6 +30,12 @@ func set_values():
 		if node is Sharkie: # KANÓN NENÍ ENEMY TAKŽE NEPOTŘEBUJI HO PŘIČÍTAT or node is Cannon:
 			max_score += node.score
 			max_enemies +=1
+		if node is Starbird:
+			max_score += node.score
+			max_enemies +=1
+		if node is Crabby:
+			max_score += node.score
+			max_enemies +=1
 		if node is Cannon: # also dává 0 skóre, ale to ještě možná změním
 			max_score += node.score
 

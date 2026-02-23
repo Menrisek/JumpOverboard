@@ -12,6 +12,7 @@ class_name Starbird
 @export var patrol_point_b: Node2D        # druhý patrol point
 @export var chase_delay = 1            # jak dlouho ještě honí po ztrátě hráče
 
+
 var default_flying_speed
 var health = 0
 var can_attack = true

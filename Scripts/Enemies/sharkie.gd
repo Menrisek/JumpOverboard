@@ -74,6 +74,7 @@ func immunityframes():
 func die():
 	GameManager.score += score
 	GameManager.enemies_beaten += 1
+	
 	dead = true
 	speed = 0
 	#v animaci je zavolání funkce "queue_free()"

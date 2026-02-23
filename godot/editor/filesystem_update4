@@ -1,10 +1,7 @@
-res://Scripts/Core/GameManager.gd
-res://Scenes/WorldScenes/LevelTest.tscn
-res://Scripts/Core/settings_menu.gd
-res://Scenes/WorldScenes/Menu/settings_menu.tscn
-res://Scripts/Core/SaveData.gd
-res://default_bus_layout.tres
-res://Scripts/Core/AudioManager.gd
-res://Scripts/Core/SaveManager.gd
-res://Scenes/WorldScenes/Menu/main_menu.tscn
-res://Scripts/Core/main_menu.gd
+res://Scenes/Enemies/ShootingEnemies/crabby.tscn
+res://Scripts/Enemies/ShootingEnemies/crabby.gd
+res://Scripts/Enemies/starbird.gd
+res://Scenes/Enemies/sharkie.tscn
+res://Scripts/Enemies/sharkie.gd
+res://Scenes/WorldScenes/Level1.tscn
+res://Scripts/Core/RunTimeLevel.gd
