@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cd65ved8crkmy"]
+[gd_scene format=3 uid="uid://cd65ved8crkmy"]
 
 [ext_resource type="Texture2D" uid="uid://ch70c123fh43" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_jim1w"]
 [ext_resource type="Script" uid="uid://bbv8nfprmbt5f" path="res://Scripts/Core/WorldMap.gd" id="1_wpf7j"]
@@ -253,10 +253,10 @@ _data = {
 &"select": SubResource("Animation_nm4vp")
 }
 
-[node name="WorldMap" type="Node2D"]
+[node name="WorldMap" type="Node2D" unique_id=1971981996]
 script = ExtResource("1_wpf7j")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1343537096]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -272,7 +272,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.105005, 0.383586, 0.802246, 1)
 
-[node name="Map" type="TextureRect" parent="."]
+[node name="Map" type="TextureRect" parent="." unique_id=1451615818]
 offset_left = -456.0
 offset_top = -264.0
 offset_right = -171.0
@@ -280,22 +280,22 @@ offset_bottom = -105.0
 scale = Vector2(3, 3)
 texture = ExtResource("2_274kt")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=359225008]
 
-[node name="Main menu" type="Button" parent="CanvasLayer"]
+[node name="Main menu" type="Button" parent="CanvasLayer" unique_id=1635361779]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = -80.0
-offset_right = 222.0
-offset_bottom = -30.0
+offset_left = 18.0
+offset_top = -81.0
+offset_right = 232.0
+offset_bottom = -31.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ws6nv")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 23
 text = "Back to main menu"
 
-[node name="Label4" type="Label" parent="CanvasLayer"]
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=35838629]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -308,7 +308,7 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ws6nv")
 text = "Move with WASD and Space"
 
-[node name="CoinIcon" type="TextureRect" parent="CanvasLayer"]
+[node name="CoinIcon" type="TextureRect" parent="CanvasLayer" unique_id=1044110675]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -325,7 +325,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 texture = ExtResource("5_ns6p6")
 
-[node name="CoinDisplay" type="Label" parent="CanvasLayer"]
+[node name="CoinDisplay" type="Label" parent="CanvasLayer" unique_id=1466844868]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -345,7 +345,7 @@ horizontal_alignment = 2
 vertical_alignment = 2
 clip_text = true
 
-[node name="Icons Container" type="HBoxContainer" parent="CanvasLayer"]
+[node name="Icons Container" type="HBoxContainer" parent="CanvasLayer" unique_id=600138237]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -356,22 +356,22 @@ offset_top = -245.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="SkullInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
+[node name="SkullInfo" type="Sprite2D" parent="CanvasLayer/Icons Container" unique_id=130121487]
 position = Vector2(262, 167)
 scale = Vector2(5, 5)
 texture = ExtResource("7_r6m06")
 
-[node name="CoinInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
+[node name="CoinInfo" type="Sprite2D" parent="CanvasLayer/Icons Container" unique_id=1609625924]
 position = Vector2(259, 107)
 scale = Vector2(5, 5)
 texture = ExtResource("6_icit8")
 
-[node name="NoHitInfo" type="Sprite2D" parent="CanvasLayer/Icons Container"]
+[node name="NoHitInfo" type="Sprite2D" parent="CanvasLayer/Icons Container" unique_id=48756927]
 position = Vector2(256, 40)
 scale = Vector2(5, 5)
 texture = ExtResource("5_ns6p6")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=955631853]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -384,9 +384,10 @@ offset_bottom = -191.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ws6nv")
+theme_override_font_sizes/font_size = 23
 text = "Collected all coins -"
 
-[node name="Label2" type="Label" parent="CanvasLayer"]
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=851036693]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -399,9 +400,10 @@ offset_bottom = -127.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ws6nv")
+theme_override_font_sizes/font_size = 23
 text = "Killed all enemies -"
 
-[node name="Label3" type="Label" parent="CanvasLayer"]
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=1651100127]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -414,380 +416,359 @@ offset_bottom = -62.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ws6nv")
+theme_override_font_sizes/font_size = 23
 text = "Finished without getting hit -"
 
-[node name="LevelHolder" type="Node2D" parent="."]
+[node name="LevelHolder" type="Node2D" parent="." unique_id=275286007]
 
-[node name="Level1" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("right")]
+[node name="Level1" type="Node2D" parent="LevelHolder" unique_id=944872670 node_paths=PackedStringArray("right")]
 position = Vector2(-204, 160)
 script = ExtResource("2_rdguj")
 right = NodePath("../Level2")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level1"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level1" unique_id=2054467262]
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level1"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level1" unique_id=1882638346]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay" unique_id=1192819733]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay" unique_id=632896014]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level1/StatsDisplay" unique_id=702132541]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level1/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level1/StatsDisplay" unique_id=82093982]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level2" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+[node name="Level2" type="Node2D" parent="LevelHolder" unique_id=734373005 node_paths=PackedStringArray("left", "right")]
 position = Vector2(-48, 123)
 script = ExtResource("2_rdguj")
 left = NodePath("../Level1")
 right = NodePath("../Level3")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level2"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level2" unique_id=262418116]
 position = Vector2(0, 1.52588e-05)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level2"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level2" unique_id=82876510]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay" unique_id=582522767]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay" unique_id=126555209]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level2/StatsDisplay" unique_id=695678129]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level2/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level2/StatsDisplay" unique_id=914164757]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level3" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "left", "right")]
+[node name="Level3" type="Node2D" parent="LevelHolder" unique_id=1357224146 node_paths=PackedStringArray("up", "left", "right")]
 position = Vector2(171, 154)
 script = ExtResource("2_rdguj")
 up = NodePath("../Level4")
 left = NodePath("../Level2")
 right = NodePath("../Level4")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level3"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level3" unique_id=1382557240]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level3"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level3" unique_id=1416685654]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay" unique_id=2124782864]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay" unique_id=574803031]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level3/StatsDisplay" unique_id=618627866]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level3/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level3/StatsDisplay" unique_id=501441007]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level4" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left")]
+[node name="Level4" type="Node2D" parent="LevelHolder" unique_id=470507495 node_paths=PackedStringArray("down", "left")]
 position = Vector2(291, 49)
 script = ExtResource("2_rdguj")
 down = NodePath("../Level3")
 left = NodePath("../Level5")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level4"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level4" unique_id=609227451]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level4"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level4" unique_id=1378858149]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay" unique_id=942784804]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay" unique_id=1523329749]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level4/StatsDisplay" unique_id=1736036725]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level4/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level4/StatsDisplay" unique_id=844707109]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level5" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+[node name="Level5" type="Node2D" parent="LevelHolder" unique_id=1959081953 node_paths=PackedStringArray("left", "right")]
 position = Vector2(22, -12)
 script = ExtResource("2_rdguj")
 left = NodePath("../Level6")
 right = NodePath("../Level4")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level5"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level5" unique_id=1586289038]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level5"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level5" unique_id=1069525986]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay" unique_id=977363641]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay" unique_id=106351207]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level5/StatsDisplay" unique_id=1320119347]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level5/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level5/StatsDisplay" unique_id=2036415321]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level6" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+[node name="Level6" type="Node2D" parent="LevelHolder" unique_id=546839022 node_paths=PackedStringArray("left", "right")]
 position = Vector2(-159, -5)
 script = ExtResource("2_rdguj")
 left = NodePath("../Level7")
 right = NodePath("../Level5")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level6"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level6" unique_id=667452002]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level6"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level6" unique_id=2045881981]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay" unique_id=1716711676]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay" unique_id=465176982]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level6/StatsDisplay" unique_id=1295667539]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level6/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level6/StatsDisplay" unique_id=1771031931]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level7" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("up", "right")]
+[node name="Level7" type="Node2D" parent="LevelHolder" unique_id=1584088636 node_paths=PackedStringArray("up", "right")]
 position = Vector2(-365, -46)
 script = ExtResource("2_rdguj")
 up = NodePath("../Level8")
 right = NodePath("../Level6")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level7"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level7" unique_id=1687914189]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level7"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level7" unique_id=564992267]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay" unique_id=2064563952]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay" unique_id=149786492]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level7/StatsDisplay" unique_id=1174976716]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level7/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level7/StatsDisplay" unique_id=541773929]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level8" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("down", "left", "right")]
+[node name="Level8" type="Node2D" parent="LevelHolder" unique_id=1594205582 node_paths=PackedStringArray("down", "left", "right")]
 position = Vector2(-198, -177)
 script = ExtResource("2_rdguj")
 down = NodePath("../Level7")
 left = NodePath("../Level7")
 right = NodePath("../Level9")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level8"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level8" unique_id=911299121]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level8"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level8" unique_id=1455453269]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay" unique_id=1530723061]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay" unique_id=1889679400]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level8/StatsDisplay" unique_id=773333550]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level8/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level8/StatsDisplay" unique_id=39637305]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level9" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left", "right")]
+[node name="Level9" type="Node2D" parent="LevelHolder" unique_id=1719370931 node_paths=PackedStringArray("left", "right")]
 position = Vector2(65, -204)
 script = ExtResource("2_rdguj")
 left = NodePath("../Level8")
 right = NodePath("../Level10")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level9"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level9" unique_id=808685654]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level9"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level9" unique_id=807573974]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay" unique_id=720871469]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay" unique_id=1719734612]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level9/StatsDisplay" unique_id=1222515039]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level9/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level9/StatsDisplay" unique_id=604157326]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Level10" type="Node2D" parent="LevelHolder" node_paths=PackedStringArray("left")]
+[node name="Level10" type="Node2D" parent="LevelHolder" unique_id=705261638 node_paths=PackedStringArray("left")]
 position = Vector2(299, -153)
 script = ExtResource("2_rdguj")
 left = NodePath("../Level9")
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level10"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelHolder/Level10" unique_id=749659268]
 position = Vector2(0, 3.8147e-06)
 scale = Vector2(2.43333, 2.23333)
 texture = ExtResource("3_rrpgb")
 
-[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level10"]
+[node name="StatsDisplay" type="Node2D" parent="LevelHolder/Level10" unique_id=966197426]
 visible = false
 position = Vector2(0, -3.69549e-06)
 scale = Vector2(2.43333, 2.23333)
 
-[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+[node name="DisplayCoins" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay" unique_id=577462640]
 position = Vector2(-9.45207, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_ns6p6")
 
-[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+[node name="DisplayEnemies" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay" unique_id=1595617831]
 position = Vector2(-3.93391e-06, -14.3284)
 scale = Vector2(0.761, 0.75)
 texture = ExtResource("6_icit8")
 
-[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay"]
+[node name="DisplayHits" type="Sprite2D" parent="LevelHolder/Level10/StatsDisplay" unique_id=2030940094]
 position = Vector2(9.0411, -10.7463)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("7_r6m06")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level10/StatsDisplay"]
-libraries = {
-&"": SubResource("AnimationLibrary_66m1q")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelHolder/Level10/StatsDisplay" unique_id=1043501058]
+libraries/ = SubResource("AnimationLibrary_66m1q")
 
-[node name="Player" type="Sprite2D" parent="."]
+[node name="Player" type="Sprite2D" parent="." unique_id=278258742]
 position = Vector2(-213, 157)
 texture = ExtResource("1_jim1w")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-libraries = {
-&"": SubResource("AnimationLibrary_a21r6")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=2141747532]
+libraries/ = SubResource("AnimationLibrary_a21r6")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=305960371]
 position = Vector2(1, -1)
 zoom = Vector2(3.5, 3.5)
 position_smoothing_enabled = true

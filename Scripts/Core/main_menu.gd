@@ -20,7 +20,7 @@ func _on_load_pressed():
 	SaveManager.load_game()
 
 func _on_options_pressed():
-	GameManager.load_options_menu()
+	get_node("SettingsMenu").visible = true
 
 func _on_world_map_pressed():
 	GameManager.load_world()

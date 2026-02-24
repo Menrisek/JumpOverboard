@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="9_g11mr"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="10_tslpx"]
 [ext_resource type="PackedScene" uid="uid://ddhu733seikpa" path="res://Scenes/Interactable/checkpoint.tscn" id="12_20jvh"]
+[ext_resource type="AudioStream" uid="uid://cvfaw6timrqg4" path="res://Audio/Soundtrack/Where is my crew.wav" id="12_lh4kg"]
 [ext_resource type="PackedScene" uid="uid://bm4hkqi2x4k2p" path="res://Scenes/Interactable/coin.tscn" id="13_e87rq"]
 [ext_resource type="PackedScene" uid="uid://ccbbccwsl63rd" path="res://Scenes/Enemies/starbird.tscn" id="13_ow7s5"]
 [ext_resource type="PackedScene" uid="uid://bjpdewaeiii73" path="res://Scenes/Enemies/sharkie.tscn" id="14_4q25a"]
@@ -796,6 +797,10 @@ expand_mode = 2
 [node name="MovingSaw" parent="." unique_id=1571716391 instance=ExtResource("28_t3v56")]
 position = Vector2(116, 112)
 
+[node name="MovingSaw2" parent="." unique_id=341678809 instance=ExtResource("28_t3v56")]
+position = Vector2(420, 96)
+move_axis = 1
+
 [node name="TileMap" type="TileMap" parent="." unique_id=466564479]
 tile_set = SubResource("TileSet_5giv2")
 format = 2
@@ -945,92 +950,59 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -124.0
-offset_right = 181.0
-offset_bottom = 146.0
+offset_left = -230.5
+offset_top = -185.0
+offset_right = 230.5
+offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 0.905882)
 
-[node name="YouWin" type="Label" parent="UIManager/WinScreen" unique_id=338690548]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -160.5
-offset_top = 22.0
-offset_right = 68.5
-offset_bottom = 42.0
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/WinScreen" unique_id=272042348]
+layout_mode = 0
+offset_right = 461.0
+offset_bottom = 370.0
 grow_horizontal = 2
-scale = Vector2(1.4, 1.4)
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/WinScreen/VBoxContainer" unique_id=2122077087]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="YouWin" type="Label" parent="UIManager/WinScreen/VBoxContainer/MarginContainer" unique_id=338690548]
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_tslpx")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 54
 text = "Island completed"
 horizontal_alignment = 1
 
-[node name="Score" type="Label" parent="UIManager/WinScreen" unique_id=1925985833]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -124.5
-offset_top = 71.0
-offset_right = 58.5
-offset_bottom = 91.0
-grow_horizontal = 2
-scale = Vector2(1.4, 1.4)
+[node name="Score" type="Label" parent="UIManager/WinScreen/VBoxContainer" unique_id=1925985833]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("10_tslpx")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "Your Score: 1300"
 horizontal_alignment = 1
 
-[node name="Speedrun timer" type="Label" parent="UIManager/WinScreen" unique_id=1168154631]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -124.5
-offset_top = 103.0
-offset_right = 58.5
-offset_bottom = 123.0
-grow_horizontal = 2
-scale = Vector2(1.4, 1.4)
+[node name="Speedrun timer" type="Label" parent="UIManager/WinScreen/VBoxContainer" unique_id=1168154631]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("10_tslpx")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "Your Time: 38.56"
 horizontal_alignment = 1
 
-[node name="Death counter" type="Label" parent="UIManager/WinScreen" unique_id=959027049]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -124.5
-offset_top = 134.0
-offset_right = 58.5
-offset_bottom = 154.0
-grow_horizontal = 2
-scale = Vector2(1.4, 1.4)
+[node name="Death counter" type="Label" parent="UIManager/WinScreen/VBoxContainer" unique_id=959027049]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("10_tslpx")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "Deaths: 69"
 horizontal_alignment = 1
 
-[node name="Coin counter" type="Label" parent="UIManager/WinScreen" unique_id=2066155918]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -124.5
-offset_top = 168.0
-offset_right = 58.5
-offset_bottom = 188.0
-grow_horizontal = 2
-scale = Vector2(1.4, 1.4)
+[node name="Coin counter" type="Label" parent="UIManager/WinScreen/VBoxContainer" unique_id=2066155918]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("10_tslpx")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "Coins: 420"
 horizontal_alignment = 1
 
@@ -1040,12 +1012,13 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -55.0
-offset_right = 115.0
-offset_bottom = -10.0
+offset_left = 14.5
+offset_top = -61.0
+offset_right = 136.5
+offset_bottom = -16.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("10_tslpx")
+theme_override_font_sizes/font_size = 23
 text = "Main Menu"
 
 [node name="Restart" type="Button" parent="UIManager/WinScreen" unique_id=1045221694]
@@ -1054,12 +1027,13 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 125.5
-offset_top = -55.0
-offset_right = 235.5
-offset_bottom = -10.0
+offset_left = 174.5
+offset_top = -61.0
+offset_right = 284.5
+offset_bottom = -16.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("10_tslpx")
+theme_override_font_sizes/font_size = 23
 text = "Restart"
 
 [node name="FinishLevel" type="Button" parent="UIManager/WinScreen" unique_id=238730932]
@@ -1068,13 +1042,20 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 245.0
-offset_top = -55.0
-offset_right = 355.0
-offset_bottom = -10.0
+offset_left = 326.5
+offset_top = -61.0
+offset_right = 449.5
+offset_bottom = -16.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("10_tslpx")
+theme_override_font_sizes/font_size = 23
 text = "World map"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=2012025763]
+stream = ExtResource("12_lh4kg")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
 
 [node name="Checkpoint" parent="." unique_id=1261172293 instance=ExtResource("12_20jvh")]
 position = Vector2(-68, 91)
@@ -1265,11 +1246,9 @@ position = Vector2(216, 96)
 [node name="shooting_enemy" parent="." unique_id=32705798 instance=ExtResource("27_t3v56")]
 position = Vector2(184, 96)
 can_respawn = true
-enable_hit_numbers = false
 
 [node name="shooting_enemy2" parent="." unique_id=1313580636 instance=ExtResource("27_t3v56")]
 position = Vector2(-280, 96)
-enable_hit_numbers = false
 
 [node name="Chest2" parent="." unique_id=1340594597 instance=ExtResource("19_lh4kg")]
 position = Vector2(-149, 95)

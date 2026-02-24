@@ -13,15 +13,24 @@ func _ready():
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent() is Player and !item_taken:
+		var player = area.get_parent()
 		item_taken = true
 		sfx_speed_up_taken.play()
-		area.get_parent().speed += speed_change
+		
+		#zvýším momentální rychlost i výchozí rychlost (pro případ dashe)
+		player.speed += speed_change
+		player.default_speed += speed_change
+		
 		print("Speed boost taken")
 		self.visible = false
+		
+		#počkám daný čas
 		await get_tree().create_timer(speeding_time).timeout
-		#pokud je rychlost stejná jako na začátku, tak to neodečtu
-		if area.get_parent().speed != area.get_parent().default_speed:
-			area.get_parent().speed -= speed_change
+		
+		#snížím zpět obě hodnoty
+		player.speed -= speed_change
+		player.default_speed -= speed_change
+		
 		print("Speed boost gone")
 		respawn()
 

@@ -14,7 +14,7 @@ class_name Crabby
 @export var dps_reset_time := 1.5
 
 @export_category("Hit Numbers")
-@export var enable_hit_numbers := true
+@export var enable_hit_numbers := false
 
 @export_category("Movement")
 @export var enable_movement := true

@@ -1,8 +1,9 @@
+Label
+MarginContainer
+VBoxContainer
 Button
 ColorRect
-VBoxContainer
 HSlider
-Label
 Marker2D
 Node2D
 CollisionShape2D
@@ -11,4 +12,3 @@ CharacterBody2D
 Sprite2D
 AnimationPlayer
 Timer
-Line2D

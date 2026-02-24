@@ -40,7 +40,7 @@ buses/default_bus_layout="uid://ds5vsgnfwsjhk"
 GameManager="*res://Scripts/Core/GameManager.gd"
 LevelData="*res://Scripts/Core/LevelData.gd"
 SaveManager="*res://Scripts/Core/SaveManager.gd"
-AudioManager="*uid://ccbhycgn45tc7"
+Settings="uid://c5crefdqto6oe"
 
 [display]
 
