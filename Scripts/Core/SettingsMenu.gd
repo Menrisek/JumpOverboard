@@ -1,4 +1,5 @@
 extends Control
+class_name SettingsMenu
 
 # Cesta kam se uloží konfigurace 
 const SAVE_PATH = "user://Saves/settings.cfg"

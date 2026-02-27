@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5crefdqto6oe"]
 
-[ext_resource type="Script" uid="uid://dms2r645oa1ne" path="res://Scripts/Core/settings_menu.gd" id="1_tuaiu"]
+[ext_resource type="Script" uid="uid://dms2r645oa1ne" path="res://Scripts/Core/SettingsMenu.gd" id="1_tuaiu"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="2_yvy67"]
 
 [node name="SettingsMenu" type="Control" unique_id=773264295]

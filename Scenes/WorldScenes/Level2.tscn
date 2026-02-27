@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bm4hkqi2x4k2p" path="res://Scenes/Interactable/coin.tscn" id="9_5xnhs"]
 [ext_resource type="AudioStream" uid="uid://hjho857mm7fd" path="res://Audio/Soundtrack/soundtrack demo1.wav" id="9_84dm2"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="10_6eq7m"]
+[ext_resource type="PackedScene" uid="uid://bqiha0o6viahq" path="res://Scenes/Interactable/one_way_platform_small.tscn" id="15_n4jfm"]
 [ext_resource type="PackedScene" uid="uid://mc1uh105jpav" path="res://Scenes/Interactable/spikes.tscn" id="17_3hd7r"]
 [ext_resource type="PackedScene" uid="uid://ctx6tx0t2e8ag" path="res://Scenes/Interactable/falling_spikes.tscn" id="18_o816e"]
 
@@ -856,38 +857,26 @@ position = Vector2(577, 96)
 [node name="Spikes5" parent="." unique_id=674163822 instance=ExtResource("17_3hd7r")]
 position = Vector2(1054, 210)
 
-[node name="Spikes6" parent="." unique_id=123750222 instance=ExtResource("17_3hd7r")]
-position = Vector2(1120, 210)
-
 [node name="Spikes7" parent="." unique_id=864990887 instance=ExtResource("17_3hd7r")]
 position = Vector2(1152, 210)
 
-[node name="Spikes8" parent="." unique_id=258927808 instance=ExtResource("17_3hd7r")]
-position = Vector2(1282, 162)
-
 [node name="Spikes9" parent="." unique_id=1248411272 instance=ExtResource("17_3hd7r")]
-position = Vector2(1312, 162)
+position = Vector2(1295, 162)
 
 [node name="Checkpoint3" parent="." unique_id=859104688 instance=ExtResource("8_t3uj1")]
 position = Vector2(2631, 140)
 
 [node name="Spikes10" parent="." unique_id=1639067660 instance=ExtResource("17_3hd7r")]
-position = Vector2(1652, 113)
+position = Vector2(1672, 113)
 
 [node name="Spikes11" parent="." unique_id=1269507220 instance=ExtResource("17_3hd7r")]
-position = Vector2(1683, 113)
+position = Vector2(1703, 113)
 
 [node name="Spikes12" parent="." unique_id=2017318526 instance=ExtResource("17_3hd7r")]
-position = Vector2(1714, 113)
-
-[node name="Spikes13" parent="." unique_id=1273806356 instance=ExtResource("17_3hd7r")]
-position = Vector2(1745, 113)
-
-[node name="Spikes14" parent="." unique_id=1917549086 instance=ExtResource("17_3hd7r")]
-position = Vector2(1805, 112)
+position = Vector2(1734, 113)
 
 [node name="Spikes15" parent="." unique_id=1008092794 instance=ExtResource("17_3hd7r")]
-position = Vector2(1836, 112)
+position = Vector2(1813, 113)
 
 [node name="Coin" parent="." unique_id=652546111 instance=ExtResource("9_5xnhs")]
 position = Vector2(366, 63)
@@ -902,7 +891,7 @@ position = Vector2(561, 57)
 position = Vector2(911, 155)
 
 [node name="Coin6" parent="." unique_id=1745303424 instance=ExtResource("9_5xnhs")]
-position = Vector2(1087, 199)
+position = Vector2(1103, 198)
 
 [node name="Coin8" parent="." unique_id=1740659181 instance=ExtResource("9_5xnhs")]
 position = Vector2(1022, 197)
@@ -940,9 +929,6 @@ position = Vector2(398, 93)
 [node name="Spikes16" parent="." unique_id=2116268628 instance=ExtResource("17_3hd7r")]
 position = Vector2(2049, 225)
 
-[node name="Spikes18" parent="." unique_id=1349358040 instance=ExtResource("17_3hd7r")]
-position = Vector2(2083, 225)
-
 [node name="Spikes19" parent="." unique_id=121753919 instance=ExtResource("17_3hd7r")]
 position = Vector2(2144, 224)
 
@@ -952,11 +938,8 @@ position = Vector2(2207, 224)
 [node name="Spikes21" parent="." unique_id=1713787 instance=ExtResource("17_3hd7r")]
 position = Vector2(2272, 225)
 
-[node name="Spikes22" parent="." unique_id=1928140658 instance=ExtResource("17_3hd7r")]
-position = Vector2(2563, 146)
-
 [node name="Spikes23" parent="." unique_id=1257949368 instance=ExtResource("17_3hd7r")]
-position = Vector2(2595, 146)
+position = Vector2(2573, 146)
 
 [node name="FallingSpikes" parent="." unique_id=108920095 instance=ExtResource("18_o816e")]
 position = Vector2(2767, 21)
@@ -1113,6 +1096,9 @@ position = Vector2(3846, 96)
 position = Vector2(1887, 188)
 rotation = -1.5708
 direction = Vector2(1, 0)
+
+[node name="OneWayPlatformSmall" parent="." unique_id=323436796 instance=ExtResource("15_n4jfm")]
+position = Vector2(1954, 201)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

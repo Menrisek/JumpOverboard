@@ -21,9 +21,7 @@ func _ready():
 	levels = level_holder.get_children()
 	update_levels() 
 	#vypíše celkový počet coinů do konzole
-	for level in SaveManager.save_data.level_dictionary:
-		total_coins += SaveManager.save_data.level_dictionary[level]["coins"]
-		print("Total amount of coins: " + str(total_coins))
+	total_coins = LevelData.total_coins
 	#vypisuje to na mapu
 	update_coin_display()
 
@@ -109,5 +107,8 @@ func show_stats(target_level):
 func update_coin_display():
 	$CanvasLayer/CoinDisplay.text = str(total_coins)
 
-func _on_main_menu_pressed():
+func _on_main_menu_button_pressed() -> void:
 	GameManager.load_main_menu()
+
+func _on_shop_menu_button_pressed() -> void:
+	$CanvasLayer/ShopMenu.visible = true

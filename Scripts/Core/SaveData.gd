@@ -1,6 +1,10 @@
 extends Resource
 class_name SaveData
 
+@export var total_coins : int = 0
+@export var spent_coins : int = 0
+@export var unlocked_abilities : Array[String] = []
+
 @export var level_dictionary = {
 	"Level1" : {
 		"unlocked" : true,

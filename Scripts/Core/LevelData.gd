@@ -1,5 +1,9 @@
 extends Node
 
+var total_coins : int = 0
+var spent_coins : int = 0
+var unlocked_abilities : Array[String] = []
+
 #slovník co "ukládá" data
 var level_dictionary = {
 	#ve slovníku udělám další slovník
@@ -18,6 +22,10 @@ var level_dictionary = {
 		"beaten" : false,
 	}
 }
+
+#funkce, která vrací aktuální stav peněženky
+func get_available_coins() -> int:
+	return total_coins - spent_coins
 
 #automaticky se mu bude vytvářet dictionary, abych ho nemusel dělat manuálně
 func generate_level(level):
@@ -53,11 +61,20 @@ func generate_level_number(level):
 	#a pak zpět na str abych to mohl přidat k Level
 	return "Level" + str(level_number)
 
-#funcke na updatování lvlů (datové typy jsou už předtím definované)
+#funkce na updatování lvlů (datové typy jsou už předtím definované)
 func update_level(level, score, max_score, coins, max_coins, enemies_beaten, max_enemies_beaten, damage_taken, deaths, timer, beaten):
+	# Zjistím, kolik coinů měl hráč v tomto levelu sebráno doposud
+	var old_coins = level_dictionary[level]["coins"]
+	
+	# Zamezení farmení. Přičítám jen pokud sebral víc, než je jeho dosavadní rekord
+	if coins > old_coins:
+		var new_coins_found = coins - old_coins
+		total_coins += new_coins_found
+		level_dictionary[level]["coins"] = coins # ukládání
+
+	
 	level_dictionary[level]["score"] = score
 	level_dictionary[level]["max_score"] = max_score
-	level_dictionary[level]["coins"] = coins
 	level_dictionary[level]["max_coins"] = max_coins
 	level_dictionary[level]["enemies_beaten"] = enemies_beaten
 	level_dictionary[level]["max_enemies_beaten"] = max_enemies_beaten
@@ -65,4 +82,6 @@ func update_level(level, score, max_score, coins, max_coins, enemies_beaten, max
 	level_dictionary[level]["deaths"] = deaths
 	level_dictionary[level]["timer"] = timer
 	level_dictionary[level]["beaten"] = beaten
+	
 	print(level_dictionary)
+	print("Celkem coinů v peněžence: ", total_coins)

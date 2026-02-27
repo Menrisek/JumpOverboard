@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dxsv5s41vypro"]
+[gd_scene format=3 uid="uid://dxsv5s41vypro"]
 
 [ext_resource type="Script" uid="uid://bxneabdd14pa" path="res://Scripts/Player/player.gd" id="1_hcqxc"]
 [ext_resource type="Texture2D" uid="uid://dp7j1g8f6u1s1" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="2_6vciq"]
@@ -364,26 +364,26 @@ stream_0/stream = ExtResource("35_2mdcc")
 stream_1/stream = ExtResource("36_2mdcc")
 stream_2/stream = ExtResource("37_ol88v")
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1073263007 groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_hcqxc")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=117170309]
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=115810283]
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_3krsy")
 debug_color = Color(0.32267833, 0.6248632, 0, 0.41960785)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1981811311]
 texture = ExtResource("2_6vciq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839174476]
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_35s87")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1193903490]
 zoom = Vector2(3.5, 3.5)
 process_callback = 0
 position_smoothing_enabled = true
@@ -392,39 +392,39 @@ drag_top_margin = 0.1
 drag_right_margin = 0.1
 drag_bottom_margin = 0.1
 
-[node name="AttackArea" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="." unique_id=350587412]
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=423257851]
 position = Vector2(20, 2)
 shape = SubResource("RectangleShape2D_q3ayb")
 debug_color = Color(1, 0.0058438913, 0.081275724, 0.41960785)
 
-[node name="FiringPoint" type="Marker2D" parent="."]
+[node name="FiringPoint" type="Marker2D" parent="." unique_id=1684115076]
 position = Vector2(14, 6)
 
-[node name="Healthbar" parent="." instance=ExtResource("27_u0465")]
+[node name="Healthbar" parent="." unique_id=2071535915 instance=ExtResource("27_u0465")]
 visible = false
 offset_top = 15.0
 offset_bottom = 15.0
 
-[node name="CoyoteTimer" type="Timer" parent="."]
+[node name="CoyoteTimer" type="Timer" parent="." unique_id=1517505901]
 wait_time = 0.1
 one_shot = true
 
-[node name="DashTimer" type="Timer" parent="."]
+[node name="DashTimer" type="Timer" parent="." unique_id=1782331909]
 wait_time = 0.12
 
-[node name="DashCooldownTimer" type="Timer" parent="."]
+[node name="DashCooldownTimer" type="Timer" parent="." unique_id=1199399805]
 wait_time = 0.3
 one_shot = true
 
-[node name="GhostingEffectTimer" type="Timer" parent="."]
+[node name="GhostingEffectTimer" type="Timer" parent="." unique_id=462317451]
 wait_time = 0.05
 
-[node name="PlayerUI" type="CanvasLayer" parent="."]
+[node name="PlayerUI" type="CanvasLayer" parent="." unique_id=847488924]
 
-[node name="HeartsContainer" type="HBoxContainer" parent="PlayerUI"]
+[node name="HeartsContainer" type="HBoxContainer" parent="PlayerUI" unique_id=278276950]
 custom_minimum_size = Vector2(120, 120)
 anchors_preset = 3
 anchor_left = 1.0
@@ -438,22 +438,22 @@ offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/HeartsContainer" unique_id=834025497]
 layout_mode = 2
 texture = ExtResource("4_cxmfn")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+[node name="TextureRect2" type="TextureRect" parent="PlayerUI/HeartsContainer" unique_id=1268025324]
 layout_mode = 2
 texture = ExtResource("4_cxmfn")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="PlayerUI/HeartsContainer"]
+[node name="TextureRect3" type="TextureRect" parent="PlayerUI/HeartsContainer" unique_id=1461960862]
 layout_mode = 2
 texture = ExtResource("4_cxmfn")
 expand_mode = 2
 
-[node name="SpeedrunTimer" type="Label" parent="PlayerUI"]
+[node name="SpeedrunTimer" type="Label" parent="PlayerUI" unique_id=395551914]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -464,7 +464,7 @@ theme_override_fonts/font = ExtResource("5_ol88v")
 theme_override_font_sizes/font_size = 30
 text = "100.00"
 
-[node name="LevelNumber" type="Label" parent="PlayerUI"]
+[node name="LevelNumber" type="Label" parent="PlayerUI" unique_id=2056707671]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
@@ -479,31 +479,27 @@ theme_override_fonts/font = ExtResource("5_ol88v")
 theme_override_font_sizes/font_size = 30
 text = "Level 1"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerUI/LevelNumber"]
-libraries = {
-&"": SubResource("AnimationLibrary_c6ssy")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerUI/LevelNumber" unique_id=589979678]
+libraries/ = SubResource("AnimationLibrary_c6ssy")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_oqntf")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=31631374]
+libraries/ = SubResource("AnimationLibrary_oqntf")
 
-[node name="SFX Sword Swing" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX Sword Swing" type="AudioStreamPlayer2D" parent="." unique_id=89305311]
 stream = ExtResource("32_yu82y")
 bus = &"SFX"
 
-[node name="SFX Hit" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX Hit" type="AudioStreamPlayer2D" parent="." unique_id=915580043]
 stream = ExtResource("33_d6fof")
 volume_db = -15.0
 bus = &"SFX"
 
-[node name="SFX Heal taken" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX Heal taken" type="AudioStreamPlayer2D" parent="." unique_id=309577108]
 stream = ExtResource("34_hi0an")
 volume_db = -15.0
 bus = &"SFX"
 
-[node name="SFX Jump" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX Jump" type="AudioStreamPlayer2D" parent="." unique_id=627656943]
 stream = SubResource("AudioStreamRandomizer_cx7vx")
 bus = &"SFX"
 

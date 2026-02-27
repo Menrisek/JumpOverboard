@@ -15,13 +15,26 @@ class_name Player
 
 @export var show_hp = true
 
+#movement
+@export_category("Movement")
 @export var speed = 250.0
 @export var jump_height = -300.0
+#dash a boostování rychlosti
 @export var dash_power = 2.5
 var has_dashed_in_air = false
 var can_dash = true
 var default_speed = speed
 var default_jump_height = jump_height
+#double jump 
+var max_jumps = 1 
+var current_jumps = 0
+
+#odemykání schopností
+@export_category("Abilities")
+@export var has_dash_unlocked = false
+@export var has_knife_throw_unlocked = false
+@export var has_double_jump_unlocked = false
+@export var has_wall_climb_unlocked = false
 
 
 var ghosting_effect_scene = preload("res://Scenes/Entities/ghosting_effect.tscn")
@@ -33,6 +46,7 @@ var knife_path=preload("res://Scenes/Entities/knife.tscn")
 var attacking = false
 var hit = false
 
+@export_category("Health")
 @export var max_health = 3
 @onready var health = 0
 var hearts_list : Array[TextureRect]
@@ -46,6 +60,19 @@ func _ready():
 	health = max_health
 	GameManager.player = self
 	time = 0
+	if "Dash" in LevelData.unlocked_abilities:
+		has_dash_unlocked = true
+	
+	if "KnifeThrow" in LevelData.unlocked_abilities:
+		has_knife_throw_unlocked = true
+		
+	if "DoubleJump" in LevelData.unlocked_abilities:
+		has_double_jump_unlocked = true
+		max_jumps = 2 # Pokud má double jump, může skočit dvakrát
+		
+	if "WallClimb" in LevelData.unlocked_abilities:
+		has_wall_climb_unlocked = true
+	
 	#kolik má srdcí tak tolik to zobrazí
 	var hearts_parent = $PlayerUI/HeartsContainer
 	for child in hearts_parent.get_children():
@@ -73,7 +100,7 @@ func _physics_process(delta):
 		sprite.flip_h = false
 
 	# házení nožů
-	if Input.is_action_just_pressed("throw"):
+	if Input.is_action_just_pressed("throw") and  has_knife_throw_unlocked:
 		throw()
 	
 	
@@ -108,7 +135,7 @@ func _physics_process(delta):
 	# dash
 	# pokud je na zemi tak může dashnout (a neovlivňuje to has_dashed_in_air)
 	# pokud je ve vzduchu tak může dashnout pouze pokud ještě v něm nedashnul
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and has_dash_unlocked:
 		handle_dash(direction)
 	
 	move_and_slide()
@@ -182,7 +209,7 @@ func take_damage(damage_amouth : int):
 		GameManager.damage_taken +=1
 		
 		health -= damage_amouth
-		print("Current health: " + str(health))
+		print("Player's current health: " + str(health))
 		#není to dokonalé, ale jinak takto funguje health bar pod hráčem (+ ve funkci die() je stejný bar)
 		# ZDE KDYBYCH CHTĚL HEALTHBAR POD HRÁČEM: get_node("Healthbar").update_healthbar(health, max_health)
 		update_heart_display()

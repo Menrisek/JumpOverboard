@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dc4wyfda724ns"]
+
+[ext_resource type="Script" uid="uid://bbrv30cvx1mcv" path="res://Scripts/Core/ShopMenu.gd" id="1_x46nf"]
+[ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="2_mn1o0"]
+
+[node name="ShopMenu" type="Control" unique_id=924863457]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x46nf")
+
+[node name="PauseMenu" type="ColorRect" parent="." unique_id=430892199]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.75
+offset_top = -292.5
+offset_right = 505.75
+offset_bottom = 292.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.203922, 0.203922, 0.905882)
+
+[node name="BuyDashButton" type="Button" parent="PauseMenu" unique_id=1620215259]
+layout_mode = 0
+offset_left = 94.75
+offset_top = 212.5
+offset_right = 195.75
+offset_bottom = 308.5
+text = "Dash"
+
+[node name="BuyKnifeThrowButton" type="Button" parent="PauseMenu" unique_id=1484801378]
+layout_mode = 0
+offset_left = 331.75
+offset_top = 212.5
+offset_right = 432.75
+offset_bottom = 308.5
+text = "Knife Throw"
+
+[node name="BuyDoubleJumpButton" type="Button" parent="PauseMenu" unique_id=1834402500]
+layout_mode = 0
+offset_left = 547.75
+offset_top = 212.5
+offset_right = 655.75
+offset_bottom = 308.5
+text = "Double Jump
+"
+
+[node name="BuyWallClimbButton" type="Button" parent="PauseMenu" unique_id=646157851]
+layout_mode = 0
+offset_left = 804.75
+offset_top = 212.5
+offset_right = 905.75
+offset_bottom = 308.5
+text = "Wall Climb"
+
+[node name="CloseButton" type="Button" parent="PauseMenu" unique_id=448005205]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -107.0
+offset_top = -58.0
+offset_right = 107.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 23
+text = "Close"
+
+[connection signal="pressed" from="PauseMenu/BuyDashButton" to="." method="_on_buy_dash_button_pressed"]
+[connection signal="pressed" from="PauseMenu/BuyKnifeThrowButton" to="." method="_on_buy_knife_throw_button_pressed"]
+[connection signal="pressed" from="PauseMenu/BuyDoubleJumpButton" to="." method="_on_buy_double_jump_button_pressed"]
+[connection signal="pressed" from="PauseMenu/BuyWallClimbButton" to="." method="_on_buy_wall_climb_button_pressed"]
+[connection signal="pressed" from="PauseMenu/CloseButton" to="." method="_on_close_button_pressed"]
