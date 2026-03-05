@@ -1337,6 +1337,18 @@ position = Vector2(1728, -90)
 position = Vector2(1953, -11)
 rotation = -1.5708
 
+[node name="Spikes24" parent="." unique_id=1001981009 instance=ExtResource("16_y3ljm")]
+position = Vector2(1953, -299)
+rotation = -1.5708
+
+[node name="Spikes42" parent="." unique_id=601899863 instance=ExtResource("16_y3ljm")]
+position = Vector2(1953, -267)
+rotation = -1.5708
+
+[node name="Spikes43" parent="." unique_id=1533597210 instance=ExtResource("16_y3ljm")]
+position = Vector2(1953, -235)
+rotation = -1.5708
+
 [node name="Spikes16" parent="." unique_id=1862399245 instance=ExtResource("16_y3ljm")]
 position = Vector2(1953, 20)
 rotation = -1.5708

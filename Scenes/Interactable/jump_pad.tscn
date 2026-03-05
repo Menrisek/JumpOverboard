@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8wub4clrsene"]
+[gd_scene format=3 uid="uid://b8wub4clrsene"]
 
 [ext_resource type="Script" uid="uid://cotduyr83spou" path="res://Scripts/Interactable/jump_pad.gd" id="1_m3brt"]
 [ext_resource type="Texture2D" uid="uid://b3kg3suuo1yaj" path="res://Art/Jump Pad/Tornado 01.png" id="2_66y0v"]
@@ -47,21 +47,19 @@ _data = {
 &"spinn": SubResource("Animation_x8gy1")
 }
 
-[node name="JumpPad" type="Node2D"]
+[node name="JumpPad" type="Node2D" unique_id=986464834]
 script = ExtResource("1_m3brt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=381145839]
 texture = ExtResource("2_66y0v")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1050393066]
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=857976614]
 shape = SubResource("CapsuleShape2D_my6if")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_5ud5y")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=138789349]
+libraries/ = SubResource("AnimationLibrary_5ud5y")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -10,6 +10,12 @@ var max_score = 0
 var max_coins = 0
 var max_enemies = 0
 
+#_enter_tree() se zapíná ještě před spuštěním _ready() (první se podívám do savu, pak se načte hráč a v player.ready() to zkontroluju zda hráč má odemknuté ability)
+func _enter_tree():
+	#loaduju hru, pro jistotu a pro debugger
+	if SaveManager.save_exists():
+		SaveManager.load_game()
+
 func _ready():
 	#resetuji staty na 0 po dohrání lvlu, když budu chtít udělat celkové coiny nebo celkový počet smrtí
 	#tak to jen nebudu nulovat a ono se to bude přičítat až do konce dohrání

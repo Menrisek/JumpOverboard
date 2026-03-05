@@ -1179,9 +1179,6 @@ rotation = 3.14159
 direction = Vector2(0, -1)
 shake = false
 
-[node name="Spikes7" parent="." unique_id=1809326784 instance=ExtResource("12_1y38l")]
-position = Vector2(1012, -174)
-
 [node name="Spikes8" parent="." unique_id=438103584 instance=ExtResource("12_1y38l")]
 position = Vector2(1248, -47)
 
@@ -1352,9 +1349,6 @@ position = Vector2(4882, 146)
 
 [node name="Spikes21" parent="." unique_id=736827878 instance=ExtResource("12_1y38l")]
 position = Vector2(5026, 146)
-
-[node name="Spikes22" parent="." unique_id=1630737067 instance=ExtResource("12_1y38l")]
-position = Vector2(5091, 146)
 
 [node name="Spikes23" parent="." unique_id=1599797863 instance=ExtResource("12_1y38l")]
 position = Vector2(5122, 146)
@@ -1532,6 +1526,10 @@ position = Vector2(4405, -85)
 
 [node name="Coin44" parent="." unique_id=1441311184 instance=ExtResource("16_ddj41")]
 position = Vector2(4405, -63)
+
+[node name="Spikes27" parent="." unique_id=82967457 instance=ExtResource("12_1y38l")]
+position = Vector2(705, -9)
+rotation = -1.5708
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

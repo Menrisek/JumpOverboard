@@ -33,6 +33,7 @@ offset_left = 94.75
 offset_top = 212.5
 offset_right = 195.75
 offset_bottom = 308.5
+theme_override_fonts/font = ExtResource("2_mn1o0")
 text = "Dash"
 
 [node name="BuyKnifeThrowButton" type="Button" parent="PauseMenu" unique_id=1484801378]
@@ -41,6 +42,7 @@ offset_left = 331.75
 offset_top = 212.5
 offset_right = 432.75
 offset_bottom = 308.5
+theme_override_fonts/font = ExtResource("2_mn1o0")
 text = "Knife Throw"
 
 [node name="BuyDoubleJumpButton" type="Button" parent="PauseMenu" unique_id=1834402500]
@@ -49,6 +51,7 @@ offset_left = 547.75
 offset_top = 212.5
 offset_right = 655.75
 offset_bottom = 308.5
+theme_override_fonts/font = ExtResource("2_mn1o0")
 text = "Double Jump
 "
 
@@ -58,6 +61,7 @@ offset_left = 804.75
 offset_top = 212.5
 offset_right = 905.75
 offset_bottom = 308.5
+theme_override_fonts/font = ExtResource("2_mn1o0")
 text = "Wall Climb"
 
 [node name="CloseButton" type="Button" parent="PauseMenu" unique_id=448005205]

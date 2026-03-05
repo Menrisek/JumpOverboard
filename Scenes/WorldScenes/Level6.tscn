@@ -1373,6 +1373,12 @@ position = Vector2(1767, -699)
 [node name="RevealablePlatform5" parent="." unique_id=1817343656 instance=ExtResource("19_xbpkq")]
 position = Vector2(1767, -729)
 
+[node name="RevealablePlatform6" parent="." unique_id=1527808297 instance=ExtResource("19_xbpkq")]
+position = Vector2(1744, -746)
+
+[node name="RevealablePlatform7" parent="." unique_id=627303555 instance=ExtResource("19_xbpkq")]
+position = Vector2(1717, -740)
+
 [node name="Sharkie2" parent="." unique_id=1238009474 instance=ExtResource("16_w05es")]
 position = Vector2(3217, -14)
 

@@ -3,11 +3,11 @@ class_name Starbird
 
 @export var max_health = 2
 @export var score = 150
-@export var flying_speed = 150
+@export var flying_speed = 100
 @export var damage_to_player := 1
 
 @export_category("Patrol settings")
-@export var enable_patrol = false        # jestli má patrolovat
+@export var enable_patrol = true        # jestli má patrolovat
 @export var patrol_point_a: Node2D        # první patrol point
 @export var patrol_point_b: Node2D        # druhý patrol point
 @export var chase_delay = 1            # jak dlouho ještě honí po ztrátě hráče

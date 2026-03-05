@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dpg7s5dyy5cym" path="res://Scenes/Interactable/BoostingItems/heal_up.tscn" id="19_qkmnd"]
 [ext_resource type="PackedScene" uid="uid://cpsnr3nhgbl5n" path="res://Scenes/Interactable/revealable_platform.tscn" id="20_qkmnd"]
 [ext_resource type="PackedScene" uid="uid://6h0t80g6fsmf" path="res://Scenes/Interactable/moving_platform.tscn" id="21_co55x"]
+[ext_resource type="PackedScene" uid="uid://cigkc5emwtm71" path="res://Scenes/Interactable/moving_saw.tscn" id="26_a1rix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wtmh"]
 texture = ExtResource("3_n2ouv")
@@ -1684,6 +1685,22 @@ position = Vector2(4761, 101)
 
 [node name="FallingSpikes17" parent="." unique_id=118807938 instance=ExtResource("12_fyt4h")]
 position = Vector2(4544, -91)
+
+[node name="MovingSaw" parent="." unique_id=341678809 instance=ExtResource("26_a1rix")]
+position = Vector2(976, 81)
+move_axis = 1
+
+[node name="MovingSaw2" parent="." unique_id=926258933 instance=ExtResource("26_a1rix")]
+position = Vector2(1174, 138)
+move_axis = 1
+
+[node name="MovingSaw3" parent="." unique_id=1744700630 instance=ExtResource("26_a1rix")]
+position = Vector2(1373, 81)
+move_axis = 1
+
+[node name="MovingSaw4" parent="." unique_id=1846496252 instance=ExtResource("26_a1rix")]
+position = Vector2(1570, 140)
+move_axis = 1
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]

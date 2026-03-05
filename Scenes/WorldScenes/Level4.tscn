@@ -1317,7 +1317,10 @@ direction = Vector2(0, -1)
 shake = false
 
 [node name="JumpPad5" parent="." unique_id=1401232550 instance=ExtResource("13_ys6wn")]
-position = Vector2(1272, -160)
+position = Vector2(1272, -147)
+
+[node name="JumpPad17" parent="." unique_id=986464834 instance=ExtResource("13_ys6wn")]
+position = Vector2(1243, -221)
 
 [node name="Spikes17" parent="." unique_id=680734986 instance=ExtResource("10_i4lms")]
 position = Vector2(1327, -239)
@@ -1355,20 +1358,14 @@ position = Vector2(1452, -271)
 [node name="Spikes20" parent="." unique_id=337228104 instance=ExtResource("10_i4lms")]
 position = Vector2(1522, -271)
 
-[node name="Spikes21" parent="." unique_id=1097399334 instance=ExtResource("10_i4lms")]
-position = Vector2(1743, -239)
-
 [node name="Spikes23" parent="." unique_id=1598655481 instance=ExtResource("10_i4lms")]
-position = Vector2(1774, -239)
+position = Vector2(1759, -239)
 
 [node name="Spikes24" parent="." unique_id=808860021 instance=ExtResource("10_i4lms")]
 position = Vector2(1839, -239)
 
 [node name="Spikes25" parent="." unique_id=514544207 instance=ExtResource("10_i4lms")]
 position = Vector2(1932, -239)
-
-[node name="Spikes22" parent="." unique_id=2076499732 instance=ExtResource("10_i4lms")]
-position = Vector2(1681, -239)
 
 [node name="FallingSpikes8" parent="." unique_id=811437086 instance=ExtResource("12_1l4yu")]
 position = Vector2(1871, -331)

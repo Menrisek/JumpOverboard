@@ -1253,6 +1253,15 @@ position = Vector2(-280, 96)
 [node name="Chest2" parent="." unique_id=1340594597 instance=ExtResource("19_lh4kg")]
 position = Vector2(-149, 95)
 
+[node name="JumpPad2" parent="." unique_id=1919444883 instance=ExtResource("21_nou44")]
+position = Vector2(-111, 64)
+
+[node name="JumpPad4" parent="." unique_id=986464834 instance=ExtResource("21_nou44")]
+position = Vector2(27, 40)
+
+[node name="JumpPad3" parent="." unique_id=1687385011 instance=ExtResource("21_nou44")]
+position = Vector2(379, 57)
+
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer3/WorldMap" to="UIManager" method="_on_world_map_pressed"]

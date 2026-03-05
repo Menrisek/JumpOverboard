@@ -18,8 +18,8 @@ class_name Crabby
 
 @export_category("Movement")
 @export var enable_movement := true
-@export var move_speed := 40.0
-@export var move_distance := 100.0
+@export var move_speed := 50.0
+@export var move_distance := 40.0
 
 @export_category("Attack")
 @export var can_attack := true
@@ -76,9 +76,7 @@ func _process(delta):
 		
 		var dps : float = total_damage / max(dps_timer, 0.01)
 		dps_label.text = "DPS: %.1f" % dps
-	
-	if enable_movement:
-		patrol(delta)
+
 
 #dostávání dmg 
 func take_damage(amount: int):
@@ -177,9 +175,14 @@ func patrol(_delta):
 		if anim.current_animation != "idle" and not is_hit:
 			anim.play("idle")
 	
-	if abs(global_position.x - spawn_position.x) > move_distance:
+	if is_on_wall():
 		move_direction *= -1
-		sprite.flip_h = move_direction < 0
+	#  Jinak zkontroluje, jestli nedošel na konec své trasy 
+	elif abs(global_position.x - spawn_position.x) > move_distance:
+		move_direction *= -1
+		
+	# Otočení spritu a hitboxů se teď děje vždycky podle move_direction
+	sprite.flip_h = move_direction < 0
 
 	if sprite.flip_h:
 		firing_point.position.x = -abs(firing_offset_x)

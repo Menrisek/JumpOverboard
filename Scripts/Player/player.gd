@@ -6,6 +6,7 @@ class_name Player
 @onready var attack_area = $AttackArea
 @onready var coyote_timer = $CoyoteTimer
 @onready var firing_point = $FiringPoint
+@onready var throw_timer = $ThrowTimer
 
 #sound effekty
 @onready var sfx_sword_swing = $"SFX Sword Swing"
@@ -28,6 +29,7 @@ var default_jump_height = jump_height
 #double jump 
 var max_jumps = 1 
 var current_jumps = 0
+@export var slow_sliding :float = 100.0
 
 #odemykání schopností
 @export_category("Abilities")
@@ -99,14 +101,28 @@ func _physics_process(delta):
 		firing_point.position.x = firing_offset_x
 		sprite.flip_h = false
 
-	# házení nožů
-	if Input.is_action_just_pressed("throw") and  has_knife_throw_unlocked:
+
+	# házení nožů (muže házet po 0.4 sec viz. throw timer node)
+	if Input.is_action_just_pressed("throw") and has_knife_throw_unlocked and throw_timer.is_stopped():
 		throw()
+		throw_timer.start()
 	
-	
-	# Add the gravity.
+	#zjistím směr stisku klávesy (kvůli lezení po zdech)
+	var direction = Input.get_axis("left", "right")
+
+	# WALL CLIMB 
+	var is_wall_sliding = false
+	# is_on_wall_only() = jsem na zdi, ale nedotýkám se země. 
+	# direction != 0 = hráč drží šipku směrem do zdi.
+	if has_wall_climb_unlocked and is_on_wall_only() and direction != 0:
+		is_wall_sliding = true
+
+	# Add the gravity (a zpomalení na zdi).
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if is_wall_sliding and velocity.y > 0:
+			velocity.y = slow_sliding  # Konstanta pro pomalé klouzání po zdi
+		else:
+			velocity += get_gravity() * delta
 	
 	if Input.is_action_just_pressed("jump"):
 		jump_buffering = 0.1
@@ -116,15 +132,36 @@ func _physics_process(delta):
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y *= 0.4
 		
-	# Handle jump.
-	if jump_buffering > 0 and (is_on_floor() or !coyote_timer.is_stopped()):
-		sfx_jump.play()
-		jump_buffering = 0.0
-		velocity.y = jump_height
+	# DOUBLE JUMP
+	
+	# Pokud jsem na zemi, vyresetujeme počítadlo skoků
+	if is_on_floor():
+		current_jumps = 0
 		
+	# Handle jump 
+	if jump_buffering > 0:
+		if is_on_floor() or !coyote_timer.is_stopped():
+			# 1. Klasický skok ze země
+			sfx_jump.play()
+			jump_buffering = 0.0
+			velocity.y = jump_height
+			current_jumps = 1
+		elif is_wall_sliding:
+			# 2. Skok (odraz) ze zdi
+			sfx_jump.play()
+			jump_buffering = 0.0
+			velocity.y = jump_height
+			current_jumps = 1 # Reset na 1, abych po odrazu ze zdi mohl použít double jump
+		elif current_jumps < max_jumps:
+			# 3. Double jump ve vzduchu
+			sfx_jump.play()
+			jump_buffering = 0.0
+			velocity.y = jump_height
+			current_jumps += 1
+
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
 	else:
@@ -132,7 +169,8 @@ func _physics_process(delta):
 
 	var was_on_floor = is_on_floor()
 	
-	# dash
+	
+	# DASH
 	# pokud je na zemi tak může dashnout (a neovlivňuje to has_dashed_in_air)
 	# pokud je ve vzduchu tak může dashnout pouze pokud ještě v něm nedashnul
 	if Input.is_action_just_pressed("dash") and has_dash_unlocked:

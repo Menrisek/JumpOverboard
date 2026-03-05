@@ -14,6 +14,10 @@ func _ready():
 	$"Main Menu Soundtrack - loop".play()
 
 func _on_start_pressed():
+	#než hru spustím, zajistím načtení dat z savu
+	if SaveManager.save_exists():
+		SaveManager.load_game()
+
 	get_tree().change_scene_to_file("res://Scenes/WorldScenes/Level1.tscn")
 
 func _on_load_pressed():

@@ -8,6 +8,7 @@ radius = 13.5
 
 [node name="MovingSaw" type="Node2D" unique_id=341678809]
 script = ExtResource("1_31i8u")
+dmg = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1411701261 groups=["Enemies"]]
 texture = ExtResource("2_31i8u")

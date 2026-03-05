@@ -412,6 +412,10 @@ offset_bottom = 15.0
 wait_time = 0.1
 one_shot = true
 
+[node name="ThrowTimer" type="Timer" parent="." unique_id=1972854898]
+wait_time = 0.4
+one_shot = true
+
 [node name="DashTimer" type="Timer" parent="." unique_id=1782331909]
 wait_time = 0.12
 

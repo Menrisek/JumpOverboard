@@ -103,9 +103,10 @@ func show_stats(target_level):
 	else:
 		target_level.get_node("StatsDisplay").get_node("DisplayHits").visible = false
 
-#vypíše celkový počet coinů na mapě
+#vypíše celkový počet coinů k utracení v rohu na mapě
 func update_coin_display():
-	$CanvasLayer/CoinDisplay.text = str(total_coins)
+	var available_coins = LevelData.get_available_coins()
+	$CanvasLayer/CoinDisplay.text = str(available_coins)
 
 func _on_main_menu_button_pressed() -> void:
 	GameManager.load_main_menu()

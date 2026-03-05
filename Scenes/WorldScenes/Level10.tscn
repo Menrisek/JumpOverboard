@@ -27,6 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://bmxlrk2br3k7s" path="res://Scenes/Interactable/BoostingItems/speed_up.tscn" id="23_kietx"]
 [ext_resource type="PackedScene" uid="uid://b6tbtl8d223r5" path="res://Scenes/Interactable/BoostingItems/jump_up.tscn" id="24_a28i2"]
 [ext_resource type="PackedScene" uid="uid://dpg7s5dyy5cym" path="res://Scenes/Interactable/BoostingItems/heal_up.tscn" id="25_m5d81"]
+[ext_resource type="PackedScene" uid="uid://gu04kor5gen0" path="res://Scenes/Enemies/ShootingEnemies/crabby.tscn" id="28_sks34"]
+[ext_resource type="PackedScene" uid="uid://ccbbccwsl63rd" path="res://Scenes/Enemies/starbird.tscn" id="29_3ugqf"]
+[ext_resource type="PackedScene" uid="uid://cigkc5emwtm71" path="res://Scenes/Interactable/moving_saw.tscn" id="30_44bkt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wtmh"]
 texture = ExtResource("3_5ah7k")
@@ -1106,7 +1109,7 @@ use_parent_material = true
 tile_set = SubResource("TileSet_5giv2")
 
 [node name="Player" parent="." unique_id=1888868185 instance=ExtResource("6_55on6")]
-position = Vector2(-886, 196)
+position = Vector2(813, -536)
 
 [node name="UIManager" type="CanvasLayer" parent="." unique_id=320691135]
 process_mode = 3
@@ -1543,9 +1546,6 @@ position = Vector2(514, 193)
 [node name="Spikes16" parent="." unique_id=1288395651 instance=ExtResource("19_k2u2c")]
 position = Vector2(640, 193)
 
-[node name="Spikes17" parent="." unique_id=157319849 instance=ExtResource("19_k2u2c")]
-position = Vector2(715, 193)
-
 [node name="Spikes18" parent="." unique_id=2006204409 instance=ExtResource("19_k2u2c")]
 position = Vector2(590, 193)
 
@@ -1911,9 +1911,6 @@ position = Vector2(753, -590)
 [node name="Sharkie6" parent="." unique_id=436817980 instance=ExtResource("17_k2u2c")]
 position = Vector2(84, -544)
 
-[node name="Sharkie7" parent="." unique_id=493898689 instance=ExtResource("17_k2u2c")]
-position = Vector2(-272, -495)
-
 [node name="Sharkie8" parent="." unique_id=509025322 instance=ExtResource("17_k2u2c")]
 position = Vector2(-592, -461)
 
@@ -2266,6 +2263,77 @@ position = Vector2(1006, -1487)
 
 [node name="Coin78" parent="." unique_id=1118785773 instance=ExtResource("21_k2u2c")]
 position = Vector2(996, -1477)
+
+[node name="Crabby" parent="." unique_id=626085346 instance=ExtResource("28_sks34")]
+position = Vector2(736, 195)
+move_distance = 60.0
+
+[node name="Starbird" parent="." unique_id=110355761 instance=ExtResource("29_3ugqf")]
+position = Vector2(413, -65)
+
+[node name="Starbird2" parent="." unique_id=269989515 instance=ExtResource("29_3ugqf")]
+position = Vector2(-511, -333)
+
+[node name="MovingSaw" parent="." unique_id=341678809 instance=ExtResource("30_44bkt")]
+position = Vector2(-674, -236)
+move_axis = 1
+move_distance = 50.0
+
+[node name="MovingSaw2" parent="." unique_id=1706781186 instance=ExtResource("30_44bkt")]
+position = Vector2(-755, -154)
+move_axis = 1
+move_distance = 50.0
+
+[node name="MovingSaw3" parent="." unique_id=1080341988 instance=ExtResource("30_44bkt")]
+position = Vector2(-755, -328)
+move_axis = 1
+move_distance = 50.0
+
+[node name="HealUp5" parent="." unique_id=325104165 instance=ExtResource("25_m5d81")]
+position = Vector2(-604.00006, -140)
+
+[node name="MovingSaw4" parent="." unique_id=2043204015 instance=ExtResource("30_44bkt")]
+position = Vector2(440, -512)
+
+[node name="Starbird3" parent="." unique_id=680491255 instance=ExtResource("29_3ugqf")]
+position = Vector2(1060, -669)
+
+[node name="MovingSaw5" parent="." unique_id=641066974 instance=ExtResource("30_44bkt")]
+position = Vector2(289, -952)
+
+[node name="MovingSaw6" parent="." unique_id=1041072824 instance=ExtResource("30_44bkt")]
+position = Vector2(712, -952)
+
+[node name="MovingSaw7" parent="." unique_id=2101520305 instance=ExtResource("30_44bkt")]
+position = Vector2(-366, -847)
+move_axis = 1
+
+[node name="MovingSaw8" parent="." unique_id=268265837 instance=ExtResource("30_44bkt")]
+position = Vector2(-607, -920)
+move_axis = 1
+
+[node name="Crabby2" parent="." unique_id=1529318128 instance=ExtResource("28_sks34")]
+position = Vector2(1, -957)
+move_speed = 40.0
+
+[node name="Starbird4" parent="." unique_id=1031305952 instance=ExtResource("29_3ugqf")]
+position = Vector2(224, -1296)
+
+[node name="MovingSaw9" parent="." unique_id=1039787568 instance=ExtResource("30_44bkt")]
+position = Vector2(112, -816)
+moving_speed = 230.0
+
+[node name="MovingSaw10" parent="." unique_id=737217220 instance=ExtResource("30_44bkt")]
+position = Vector2(961, -831)
+moving_speed = 300.0
+move_distance = 40.0
+dmg = 3
+
+[node name="Crabby3" parent="." unique_id=895222410 instance=ExtResource("28_sks34")]
+position = Vector2(-271, -493)
+
+[node name="Starbird5" parent="." unique_id=1154671644 instance=ExtResource("29_3ugqf")]
+position = Vector2(-352, -1048)
 
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/VBoxContainer/HBoxContainer2/Restart" to="UIManager" method="_on_restart_pressed"]
