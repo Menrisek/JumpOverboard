@@ -24,6 +24,7 @@ class_name Player
 @export var dash_power = 2.5
 var has_dashed_in_air = false
 var can_dash = true
+var facing_direction := 1 # 1 = doprava, -1 = doleva
 var default_speed = speed
 var default_jump_height = jump_height
 #double jump 
@@ -90,16 +91,22 @@ func _process(delta):
 	update_timer_ui()
 
 func _physics_process(delta):
+	#zjistím směr stisku klávesy (kvůli lezení po zdech)
+	var direction = Input.get_axis("left", "right")
+	
 	#přehazuje strany postavy a attack arei
-	if Input.is_action_just_pressed("left"):
-		attack_area.scale.x = abs(attack_area.scale.x) * -1
-		firing_point.position.x = -firing_offset_x
-		sprite.flip_h = true
+	if direction != 0:
+		facing_direction = sign(direction) # Uložím si, kam se zrovna hýbe (1 doprava nebo -1 doleva)
 		
-	if Input.is_action_just_pressed("right"):
-		attack_area.scale.x = abs(attack_area.scale.x)
-		firing_point.position.x = firing_offset_x
-		sprite.flip_h = false
+		# Přetočím sprite a hitboxy podle toho, kam reálně jde
+		if facing_direction == -1:
+			attack_area.scale.x = -abs(attack_area.scale.x)
+			firing_point.position.x = -abs(firing_offset_x)
+			sprite.flip_h = true
+		else:
+			attack_area.scale.x = abs(attack_area.scale.x)
+			firing_point.position.x = abs(firing_offset_x)
+			sprite.flip_h = false
 
 
 	# házení nožů (muže házet po 0.4 sec viz. throw timer node)
@@ -107,8 +114,6 @@ func _physics_process(delta):
 		throw()
 		throw_timer.start()
 	
-	#zjistím směr stisku klávesy (kvůli lezení po zdech)
-	var direction = Input.get_axis("left", "right")
 
 	# WALL CLIMB 
 	var is_wall_sliding = false
@@ -324,14 +329,14 @@ func handle_dash(direction):
 		$DashCooldownTimer.start() # zapne dash cooldown
 		$DashTimer.start()
 		speed *= dash_power
-		velocity.x = direction * speed
+		velocity.x = direction * default_speed * dash_power
 		# když dashne na zemi, nechám možnost dashnout znovu i ve vzduchu (reset)
 		has_dashed_in_air = false
 	else:
 		if not has_dashed_in_air:
 			$DashTimer.start()
 			speed *= dash_power
-			velocity.x = direction * speed
+			velocity.x = direction * default_speed * dash_power
 			# označíme, že už dashoval ve vzduchu — další dash ve vzduchu nebude možný
 			has_dashed_in_air = true
 

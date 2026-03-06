@@ -1193,13 +1193,11 @@ position = Vector2(-192, 8)
 [node name="flying_enemy2" parent="." unique_id=1619831217 node_paths=PackedStringArray("patrol_point_a", "patrol_point_b") instance=ExtResource("13_ow7s5")]
 position = Vector2(-312, -8)
 flying_speed = 45
-enable_patrol = true
 patrol_point_a = NodePath("../Coin38")
 patrol_point_b = NodePath("../Coin39")
 
 [node name="flying_enemy3" parent="." unique_id=495395220 node_paths=PackedStringArray("patrol_point_a", "patrol_point_b") instance=ExtResource("13_ow7s5")]
 position = Vector2(72, -56)
-enable_patrol = true
 patrol_point_a = NodePath("../flying_enemy")
 patrol_point_b = NodePath("../flying_enemy2")
 
