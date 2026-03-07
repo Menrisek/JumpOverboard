@@ -25,9 +25,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -234.5
-offset_top = -150.0
+offset_top = -161.75
 offset_right = 234.5
-offset_bottom = 150.0
+offset_bottom = 161.75
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 0.905882)
@@ -37,6 +37,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -0.25
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -49,6 +50,7 @@ horizontal_alignment = 1
 
 [node name="MasterLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=739362288]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yvy67")
 text = "Master"
 
 [node name="MasterSlider" type="HSlider" parent="PauseMenu/VBoxContainer" unique_id=840006785]
@@ -58,6 +60,7 @@ step = 0.01
 
 [node name="MusicLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=2056439537]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yvy67")
 text = "Music"
 
 [node name="MusicSlider" type="HSlider" parent="PauseMenu/VBoxContainer" unique_id=1048433049]
@@ -67,6 +70,7 @@ step = 0.01
 
 [node name="SFXLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=124887604]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yvy67")
 text = "SFX"
 
 [node name="SFXSlider" type="HSlider" parent="PauseMenu/VBoxContainer" unique_id=583843936]
@@ -74,25 +78,24 @@ layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="ApplyButton" type="Button" parent="PauseMenu/VBoxContainer" unique_id=61542530]
-visible = false
+[node name="ResolutionLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=210407632]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yvy67")
-text = "Apply changes"
+text = "Resolution"
 
-[node name="BackToMenuButton" type="Button" parent="PauseMenu" unique_id=1366566489]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -107.0
-offset_top = -58.0
-offset_right = 107.0
-offset_bottom = -26.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="ResolutionOptionButton" type="OptionButton" parent="PauseMenu/VBoxContainer" unique_id=105678013]
+layout_mode = 2
+
+[node name="WindowModeLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=1964580532]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yvy67")
+text = "Fullscreen"
+
+[node name="WindowModeOptionButton" type="OptionButton" parent="PauseMenu/VBoxContainer" unique_id=353904825]
+layout_mode = 2
+
+[node name="BackToMenuButton" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1366566489]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yvy67")
 theme_override_font_sizes/font_size = 23
 text = "Back to main menu"
@@ -100,5 +103,6 @@ text = "Back to main menu"
 [connection signal="value_changed" from="PauseMenu/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="PauseMenu/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="PauseMenu/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="pressed" from="PauseMenu/VBoxContainer/ApplyButton" to="." method="_on_apply_button_pressed"]
-[connection signal="pressed" from="PauseMenu/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="item_selected" from="PauseMenu/VBoxContainer/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
+[connection signal="item_selected" from="PauseMenu/VBoxContainer/WindowModeOptionButton" to="." method="_on_window_mode_option_button_item_selected"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

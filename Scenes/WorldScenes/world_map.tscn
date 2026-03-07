@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsrjb0q4ix33q" path="res://Art/World Map/World Map.png" id="2_274kt"]
 [ext_resource type="Script" uid="uid://c7n05xpvnbgql" path="res://Scripts/Core/WorldMapLevel.gd" id="2_rdguj"]
 [ext_resource type="PackedScene" uid="uid://dc4wyfda724ns" path="res://Scenes/WorldScenes/Menu/shop_menu.tscn" id="3_7dcbg"]
+[ext_resource type="PackedScene" uid="uid://canofiwos5jsy" path="res://Scenes/UI/stats_menu.tscn" id="3_ihkf7"]
 [ext_resource type="Texture2D" uid="uid://38vjocs50d1t" path="res://Art/World Map/Locked.png" id="3_rrpgb"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="3_ws6nv"]
 [ext_resource type="Texture2D" uid="uid://dms6d1h1bp0am" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xqcxy"]
@@ -283,6 +284,9 @@ texture = ExtResource("2_274kt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=359225008]
 
+[node name="StatsMenu" parent="CanvasLayer" unique_id=148545148 instance=ExtResource("3_ihkf7")]
+visible = false
+
 [node name="ShopMenu" parent="CanvasLayer" unique_id=924863457 instance=ExtResource("3_7dcbg")]
 visible = false
 
@@ -311,6 +315,20 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ws6nv")
 theme_override_font_sizes/font_size = 23
 text = "Shop"
+
+[node name="StatsButton" type="Button" parent="CanvasLayer" unique_id=826486113]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1677.0
+offset_top = -1056.0
+offset_right = 1891.0
+offset_bottom = -1006.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ws6nv")
+theme_override_font_sizes/font_size = 23
+text = "Stats
+"
 
 [node name="Label4" type="Label" parent="CanvasLayer" unique_id=35838629]
 anchors_preset = 2
@@ -793,3 +811,4 @@ position_smoothing_speed = 3.0
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ShopMenuButton" to="." method="_on_shop_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/StatsButton" to="." method="_on_stats_button_pressed"]

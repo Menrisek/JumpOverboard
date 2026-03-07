@@ -108,8 +108,13 @@ func update_coin_display():
 	var available_coins = LevelData.get_available_coins()
 	$CanvasLayer/CoinDisplay.text = str(available_coins)
 
+
 func _on_main_menu_button_pressed() -> void:
 	GameManager.load_main_menu()
 
+
 func _on_shop_menu_button_pressed() -> void:
 	$CanvasLayer/ShopMenu.visible = true
+
+func _on_stats_button_pressed() -> void:
+	$CanvasLayer/StatsMenu.visible = true

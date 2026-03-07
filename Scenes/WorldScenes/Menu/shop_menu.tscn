@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbrv30cvx1mcv" path="res://Scripts/Core/ShopMenu.gd" id="1_x46nf"]
 [ext_resource type="FontFile" uid="uid://bikfb0mpbh5g7" path="res://Art/Fonts/PirateFont.ttf" id="2_mn1o0"]
+[ext_resource type="Texture2D" uid="uid://bpjo8y0320hxl" path="res://Art/Pirate Treasure/Sprites/Gold Coin/01.png" id="3_mn1o0"]
 
 [node name="ShopMenu" type="Control" unique_id=924863457]
 layout_mode = 3
@@ -27,44 +28,126 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 0.905882)
 
-[node name="BuyDashButton" type="Button" parent="PauseMenu" unique_id=1620215259]
-layout_mode = 0
-offset_left = 94.75
-offset_top = 212.5
-offset_right = 195.75
-offset_bottom = 308.5
+[node name="GridContainer" type="GridContainer" parent="PauseMenu" unique_id=1724680024]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -165.0
+offset_right = 408.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 230
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="DashVBoxContainer" type="VBoxContainer" parent="PauseMenu/GridContainer" unique_id=1777170864]
+layout_mode = 2
+
+[node name="DashLabel" type="Label" parent="PauseMenu/GridContainer/DashVBoxContainer" unique_id=203817745]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 50
 text = "Dash"
+horizontal_alignment = 1
 
-[node name="BuyKnifeThrowButton" type="Button" parent="PauseMenu" unique_id=1484801378]
-layout_mode = 0
-offset_left = 331.75
-offset_top = 212.5
-offset_right = 432.75
-offset_bottom = 308.5
+[node name="BuyDashButton" type="Button" parent="PauseMenu/GridContainer/DashVBoxContainer" unique_id=1620215259]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 32
 theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 24
+text = "Dash Price"
+icon = ExtResource("3_mn1o0")
+expand_icon = true
+
+[node name="KnifeVBoxContainer" type="VBoxContainer" parent="PauseMenu/GridContainer" unique_id=13246125]
+layout_mode = 2
+
+[node name="KnifeThowLabel" type="Label" parent="PauseMenu/GridContainer/KnifeVBoxContainer" unique_id=517890584]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 50
 text = "Knife Throw"
+horizontal_alignment = 1
 
-[node name="BuyDoubleJumpButton" type="Button" parent="PauseMenu" unique_id=1834402500]
-layout_mode = 0
-offset_left = 547.75
-offset_top = 212.5
-offset_right = 655.75
-offset_bottom = 308.5
+[node name="BuyKnifeThrowButton" type="Button" parent="PauseMenu/GridContainer/KnifeVBoxContainer" unique_id=1484801378]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 32
 theme_override_fonts/font = ExtResource("2_mn1o0")
-text = "Double Jump
+theme_override_font_sizes/font_size = 24
+text = "Knife Throw Price"
+icon = ExtResource("3_mn1o0")
+expand_icon = true
+
+[node name="DoubleJumpVBoxContainer" type="VBoxContainer" parent="PauseMenu/GridContainer" unique_id=1575324504]
+layout_mode = 2
+
+[node name="DoubleJumpLabel" type="Label" parent="PauseMenu/GridContainer/DoubleJumpVBoxContainer" unique_id=1152071770]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 50
+text = "Double Jump"
+horizontal_alignment = 1
+
+[node name="BuyDoubleJumpButton" type="Button" parent="PauseMenu/GridContainer/DoubleJumpVBoxContainer" unique_id=1834402500]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 32
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 24
+text = "Double Jump Price
 "
+icon = ExtResource("3_mn1o0")
+expand_icon = true
 
-[node name="BuyWallClimbButton" type="Button" parent="PauseMenu" unique_id=646157851]
-layout_mode = 0
-offset_left = 804.75
-offset_top = 212.5
-offset_right = 905.75
-offset_bottom = 308.5
+[node name="WallClimbBoxContainer" type="VBoxContainer" parent="PauseMenu/GridContainer" unique_id=833921607]
+layout_mode = 2
+
+[node name="WallClimbLabel" type="Label" parent="PauseMenu/GridContainer/WallClimbBoxContainer" unique_id=1578863481]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 50
 text = "Wall Climb"
+horizontal_alignment = 1
+
+[node name="BuyWallClimbButton" type="Button" parent="PauseMenu/GridContainer/WallClimbBoxContainer" unique_id=646157851]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 32
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 24
+text = "Wall Climb Price"
+icon = ExtResource("3_mn1o0")
+expand_icon = true
+
+[node name="ShopLabel" type="Label" parent="PauseMenu" unique_id=82114238]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -506.0
+offset_top = 0.5
+offset_right = 506.0
+offset_bottom = 133.5
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_mn1o0")
+theme_override_font_sizes/font_size = 120
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CloseButton" type="Button" parent="PauseMenu" unique_id=448005205]
+custom_minimum_size = Vector2(300, 30)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -81,8 +164,8 @@ theme_override_fonts/font = ExtResource("2_mn1o0")
 theme_override_font_sizes/font_size = 23
 text = "Close"
 
-[connection signal="pressed" from="PauseMenu/BuyDashButton" to="." method="_on_buy_dash_button_pressed"]
-[connection signal="pressed" from="PauseMenu/BuyKnifeThrowButton" to="." method="_on_buy_knife_throw_button_pressed"]
-[connection signal="pressed" from="PauseMenu/BuyDoubleJumpButton" to="." method="_on_buy_double_jump_button_pressed"]
-[connection signal="pressed" from="PauseMenu/BuyWallClimbButton" to="." method="_on_buy_wall_climb_button_pressed"]
+[connection signal="pressed" from="PauseMenu/GridContainer/DashVBoxContainer/BuyDashButton" to="." method="_on_buy_dash_button_pressed"]
+[connection signal="pressed" from="PauseMenu/GridContainer/KnifeVBoxContainer/BuyKnifeThrowButton" to="." method="_on_buy_knife_throw_button_pressed"]
+[connection signal="pressed" from="PauseMenu/GridContainer/DoubleJumpVBoxContainer/BuyDoubleJumpButton" to="." method="_on_buy_double_jump_button_pressed"]
+[connection signal="pressed" from="PauseMenu/GridContainer/WallClimbBoxContainer/BuyWallClimbButton" to="." method="_on_buy_wall_climb_button_pressed"]
 [connection signal="pressed" from="PauseMenu/CloseButton" to="." method="_on_close_button_pressed"]

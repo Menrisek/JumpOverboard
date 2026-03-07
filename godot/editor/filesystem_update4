@@ -1,3 +1,10 @@
-res://Scenes/Entities/player.tscn
-res://Scripts/Player/player.gd
-res://Scenes/WorldScenes/LevelTest.tscn
+res://Scenes/WorldScenes/Menu/settings_menu.tscn
+res://Scripts/Core/SettingsMenu.gd
+res://Scenes/WorldScenes/Menu/main_menu.tscn
+res://Scenes/WorldScenes/Menu/shop_menu.tscn
+res://Scripts/Core/ShopMenu.gd
+res://Scripts/Core/SaveManager.gd
+res://Scenes/WorldScenes/world_map.tscn
+res://Scripts/Core/WorldMap.gd
+res://Scenes/UI/stats_menu.tscn
+res://Scripts/UI/stats_menu.gd
