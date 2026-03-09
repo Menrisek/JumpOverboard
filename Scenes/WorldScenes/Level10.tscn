@@ -1109,7 +1109,7 @@ use_parent_material = true
 tile_set = SubResource("TileSet_5giv2")
 
 [node name="Player" parent="." unique_id=1888868185 instance=ExtResource("6_55on6")]
-position = Vector2(813, -536)
+position = Vector2(-886, 195)
 
 [node name="UIManager" type="CanvasLayer" parent="." unique_id=320691135]
 process_mode = 3
