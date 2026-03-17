@@ -1,4 +1,5 @@
 extends Node2D
+class_name MovingSaw
 
 # definuje dvě možnosti, ze kterých si budu vybírat
 enum Axis { HORIZONTAL, VERTICAL }

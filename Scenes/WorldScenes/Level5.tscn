@@ -1088,7 +1088,9 @@ offset_top = -1.0
 offset_right = 512.0
 offset_bottom = 22.0
 theme_override_fonts/font = ExtResource("11_g3eao")
-text = "Be aware of the cannons"
+text = "Be aware of the cannons
+(some of them may be breakable)"
+horizontal_alignment = 1
 
 [node name="Checkpoint" parent="." unique_id=57918073 instance=ExtResource("9_g7ih2")]
 position = Vector2(-291, 203)
@@ -1111,9 +1113,6 @@ position = Vector2(142, 177)
 
 [node name="Spikes2" parent="." unique_id=1350823840 instance=ExtResource("12_1y38l")]
 position = Vector2(385, 129)
-
-[node name="Spikes3" parent="." unique_id=2036020716 instance=ExtResource("12_1y38l")]
-position = Vector2(578, 81)
 
 [node name="Spikes4" parent="." unique_id=106426676 instance=ExtResource("12_1y38l")]
 position = Vector2(640, 81)
@@ -1169,9 +1168,6 @@ distance = 350
 
 [node name="Spikes5" parent="." unique_id=1389597351 instance=ExtResource("12_1y38l")]
 position = Vector2(875, -47)
-
-[node name="Spikes6" parent="." unique_id=291335916 instance=ExtResource("12_1y38l")]
-position = Vector2(1026, -47)
 
 [node name="FallingSpikes" parent="." unique_id=1235065415 instance=ExtResource("13_o3gr7")]
 position = Vector2(945, -174)

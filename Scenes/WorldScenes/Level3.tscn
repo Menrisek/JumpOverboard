@@ -1180,9 +1180,6 @@ rotation = 1.5708
 position = Vector2(719, -113)
 rotation = 1.5708
 
-[node name="Spikes3" parent="." unique_id=772432897 instance=ExtResource("16_y3ljm")]
-position = Vector2(1328, -143)
-
 [node name="OneWayPlatform" parent="." unique_id=1024166797 instance=ExtResource("16_jntny")]
 position = Vector2(2112, -380)
 
@@ -1214,7 +1211,7 @@ direction = Vector2(1, 0)
 shake = false
 
 [node name="Spikes4" parent="." unique_id=751033055 instance=ExtResource("16_y3ljm")]
-position = Vector2(1359, -143)
+position = Vector2(1343, -143)
 
 [node name="FallingSpikes6" parent="." unique_id=659160155 instance=ExtResource("17_i6w1a")]
 position = Vector2(1248, -251)
@@ -1239,9 +1236,6 @@ position = Vector2(1868, 34)
 
 [node name="JumpPad9" parent="." unique_id=1596514041 instance=ExtResource("13_lklj4")]
 position = Vector2(1739, 19)
-
-[node name="Spikes9" parent="." unique_id=238090653 instance=ExtResource("16_y3ljm")]
-position = Vector2(1599, 225)
 
 [node name="Spikes10" parent="." unique_id=2129861474 instance=ExtResource("16_y3ljm")]
 position = Vector2(1568, 225)
@@ -1324,11 +1318,11 @@ position = Vector2(2112, -365)
 [node name="Coin32" parent="." unique_id=978421399 instance=ExtResource("10_whwfm")]
 position = Vector2(1629, -210)
 
-[node name="Spikes11" parent="." unique_id=1742217634 instance=ExtResource("16_y3ljm")]
-position = Vector2(1758, 193)
+[node name="Coin50" parent="." unique_id=1579379041 instance=ExtResource("10_whwfm")]
+position = Vector2(1472, -303)
 
 [node name="Spikes12" parent="." unique_id=428079631 instance=ExtResource("16_y3ljm")]
-position = Vector2(1789, 193)
+position = Vector2(1772, 193)
 
 [node name="OneWayPlatformSmall" parent="." unique_id=791883237 instance=ExtResource("18_67vgb")]
 position = Vector2(1728, -90)
@@ -1350,11 +1344,7 @@ position = Vector2(1953, -235)
 rotation = -1.5708
 
 [node name="Spikes16" parent="." unique_id=1862399245 instance=ExtResource("16_y3ljm")]
-position = Vector2(1953, 20)
-rotation = -1.5708
-
-[node name="Spikes15" parent="." unique_id=2143784866 instance=ExtResource("16_y3ljm")]
-position = Vector2(1953, 163)
+position = Vector2(1952, -73)
 rotation = -1.5708
 
 [node name="MovingPlatform" parent="." unique_id=573888633 instance=ExtResource("14_e7wks")]
@@ -1478,9 +1468,6 @@ rotation = 1.5708
 [node name="Spikes26" parent="." unique_id=581248448 instance=ExtResource("16_y3ljm")]
 position = Vector2(2345, 225)
 
-[node name="Spikes27" parent="." unique_id=1041710579 instance=ExtResource("16_y3ljm")]
-position = Vector2(2376, 225)
-
 [node name="Spikes30" parent="." unique_id=1472083750 instance=ExtResource("16_y3ljm")]
 position = Vector2(2624, 225)
 
@@ -1495,10 +1482,6 @@ position = Vector2(2806, 290)
 
 [node name="Spikes32" parent="." unique_id=745500943 instance=ExtResource("16_y3ljm")]
 position = Vector2(2113, 49)
-
-[node name="Spikes36" parent="." unique_id=1272657729 instance=ExtResource("16_y3ljm")]
-position = Vector2(2145, 145)
-rotation = -1.5708
 
 [node name="Spikes33" parent="." unique_id=343079202 instance=ExtResource("16_y3ljm")]
 position = Vector2(2080, -95)

@@ -849,10 +849,7 @@ position = Vector2(770, 92)
 position = Vector2(367, 96)
 
 [node name="Spikes3" parent="." unique_id=516008386 instance=ExtResource("17_3hd7r")]
-position = Vector2(545, 96)
-
-[node name="Spikes4" parent="." unique_id=2102687288 instance=ExtResource("17_3hd7r")]
-position = Vector2(577, 96)
+position = Vector2(561, 96)
 
 [node name="Spikes5" parent="." unique_id=674163822 instance=ExtResource("17_3hd7r")]
 position = Vector2(1054, 210)
@@ -885,7 +882,7 @@ position = Vector2(366, 63)
 position = Vector2(335, 90)
 
 [node name="Coin4" parent="." unique_id=280987465 instance=ExtResource("9_5xnhs")]
-position = Vector2(561, 57)
+position = Vector2(561, 71)
 
 [node name="Coin5" parent="." unique_id=1889239428 instance=ExtResource("9_5xnhs")]
 position = Vector2(911, 155)
@@ -1007,22 +1004,12 @@ position = Vector2(2958, 96)
 [node name="Coin23" parent="." unique_id=99449378 instance=ExtResource("9_5xnhs")]
 position = Vector2(2991, 95)
 
-[node name="FallingSpikes10" parent="." unique_id=2095625178 instance=ExtResource("18_o816e")]
-position = Vector2(3298, 225)
-rotation = 3.14159
-time_to_live = 2.0
-direction = Vector2(0, -1)
-shake = false
-
 [node name="FallingSpikes11" parent="." unique_id=1938108438 instance=ExtResource("18_o816e")]
 position = Vector2(3665, 97)
 rotation = 3.14159
 time_to_live = 2.0
 direction = Vector2(0, -1)
 shake = false
-
-[node name="Spikes2" parent="." unique_id=44950727 instance=ExtResource("17_3hd7r")]
-position = Vector2(3536, 145)
 
 [node name="Spikes24" parent="." unique_id=1724154829 instance=ExtResource("17_3hd7r")]
 position = Vector2(3489, 182)
@@ -1032,10 +1019,10 @@ rotation = -1.5708
 position = Vector2(3266, 223)
 
 [node name="Coin25" parent="." unique_id=428444396 instance=ExtResource("9_5xnhs")]
-position = Vector2(3297, 201)
+position = Vector2(3297, 223)
 
 [node name="Coin26" parent="." unique_id=1409408524 instance=ExtResource("9_5xnhs")]
-position = Vector2(3297, 178)
+position = Vector2(3408, 175)
 
 [node name="Coin27" parent="." unique_id=2098600302 instance=ExtResource("9_5xnhs")]
 position = Vector2(3326, 223)

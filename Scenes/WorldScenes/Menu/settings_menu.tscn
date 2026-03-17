@@ -89,7 +89,7 @@ layout_mode = 2
 [node name="WindowModeLabel" type="Label" parent="PauseMenu/VBoxContainer" unique_id=1964580532]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yvy67")
-text = "Fullscreen"
+text = "Window mode"
 
 [node name="WindowModeOptionButton" type="OptionButton" parent="PauseMenu/VBoxContainer" unique_id=353904825]
 layout_mode = 2

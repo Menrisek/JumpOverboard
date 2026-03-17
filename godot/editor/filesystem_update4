@@ -1,5 +1,13 @@
-res://Scenes/UI/stats_menu.tscn
-res://Scripts/UI/stats_menu.gd
-res://Scenes/WorldScenes/Level10.tscn
-res://Scenes/WorldScenes/Menu/shop_menu.tscn
 res://Scenes/WorldScenes/Menu/main_menu.tscn
+res://Scripts/Interactable/moving_saw.gd
+res://Scenes/Interactable/falling_spikes.tscn
+res://Scenes/WorldScenes/Level2.tscn
+res://Scenes/WorldScenes/Level1.tscn
+res://Scenes/WorldScenes/Level3.tscn
+res://Scenes/WorldScenes/Level4.tscn
+res://Scenes/WorldScenes/Level5.tscn
+res://Scenes/WorldScenes/Level6.tscn
+res://Scenes/WorldScenes/Level7.tscn
+res://Scenes/Entities/player.tscn
+res://Scenes/WorldScenes/Menu/settings_menu.tscn
+res://Scenes/WorldScenes/Menu/shop_menu.tscn

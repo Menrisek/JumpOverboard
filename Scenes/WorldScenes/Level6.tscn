@@ -921,11 +921,8 @@ position = Vector2(505, -437)
 [node name="Sharkie" parent="." unique_id=548949332 instance=ExtResource("16_w05es")]
 position = Vector2(638, -514)
 
-[node name="Spikes2" parent="." unique_id=2080801474 instance=ExtResource("14_xwrr0")]
-position = Vector2(868, -479)
-
 [node name="FallingSpikes" parent="." unique_id=1123540480 instance=ExtResource("17_xbpkq")]
-position = Vector2(837, -479)
+position = Vector2(854, -478)
 rotation = 3.14159
 direction = Vector2(0, -1)
 shake = false
@@ -942,9 +939,6 @@ position = Vector2(1072, -654)
 [node name="Spikes4" parent="." unique_id=130905283 instance=ExtResource("14_xwrr0")]
 position = Vector2(1103, -654)
 
-[node name="Spikes5" parent="." unique_id=1472015424 instance=ExtResource("14_xwrr0")]
-position = Vector2(1134, -655)
-
 [node name="JumpPad4" parent="." unique_id=2020190960 instance=ExtResource("15_cdnoi")]
 position = Vector2(1148, -409)
 
@@ -953,6 +947,9 @@ position = Vector2(1286, -459)
 
 [node name="Checkpoint2" parent="." unique_id=93616814 instance=ExtResource("9_7giis")]
 position = Vector2(1395, -565)
+
+[node name="Checkpoint4" parent="." unique_id=636596162 instance=ExtResource("9_7giis")]
+position = Vector2(3023, 11)
 
 [node name="Spikes6" parent="." unique_id=695028840 instance=ExtResource("14_xwrr0")]
 position = Vector2(1601, -624)
@@ -1391,12 +1388,6 @@ position = Vector2(3540, -14)
 [node name="HealUp" parent="." unique_id=625336073 instance=ExtResource("20_0layu")]
 position = Vector2(897, -481)
 
-[node name="FallingSpikes2" parent="." unique_id=1630109516 instance=ExtResource("17_xbpkq")]
-position = Vector2(3024, 17)
-rotation = 3.14159
-direction = Vector2(0, -1)
-shake = false
-
 [node name="Spikes13" parent="." unique_id=45904297 instance=ExtResource("14_xwrr0")]
 position = Vector2(3361, 33)
 
@@ -1605,7 +1596,7 @@ position = Vector2(245, -230)
 position = Vector2(356, -408)
 
 [node name="Coin34" parent="." unique_id=948352735 instance=ExtResource("23_is2vx")]
-position = Vector2(3024, -11)
+position = Vector2(3056, 13)
 
 [node name="Coin35" parent="." unique_id=1351281901 instance=ExtResource("23_is2vx")]
 position = Vector2(3119, -29)

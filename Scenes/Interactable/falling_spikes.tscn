@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctx6tx0t2e8ag"]
+[gd_scene format=3 uid="uid://ctx6tx0t2e8ag"]
 
 [ext_resource type="Script" uid="uid://brlm1ixfrk70u" path="res://Scripts/Interactable/falling_spikes.gd" id="1_j00yl"]
-[ext_resource type="Texture2D" uid="uid://dfbayclakaw1h" path="res://Art/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_mwxpr"]
+[ext_resource type="Texture2D" uid="uid://brkdj83hy4dcl" path="res://Art/Palm Tree Island/Sprites/Objects/Spikes/Falling Spikes.png" id="2_7l8c7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_coftw"]
 size = Vector2(31, 176)
@@ -58,30 +58,28 @@ _data = {
 &"Shake": SubResource("Animation_r04lx")
 }
 
-[node name="FallingSpikes" type="Node2D"]
+[node name="FallingSpikes" type="Node2D" unique_id=504759248]
 script = ExtResource("1_j00yl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=178268479]
 rotation = 3.14159
-texture = ExtResource("1_mwxpr")
+texture = ExtResource("2_7l8c7")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=748243175]
 monitorable = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" unique_id=349699764]
 polygon = PackedVector2Array(5, 0, -12, -1, -15, -6, -15, -16, 16, -16, 16, -10, 12, -4)
 
-[node name="PlayerDetectionZone" type="Area2D" parent="."]
+[node name="PlayerDetectionZone" type="Area2D" parent="." unique_id=1773230123]
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetectionZone" unique_id=932238874]
 position = Vector2(0.5, 72)
 shape = SubResource("RectangleShape2D_coftw")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_fuu11")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=327101192]
+libraries/ = SubResource("AnimationLibrary_fuu11")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_entered" from="PlayerDetectionZone" to="." method="_on_player_detection_zone_area_entered"]
