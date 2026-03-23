@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://if1g3b3681rf" path="res://Audio/Soundtrack/Jump Overboard Menu.wav" id="5_0q38u"]
 [ext_resource type="PackedScene" uid="uid://c5crefdqto6oe" path="res://Scenes/WorldScenes/Menu/settings_menu.tscn" id="5_sg5s6"]
 [ext_resource type="AudioStream" uid="uid://dejd7jahxt24j" path="res://Audio/Soundtrack/Jump Overboard Menu - loop.wav" id="6_smc21"]
+[ext_resource type="AudioStream" uid="uid://dqs3vyjxam3n7" path="res://Audio/SoundEffects/Interactable/Menu/HoverSound.wav" id="8_oa38w"]
+[ext_resource type="AudioStream" uid="uid://d0rhicsvo6ofp" path="res://Audio/SoundEffects/Interactable/Menu/SelectSound.wav" id="9_n7cm7"]
 
 [node name="MainMenu" type="Control" unique_id=690702357]
 layout_mode = 3
@@ -107,6 +109,14 @@ bus = &"Music"
 [node name="Main Menu Soundtrack - loop" type="AudioStreamPlayer" parent="." unique_id=510330773]
 stream = ExtResource("6_smc21")
 bus = &"Music"
+
+[node name="SFX Hover" type="AudioStreamPlayer2D" parent="." unique_id=1396065596]
+stream = ExtResource("8_oa38w")
+bus = &"SFX"
+
+[node name="SFX Select" type="AudioStreamPlayer2D" parent="." unique_id=1846400359]
+stream = ExtResource("9_n7cm7")
+bus = &"SFX"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]

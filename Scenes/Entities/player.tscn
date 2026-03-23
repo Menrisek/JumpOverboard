@@ -41,6 +41,8 @@
 [ext_resource type="Texture2D" uid="uid://b67766hasycw7" path="res://Art/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 03.png" id="35_6q8pc"]
 [ext_resource type="AudioStream" uid="uid://caqcxujoflfgu" path="res://Audio/SoundEffects/Player/JumpSound2.wav" id="36_2mdcc"]
 [ext_resource type="AudioStream" uid="uid://hfy4c7fou2y3" path="res://Audio/SoundEffects/Player/JumpSound3.wav" id="37_ol88v"]
+[ext_resource type="AudioStream" uid="uid://bprtoe8doxhr3" path="res://Audio/SoundEffects/Player/GrassWalking.wav" id="42_6q8pc"]
+[ext_resource type="AudioStream" uid="uid://cyy612b03nf6x" path="res://Audio/SoundEffects/Player/Dash.wav" id="43_6q8pc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3krsy"]
 height = 26.0
@@ -505,6 +507,16 @@ bus = &"SFX"
 
 [node name="SFX Jump" type="AudioStreamPlayer2D" parent="." unique_id=627656943]
 stream = SubResource("AudioStreamRandomizer_cx7vx")
+bus = &"SFX"
+
+[node name="SFX FootstepsSound" type="AudioStreamPlayer2D" parent="." unique_id=1114592058]
+stream = ExtResource("42_6q8pc")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="SFX DashSound" type="AudioStreamPlayer2D" parent="." unique_id=1359439632]
+stream = ExtResource("43_6q8pc")
+volume_db = -15.0
 bus = &"SFX"
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]

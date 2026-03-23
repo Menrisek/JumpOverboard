@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 Button
 GridContainer
 Control
@@ -11,4 +12,3 @@ MarginContainer
 ColorRect
 HSlider
 Marker2D
-Node2D

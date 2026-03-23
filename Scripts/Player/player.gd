@@ -13,6 +13,8 @@ class_name Player
 @onready var sfx_get_hit = $"SFX Hit"
 @onready var sfx_heal_taken = $"SFX Heal taken"
 @onready var sfx_jump = $"SFX Jump"
+@onready var sfx_walk = $"SFX FootstepsSound"
+@onready var sfx_dash = $"SFX DashSound"
 
 @export var show_hp = true
 
@@ -182,6 +184,12 @@ func _physics_process(delta):
 		handle_dash(direction)
 	
 	move_and_slide()
+	#zvuk chůze
+	if is_on_floor() and abs(velocity.x) > 10.0:
+		if not sfx_walk.playing:
+			sfx_walk.play()
+	else:
+		sfx_walk.stop()
 	
 	if not was_on_floor and is_on_floor():
 		has_dashed_in_air = false
@@ -317,6 +325,9 @@ func _on_dash_cooldown_timer_timeout() -> void:
 		can_dash = true
 		
 func handle_dash(direction):
+	if not sfx_dash.playing:
+		sfx_dash.pitch_scale = randf_range(1.1, 1.3) 
+		sfx_dash.play()
 	ghosting = true
 	spawn_ghost()
 	$GhostingEffectTimer.start()

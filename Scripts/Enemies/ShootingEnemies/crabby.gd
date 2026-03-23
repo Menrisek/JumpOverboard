@@ -41,7 +41,6 @@ var knife_path=preload("res://Scenes/Entities/knife.tscn")
 @onready var firing_offset_x = firing_point.position.x
 @onready var attack_area = $DetectionArea
 
-
 var health := 0
 var total_damage := 0
 var dps_timer := 0.0
