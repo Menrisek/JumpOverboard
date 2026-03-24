@@ -37,6 +37,7 @@ func _on_buy_dash_button_pressed() -> void:
 		print("Dash zakoupen!")
 		#update zobrazení na mapě kolik mám coinů
 		get_tree().current_scene.update_coin_display()
+		update_shop_ui()
 		
 		# Tady si pak updatuju zobrazení mincí v UI
 	else:
@@ -56,6 +57,7 @@ func _on_buy_knife_throw_button_pressed() -> void:
 		SaveManager.save_game()
 		print("Knife Throw zakoupen!")
 		get_tree().current_scene.update_coin_display()
+		update_shop_ui()
 		
 	else:
 		print("Nemáš dostatek peněz!")
@@ -74,6 +76,7 @@ func _on_buy_double_jump_button_pressed() -> void:
 		SaveManager.save_game()
 		print("Double Jump zakoupen!")
 		get_tree().current_scene.update_coin_display()
+		update_shop_ui()
 		
 	else:
 		print("Nemáš dostatek peněz!")
@@ -92,6 +95,7 @@ func _on_buy_wall_climb_button_pressed() -> void:
 		SaveManager.save_game()
 		print("Wall Climb zakoupen!")
 		get_tree().current_scene.update_coin_display()
+		update_shop_ui()
 		
 	else:
 		print("Nemáš dostatek peněz!")

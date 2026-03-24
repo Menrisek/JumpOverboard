@@ -40,6 +40,9 @@ var knife_path=preload("res://Scenes/Entities/knife.tscn")
 @onready var firing_point = $FiringPoint
 @onready var firing_offset_x = firing_point.position.x
 @onready var attack_area = $DetectionArea
+@onready var sfx_walk = $"SFX Walk"
+@onready var sfx_hit = $"SFX Hit"
+@onready var sfx_throw = $"SFX Throw"
 
 var health := 0
 var total_damage := 0
@@ -89,6 +92,8 @@ func take_damage(amount: int):
 			velocity.x = 0
 			anim.play("hit")
 			health -= amount
+			sfx_hit.pitch_scale = randf_range(0.8, 1.2)
+			sfx_hit.play()
 
 	total_damage += amount
 	dps_timer = 0.0
@@ -166,11 +171,17 @@ func patrol(_delta):
 	velocity.x = move_direction * move_speed
 	move_and_slide()
 	
-	#řešení animací
+	#řešení animací a zvuku
 	if velocity.x != 0 and not is_hit:
+		if not sfx_walk.playing:
+			sfx_walk.pitch_scale = randf_range(0.9, 1.1)
+			sfx_walk.play()
+			
 		if anim.current_animation != "run":
 			anim.play("run")
 	else:
+		sfx_walk.stop()
+		
 		if anim.current_animation != "idle" and not is_hit:
 			anim.play("idle")
 	
@@ -246,6 +257,8 @@ func start_attack_cooldown():
 	can_damage_player = true
 
 func throw():
+	sfx_throw.pitch_scale = randf_range(1.1, 1.3)
+	sfx_throw.play()
 	var knife = knife_path.instantiate()
 	knife.owner_type = Knife.OwnerType.ENEMY
 

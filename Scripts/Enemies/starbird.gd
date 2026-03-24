@@ -124,6 +124,8 @@ func take_damage(damage_amount):
 	anim.play("hit")
 
 	health -= damage_amount
+	$"SFX Damaged".pitch_scale = randf_range(0.9, 1.1)
+	$"SFX Damaged".play()
 	get_node("Healthbar").update_healthbar(health, max_health)
 
 	await anim.animation_finished

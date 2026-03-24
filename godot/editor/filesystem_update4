@@ -1,6 +1,8 @@
-res://Scenes/Entities/player.tscn
+res://Scenes/Enemies/starbird.tscn
+res://Scripts/Enemies/starbird.gd
+res://Scenes/Enemies/ShootingEnemies/crabby.tscn
 res://Scripts/Enemies/ShootingEnemies/crabby.gd
+res://Scenes/Entities/player.tscn
 res://Scripts/Player/player.gd
-res://Scenes/WorldScenes/LevelTest.tscn
-res://Scenes/WorldScenes/Menu/main_menu.tscn
-res://Scripts/Core/main_menu.gd
+res://Scenes/WorldScenes/Menu/shop_menu.tscn
+res://Scripts/Core/ShopMenu.gd

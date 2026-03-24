@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://qfp35xv6527n" path="res://Art/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="23_vsefw"]
 [ext_resource type="Texture2D" uid="uid://3hlylevabugi" path="res://Art/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="24_k68hp"]
 [ext_resource type="Texture2D" uid="uid://dsvgy35mj7v7h" path="res://Art/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="25_08x14"]
+[ext_resource type="AudioStream" uid="uid://b6l5mfolf6lcp" path="res://Audio/SoundEffects/Player/KnifeThrow.wav" id="26_j1fhd"]
+[ext_resource type="AudioStream" uid="uid://dgid5557lgftt" path="res://Audio/SoundEffects/Interactable/Enemies/CrabWalking.wav" id="27_iyyoa"]
+[ext_resource type="AudioStream" uid="uid://cuumjo2l3hyfc" path="res://Audio/SoundEffects/Interactable/Enemies/CrabDamaged.wav" id="28_x5llt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4b31h"]
 size = Vector2(20, 21)
@@ -187,6 +190,21 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=85398067]
 libraries/ = SubResource("AnimationLibrary_cj7e0")
+
+[node name="SFX Throw" type="AudioStreamPlayer2D" parent="." unique_id=166661544]
+stream = ExtResource("26_j1fhd")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="SFX Walk" type="AudioStreamPlayer2D" parent="." unique_id=260082476]
+stream = ExtResource("27_iyyoa")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="SFX Hit" type="AudioStreamPlayer2D" parent="." unique_id=1039708602]
+stream = ExtResource("28_x5llt")
+volume_db = -15.0
+bus = &"SFX"
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_entered" from="DetectionArea" to="." method="_on_detection_area_area_entered"]

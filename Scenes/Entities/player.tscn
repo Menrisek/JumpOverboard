@@ -43,6 +43,7 @@
 [ext_resource type="AudioStream" uid="uid://hfy4c7fou2y3" path="res://Audio/SoundEffects/Player/JumpSound3.wav" id="37_ol88v"]
 [ext_resource type="AudioStream" uid="uid://bprtoe8doxhr3" path="res://Audio/SoundEffects/Player/GrassWalking.wav" id="42_6q8pc"]
 [ext_resource type="AudioStream" uid="uid://cyy612b03nf6x" path="res://Audio/SoundEffects/Player/Dash.wav" id="43_6q8pc"]
+[ext_resource type="AudioStream" uid="uid://b6l5mfolf6lcp" path="res://Audio/SoundEffects/Player/KnifeThrow.wav" id="44_5emx0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3krsy"]
 height = 26.0
@@ -516,6 +517,11 @@ bus = &"SFX"
 
 [node name="SFX DashSound" type="AudioStreamPlayer2D" parent="." unique_id=1359439632]
 stream = ExtResource("43_6q8pc")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="SFX Throw" type="AudioStreamPlayer2D" parent="." unique_id=115883756]
+stream = ExtResource("44_5emx0")
 volume_db = -15.0
 bus = &"SFX"
 

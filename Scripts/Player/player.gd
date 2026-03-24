@@ -15,6 +15,7 @@ class_name Player
 @onready var sfx_jump = $"SFX Jump"
 @onready var sfx_walk = $"SFX FootstepsSound"
 @onready var sfx_dash = $"SFX DashSound"
+@onready var sfx_throw = $"SFX Throw"
 
 @export var show_hp = true
 
@@ -352,6 +353,8 @@ func handle_dash(direction):
 			has_dashed_in_air = true
 
 func throw():
+	sfx_throw.pitch_scale = randf_range(1.1, 1.3)
+	sfx_throw.play()
 	var knife = knife_path.instantiate()
 	knife.owner_type = Knife.OwnerType.PLAYER
 
